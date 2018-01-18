@@ -15,8 +15,8 @@
 
     <div>
         <form id="favorite_sport" onsubmit="return false;">
-            Favorite sport guess: <input id="sport_input" />
-            <button id="sport_button" onclick="confirmSport(document.getElementById('favorite_sport').value)">Submit</button>
+            Favorite sport guess: <input name="sport_input" size="10"/>
+            <button id="sport_button" onclick="confirmSport(document.getElementById('favorite_sport').elements.namedItem('sport_input').value)">Submit</button>
         </form>
     </div>
     <!--<div id="guessinggame">
