@@ -1,5 +1,5 @@
 function createFirstObject() {
-    if (document.getElementById("firstpart").innerHTML != null) {
+    if (document.getElementById("firstpart").innerHTML == null) {
         var first_person = {
             firstName: "Joseph",
             lastName: "Smith",
