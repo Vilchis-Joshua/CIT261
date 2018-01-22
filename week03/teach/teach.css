@@ -1,5 +1,9 @@
 #firstpart {
     background-color: black;
     color: white;
+}
+
+#first_part_code {
     font-family: Courier New, Courier, monospace;
+    background: rgb(171, 176, 172);
 }
