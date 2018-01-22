@@ -25,19 +25,27 @@
 
         <p id="firstpart"></p>
 
-        <p>
-            If you don't understand how to create the object, press the button below
-        </p>
         <p id="first_part_code">
+            //This is the first method that will be discussed to instatiate an object.<br />
+            //This is the object literal method
             var first_person = {<br />
-                &emsp; "Joseph",<br />
-                &emsp; "Smith",<br />
-                &emsp; "male",<br />
-                <br />
-                &emsp; function () {<br />
-                    &emsp; &emsp; this.firstName + " " + this.lastName;<br />
-                }<br />
+            &emsp; "Joseph",<br />
+            &emsp; "Smith",<br />
+            &emsp; "male",<br />
+            <br />
+            &emsp; function () {<br />
+            &emsp; &emsp; this.firstName + " " + this.lastName;<br />
             }<br />
+            }<br />
+        </p>
+        <br /><br />
+        <p id="first_part_code">
+            //This is the second method that will be discussed to instatiate an object.<br />
+            //This method uses the JavaScript keyword "new"
+            var person = new Object()<br />
+            person.firstName = "Joseph";
+            person.lastName = "Smith";
+            person.gender = "male";
         </p>
     </div>
 
@@ -67,6 +75,9 @@
     <div>
         <p>
             Instantiation is a word that just means "creating the object".<br />
+            The important thing to note that's different between the two methods, is how things are created.<br />
+            In the first method, everything is created at the one time in a variable. In the second method, <br />
+            the object is first created, using the new operator, then the properties are created afterwards. <br />
         </p>
     </div>
 </body>
