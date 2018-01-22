@@ -10,3 +10,7 @@ function createFirstObject() {
     }
     document.getElementById("firstpart").innerHTML += first_person.fullName();
 }
+
+function displayFirstCode() {
+    document.getElementById('first_part_code').style.visibility = 'visible';
+}

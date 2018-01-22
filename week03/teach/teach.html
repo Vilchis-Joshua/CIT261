@@ -24,6 +24,22 @@
 
         <p id="firstpart">Person Information: </p>
 
+        <p>
+            If you don't understand how to create the object, press the button below
+        </p>
+        <button onclick="displayFirstCode()">Display</button>
+        <p id="first_part_code">
+            var first_person = {
+                firstName: "Joseph",
+                lastName: "Smith",
+                gender: "male",
+
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+        </p>
+
     </div>
 
     <p>Properties, methods, instantiation</p>
