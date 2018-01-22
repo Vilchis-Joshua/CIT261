@@ -8,5 +8,4 @@ var first_person = {
     }
 }
 
-console.log();
 document.getElementById("firstpart").innerHTML = first_person.fullName();
