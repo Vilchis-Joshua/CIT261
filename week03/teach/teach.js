@@ -8,5 +8,5 @@ var first_person = {
     }
 }
 
-console.log(first_person.fullName());
-document.getElementById('firstpart').innerHTML = first_person.fullName();
+console.log();
+document.getElementById("firstpart").innerHTML = first_person.fullName();
