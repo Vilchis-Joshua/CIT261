@@ -1,4 +1,4 @@
-var first_person = function () {
+var first_person =  {
     firstName: "Joseph";
     lastName: "Smith";
     gender: "male";
