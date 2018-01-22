@@ -4,7 +4,7 @@ var first_person = {
     gender: "male",
 
     fullName: function () {
-        return this.firstName + this.lastName;
+        return this.firstName + " " + this.lastName;
     }
 };
 
