@@ -14,13 +14,13 @@
     <script>
         function numberCount(value) {
             if (value <= 21) {
-                for (var i = 1; i < value; i++) {
+                for (var i = 1; i < value + 1; i++) {
                     document.getElementById('fordisplayNumber').innerHTML += i + ", ";
                 }
 
                 var j = 1;
                 while (j <= value) {
-                    document.getElementById('whileDisplayNumber').innerHTML += i + ", ";
+                    document.getElementById('whileDisplayNumber').innerHTML += j + ", ";
                     j++;
                 }
             } else {
