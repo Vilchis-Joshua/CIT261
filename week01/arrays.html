@@ -6,6 +6,18 @@
 </head>
 <body>
     <h2>Arrays</h2>
+    <p>Arrays are variables which can hold more than one value at a time</p>
+    <button onclick="arrayStuff()">Generate</button>
+    <script>
+        function arrayStuff() {
+            var games = ["Overwatch", "Starcraft II", "Diablo III"];
+            document.getElementById("display").innerHTML = games;
+        }
+    </script>
+    <div>
+        <br /><br />
+        <p id="display"></p>
+    </div>
     <div>
         <a href="week01.html">Week01</a>
     </div>
