@@ -10,8 +10,20 @@
     <button onclick="arrayStuff()">Generate</button>
     <script>
         function arrayStuff() {
-            var games = ["Overwatch", "Starcraft II", "Diablo III"];
-            document.getElementById("display").innerHTML = games;
+            var num = Math.floor(Math.random() * 4)
+            if (num == 1) {
+                var games = ["Overwatch", "Starcraft II", "Diablo III"];
+                document.getElementById("display").innerHTML = games;
+            } else if (num == 2) {
+                var arithmatic = ["additions", "Subtraction", "Multiplication", "Division"];
+                document.getElementById("display").innerHTML = arithmatic;
+            } else if (num == 3) {
+                var gender = ["Male", "Female"];
+                document.getElementById("display").innerHTML = gender;
+            } else {
+                var states = ["Idaho", "Utah", "North Carolina"];
+                document.getElementById("display").innerHTML = states;
+            }
         }
     </script>
     <div>
