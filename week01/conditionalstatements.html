@@ -6,6 +6,22 @@
 </head>
 <body>
     <h2>Conditional Statements</h2>
+    <p>This is for a conditional statement. Input a number 1-7</p>
+    <div>
+        <form action="" id="favorite_number" onsubmit="return false;">
+            Favorite sport guess: <input name="number_input" size="10" value="0" />
+            <button id="sport_button" onclick="confirmSport(document.getElementById('favorite_number').elements.namedItem('number_input').value)">Submit</button>
+        </form>
+    </div>
+    <script>
+        function luckyNumber(value) {
+            if (value == 7) {
+                console.log("That's my lucky number!");
+            } else {
+                console.log("Yeah, I guess that's a cool number too");
+            }
+        }
+    </script>
     <div>
         <a href="week01.html">Week01</a>
     </div>
