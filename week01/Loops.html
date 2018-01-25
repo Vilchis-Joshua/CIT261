@@ -11,6 +11,9 @@
             <button id="sport_button" onclick="numberCount(document.getElementById('number').elements.namedItem('number_input').value)">Submit</button>
         </form>
     </div>
+    <div>
+        <button id="clear" onclick="clearAll()">Clear</button>
+    </div>
     <script>
         function numberCount(value) {
             if (value <= 21) {
@@ -26,6 +29,11 @@
             } else {
                 alert("Please pick a number smaller than or equal to 20");
             }
+        }
+
+        function clearAll() {
+            document.getElementById('fordisplayNumber').innerHTML = "";
+            document.getElementById('whileDisplayNumber').innerHTML = "";
         }
     </script>
     <div>
