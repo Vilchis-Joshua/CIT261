@@ -13,14 +13,15 @@
     </div>
     <script>
         function numberCount(value) {
-            if (value <= 20) {
-                for (var i = 0; i < value; i++) {
+            if (value <= 21) {
+                for (var i = 1; i < value; i++) {
                     document.getElementById('fordisplayNumber').innerHTML = i;
                 }
 
-                while (value != 20) {
-                    document.getElementById('whileDisplayNumber').innerHTML = i;
-                    i++;
+                var j = 1;
+                while (j <= value) {
+                    document.getElementById('whileDisplayNumber').innerHTML = i + ", ";
+                    j++;
                 }
             } else {
                 alert("Please pick a number smaller than or equal to 20");
