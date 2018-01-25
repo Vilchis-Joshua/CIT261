@@ -1,7 +1,7 @@
-<?php
-
-  echo "CS313 Mobile application\n";
-  echo "Hello World!";
-  //phpinfo();
-
-?>
+<DOCTYPE! html>
+<head>
+</head>
+<body>
+	<a href="index.html">Index</a>
+</body>
+</html>
