@@ -2,15 +2,36 @@
 <html>
 <head>
     <title>Week01 - Loops</title>
-    <script src="week01.js"></script>
 </head>
 <body>
     <h2>Loops</h2>
     <div>
         <form action="" id="number" onsubmit="return false;">
-            Number to count to<input name="number_input" size="10" value="0" />
-            <button id="sport_button" onclick="luckyNumber(document.getElementById('number').elements.namedItem('number_input').value)">Submit</button>
+            Number to count to: <input name="number_input" size="10" value="0" />
+            <button id="sport_button" onclick="numberCount(document.getElementById('number').elements.namedItem('number_input').value)">Submit</button>
         </form>
+    </div>
+    <script>
+        function numberCount(value) {
+            if (value <= 20) {
+                for (var i = 0; i < value; i++) {
+                    document.getElementById('fordisplayNumber').innerHTML = i;
+                }
+
+                while (value != 20) {
+                    document.getElementById('whileDisplayNumber').innerHTML = i;
+                    i++;
+                }
+            } else {
+                alert("Please pick a number smaller than or equal to 20");
+            }
+        }
+    </script>
+    <div>
+        <h4>For Loop count</h4>
+        <p id="fordisplayNumber"></p><br />
+        <h4>While loop count</h4>
+        <p id="whileDisplayNumber"></p>
     </div>
     <div>
         <a href="week01.html">Week01</a>

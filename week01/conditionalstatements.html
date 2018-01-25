@@ -2,18 +2,18 @@
 <html>
 <head>
     <title>Week01 - Conditional Statements</title>
-    <script src="week01.js"></script>
 </head>
 <body>
     <h2>Conditional Statements</h2>
     <p>This is for a conditional statement. Input a number 1-7</p>
     <div>
         <form action="" id="favorite_number" onsubmit="return false;">
-            Input a number 1-7<input name="number_input" size="10" value="0" />
+            Input a number 1-7: <input name="number_input" size="10" value="0" />
             <button id="sport_button" onclick="luckyNumber(document.getElementById('favorite_number').elements.namedItem('number_input').value)">Submit</button>
         </form>
     </div>
     <script>
+        //For some reason, it doesn't go through that first value...
         function luckyNumber(value) {
             if (value < 8 || value > 0) {
                 if (value == 7) {
