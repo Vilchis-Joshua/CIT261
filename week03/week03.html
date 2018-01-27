@@ -9,14 +9,26 @@
         <p>
             JSON Parse, Stringify
             Using AJAX to Consume a JSON Web Service
-            AJAX is just 6 lines of code. Whether you are getting a basic text file from your server or getting the location of the International Space Station from NASA. It is pretty easy.
         </p>
     </div>
     <div>
-        <a href="teach/teach.html">Teach</a>
+        <button onclick="toStringify()">Stringify</button>
+        <br />
+        <button onclick="toParse()">Parse</button>
     </div>
     <div>
+        <p id="jsonString" hidden>
+            JSON string:
+            var text = '{ "employees" : [' +
+                '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male" },' +
+                '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female" },' +
+                '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male" } ]}';
+        </p>
+    </div>
+
+    <div>
         <br />
+        <a href="teach/teach.html">Teach (Objects)</a>
         <a href="../index.html">Index</a>
     </div>
 </body>
