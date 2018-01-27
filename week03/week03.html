@@ -10,24 +10,30 @@
     <div>
         <p>
             JSON Parse, Stringify
-            Using AJAX to Consume a JSON Web Service
         </p>
     </div>
     <div>
-        <button onclick="generateString()">Generate string</button>
+        <button onclick="generateString()">Generate JSON string</button>
         <br />
         <button onclick="toParse()">Parse</button>
     </div>
     <div>
+        <br />
         <span class="json">
                 JSON string:
                 var text = '{ "employees" : [' +
-                    '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male" },' +
-                    '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female" },' +
-                    '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male" } ]}';
+                    '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":"22" },' +
+                    '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female" }, "age":"22"' +
+                    '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":"1" } ]}';
         </span>
     </div>
 
+    <div>
+        <p>We will then take this string and parse it into an object.<br />
+        press the parse button above. Below will show what the object looks like after<br />
+        being parsed</p>
+        <div id="displayObject"></div>
+    </div>
     <div>
         <br />
         <a href="teach/teach.html">Teach (Objects)</a>
