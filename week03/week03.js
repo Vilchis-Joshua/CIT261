@@ -1,5 +1,5 @@
-function toStringify() {
-
+function generateString() {
+    document.getElementById("jsonString").style = visible;
 }
 
 
