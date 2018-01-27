@@ -1,5 +1,5 @@
 function generateString() {
-    document.getElementById("jsonString").style = visible;
+    document.getElementById("jsonString").style.visibility = visible;
 }
 
 
