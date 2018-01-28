@@ -1,3 +1,5 @@
+var obj;
+
 function generateString() {
     document.getElementsByClassName("json")[0].style.visibility = 'visible';
 }
@@ -9,7 +11,7 @@ function toParse() {
         '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":66 },' +
         '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
 
-    var obj = JSON.parse(text);
+    obj = JSON.parse(text);
     document.getElementById("displayObject").innerHTML = obj;
 }
 

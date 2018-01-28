@@ -19,7 +19,6 @@
     <div>
         <br />
         <span class="json">
-            <button onclick="toParse()">Parse</button>
             JSON string:<br />
             var text = '{ "employees" : [' +<br />
             '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +<br />
@@ -29,9 +28,12 @@
     </div>
 
     <div>
-        <p>We will then take this string and parse it into an object.<br />
-        press the parse button above. Below will show what the object looks like after<br />
-        being parsed</p>
+        <button onclick="toParse()">Parse</button>
+        <p>
+            We will then take this string and parse it into an object.<br />
+            press the parse button above. Below will show what the object looks like after<br />
+            being parsed
+        </p>
         <div id="displayObject"></div>
         <p>Notice that all we see from the output, is that it is now an object.</p>
     </div>
