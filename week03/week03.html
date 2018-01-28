@@ -53,27 +53,29 @@
         <p id="displayName"></p>
     </div>
 
-    <div>
-        <br /><br />
-        <button onclick="toStringify()">Stringify</button><br />
-        <p>On the other hand, what do you do when you want to convert your information<br />
-        into a JSON string?<br />
-        From the example that we have above, simply take the object that you created from when you parsed it,<br />
-        and then we will go in reverse using the obj.stringify() function.</p>
-        <br />
-        <p>
-            var text = '{ "employees" : [' +
-            '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +
-            '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":66 },' +
-            '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
+    <div id="stringy">
+        <div>
+            <br /><br />
+            <button onclick="toStringify()">Stringify</button><br />
+            <p>On the other hand, what do you do when you want to convert your information<br />
+            into a JSON string?<br />
+            From the example that we have above, simply take the object that you created from when you parsed it,<br />
+            and then we will go in reverse using the obj.stringify() function.</p>
+            <br />
+            <p>
+                var text = '{ "employees" : [' +
+                '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +
+                '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":66 },' +
+                '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
 
-            var obj = JSON.parse(text);<br />
+                var obj = JSON.parse(text);<br />
 
-            We want to take the obj variable and apply it to the stringify() function.
-            var JSONText = JSON.stringify(obj);
-            Press the button above to see what it gives us.
-        </p>
-        <p id="displayString"></p>
+                We want to take the obj variable and apply it to the stringify() function.
+                var JSONText = JSON.stringify(obj);
+                Press the button above to see what it gives us.
+            </p>
+            <p id="displayString"></p>
+        </div>
     </div>
     <div>
         <br />
