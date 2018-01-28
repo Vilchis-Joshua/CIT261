@@ -6,13 +6,15 @@ function generateString() {
 function toParse() {
     var text = '{ "employees" : [' +
         '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +
-        '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":22 },' +
+        '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":66 },' +
         '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
-    //var text = '{ "employees" : [' +
-    //    '{ "firstName":"John" , "lastName":"Doe" },' +
-    //    '{ "firstName":"Anna" , "lastName":"Smith" },' +
-    //    '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
     var obj = JSON.parse(text);
     document.getElementById("displayObject").innerHTML = obj;
+}
+
+function generateName() {
+    var num = Math.floor(Math.random() * 3);
+    document.getElementById("displayName").innerHTML =  obj.employees[num].firstName + " " + obj.employees[num].lastName + " is a "
+        obj.employees[num].gender + " and is " + obj.employees[1].age + " years old." 
 }

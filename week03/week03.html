@@ -15,16 +15,16 @@
     <div>
         <button onclick="generateString()">Generate JSON string</button>
         <br />
-        <button onclick="toParse()">Parse</button>
     </div>
     <div>
         <br />
         <span class="json">
-            JSON string:
-            var text = '{ "employees" : [' +
-            '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":"22" }' +<br />
-            '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":"22" }' +<br />
-            '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":"1" } ]}'
+            <button onclick="toParse()">Parse</button>
+            JSON string:<br />
+            var text = '{ "employees" : [' +<br />
+            '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +<br />
+            '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":22 },' +<br />
+            '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
         </span>
     </div>
 
@@ -33,6 +33,19 @@
         press the parse button above. Below will show what the object looks like after<br />
         being parsed</p>
         <div id="displayObject"></div>
+        <p>Notice that all we see from the output, is that it is now an object.</p>
+    </div>
+    
+    <div>
+        <p>In order to get the information from inside of the object, consider it almost like a class<br />
+         in this instance, we have a JSON string turned prased into an object.<br />
+        Now if we take the object, and access the "properties", we can see what it actually is.</p>
+        <br />
+        <p>Let's take a look at Josh Vilchis. To do this, we simply take our object variable:<br />
+        obj.employees[1].firstName + " " + obj.employees[1].lastName + " is a "<br />
+        obj.employees[1].gender + " and is " + obj.employees[1].age + " years old."<br />
+        Press the button below to see what the output would be.</p>
+        <button onclick="generateName()">Display object info</button>
     </div>
     <div>
         <br />
