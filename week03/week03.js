@@ -24,3 +24,15 @@ function generateName() {
     document.getElementById("displayName").innerHTML =  obj.employees[num].firstName + " " + obj.employees[num].lastName + " is a " +
         obj.employees[num].gender + " and is " + obj.employees[num].age + " years old." 
 }
+
+function toStringify() {
+    var text = '{ "employees" : [' +
+        '{ "firstName":"Josh" , "lastName":"Vilchis", "gender":"male", "age":22 },' +
+        '{ "firstName":"Anna" , "lastName":"Smith", "gender":"female", "age":66 },' +
+        '{ "firstName":"Peter" , "lastName":"Jones", "gender":"male", "age":1 } ]}';
+
+    var obj = JSON.parse(text);
+
+    var text = JSON.stringify(obj);
+    document.getElementById("displayString").innerHTML = text;
+}
