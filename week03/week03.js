@@ -21,6 +21,6 @@ function generateName() {
 
     var obj = JSON.parse(text);
     var num = Math.floor(Math.random() * 3);
-    document.getElementById("displayName").innerHTML =  obj.employees[num].firstName + " " + obj.employees[num].lastName + " is a "
+    document.getElementById("displayName").innerHTML =  obj.employees[num].firstName + " " + obj.employees[num].lastName + " is a " +
         obj.employees[num].gender + " and is " + obj.employees[num].age + " years old." 
 }
