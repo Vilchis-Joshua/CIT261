@@ -1,5 +1,5 @@
 .index_references {
-    flex-direction: column;
+    display: flex;
     flex-flow:column;
-    justify-content: center;
-}
+    align-content: center;
+]}
