@@ -1,5 +1,5 @@
 function localPractice() {
     var x = document.getElementsByName("exampleInput").value;
-    console.log("example:", x);
-    localStorage.setItem();
+    console.log(x);
+    localStorage.setItem("example:", x);
 }
