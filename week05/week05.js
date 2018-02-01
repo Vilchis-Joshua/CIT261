@@ -4,5 +4,5 @@ function localPractice() {
 }
 
 function revealInfo() {
-    var y = localStorage.getItem("example:");
+    document.getElementById("displayInfo").value = localStorage.getItem("example:");
 }
