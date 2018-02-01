@@ -5,4 +5,8 @@ function localPractice() {
 
 function revealInfo() {
     document.getElementById("displayInfo").value = localStorage.getItem("example:");
+} 
+
+function clear() {
+    localStorage.clear();
 }
