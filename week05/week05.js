@@ -4,7 +4,7 @@ function localPractice() {
 }
 
 function revealInfo() {
-    document.getElementById("displayInfo").value = localStorage.getItem("example:");
+    document.getElementById("displayInfo").innerHTML = localStorage.getItem("example:");
     console.log(document.getElementById("displayInfo").value);
 } 
 
