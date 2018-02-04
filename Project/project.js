@@ -12,6 +12,7 @@ function loadDoc() {
 
 function setup() {
     createCanvas(600, 600);
+    fill(255);
 }
 
 function draw() {
