@@ -15,7 +15,8 @@ function Snake() {
         rect(this.x, this.y, 10, 10);
     }
 
-    this.direction(x, y) {
-    
+    this.direction = function (x, y) {
+        this.xspeed = x;
+        this.yspeed = y;
     }
 }
