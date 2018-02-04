@@ -20,7 +20,9 @@ function setup() {
     snake = new Snake();
     food = new Food();
     direction = pickLocation();
-    direction.mult(scl);
+    direction.x.mult(scl);
+    direction.y.mult(scl);
+
     food.make(direction.x, direction.y);
     console.log(direction.x, direction.y);
 }
@@ -35,7 +37,6 @@ function draw() {
     background(51);
     snake.update();
     snake.show();
-
     food.show();
 }
 
