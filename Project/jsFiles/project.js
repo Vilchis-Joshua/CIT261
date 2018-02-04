@@ -1,4 +1,5 @@
 var snake;
+var scl = 20;
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -15,12 +16,15 @@ function loadDoc() {
 function setup() {
     createCanvas(600, 600);
     snake = new Snake();
+    food = new Food();
 }
 
 function draw() {
     background(51);
     snake.update();
     snake.show();
+
+    food.show();
 }
 
 function keyPressed() {
