@@ -21,6 +21,7 @@ function setup() {
     food = new Food();
     direction = pickLocation();
     food.make(direction.x, direction.y);
+    console.log(direction.x, direction.y);
 }
 
 function pickLocation() {
