@@ -8,12 +8,12 @@ function makeHidden() {
 }
 
 function changeColor() {
-    document.getElementById("box").style.backgroundColor = green;
+    document.getElementById("box").style.backgroundColor = 'green';
 
 }
 
 function changeBackgroundColor() {
-    document.getElementById("box").style.backgroundColor = blue;
+    document.getElementById("box").style.backgroundColor = 'blue';
 
 }
 
