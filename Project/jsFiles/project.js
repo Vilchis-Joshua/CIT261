@@ -14,7 +14,7 @@ function loadDoc() {
 
 function setup() {
     createCanvas(600, 600);
-    s = new Snake();
+    snake = new Snake();
 }
 
 function draw() {
