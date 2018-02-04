@@ -23,10 +23,10 @@ function makeVisible() {
 }
 
 function leftToRight() {
-    document.getElementById("box").style.visibility = 'visible';
+    document.getElementById("box").style.direction = 'rtl';
 
 }
 
 function rightToLeft() {
-    document.getElementById("box").style.visibility = 'visible';
+    document.getElementById("box").style.direction = 'ltr';
 }
