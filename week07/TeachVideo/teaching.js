@@ -8,7 +8,12 @@ function makeHidden() {
 }
 
 function changeColor() {
-    document.getElementById("box").style.backgroundColor = rgb(0, 255, 255);
+    document.getElementById("box").style.backgroundColor = green;
+
+}
+
+function changeBackgroundColor() {
+    document.getElementById("box").style.backgroundColor = blue;
 
 }
 
