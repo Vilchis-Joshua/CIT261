@@ -20,6 +20,7 @@ function setup() {
     snake = new Snake();
     food = new Food();
     direction = pickLocation();
+    direction.mult(scl);
     food.make(direction.x, direction.y);
     console.log(direction.x, direction.y);
 }
