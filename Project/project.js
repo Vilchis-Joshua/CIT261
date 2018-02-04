@@ -1,3 +1,5 @@
+var s;
+
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -12,10 +14,13 @@ function loadDoc() {
 
 function setup() {
     createCanvas(600, 600);
+    s = new Snake();
 }
 
 function draw() {
     background(51);
+    s.update();
+    s.show();
 }
 
 function Snake() {
