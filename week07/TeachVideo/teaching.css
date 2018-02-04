@@ -1,4 +1,4 @@
-#appear {
+#appear #textColor #backgroundColor #textDirection {
     display: flex;
     align-items: center;
 }

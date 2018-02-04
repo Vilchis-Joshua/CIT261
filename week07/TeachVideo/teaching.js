@@ -7,10 +7,30 @@ function makeHidden() {
 
 }
 
-function changeColor() {
-    document.getElementById("box").style.backgroundColor = 'green';
-
+function changeTextColorGreen() {
+    document.getElementById("box").style.color = 'green';
 }
+
+function changeTextColorBlue() {
+    document.getElementById("box").style.color = 'blue';
+}
+
+function changeTextColorRed() {
+    document.getElementById("box").style.color = 'red';
+}
+
+function changeBackgroundColorGreen() {
+    document.getElementById("box").style.backgroundColor = 'green';
+}
+
+function changeBackgroundColorBlue() {
+    document.getElementById("box").style.backgroundColor = 'blue';
+}
+
+function changeBackgroundColorRed() {
+    document.getElementById("box").style.backgroundColor = 'red';
+}
+
 
 function changeBackgroundColor() {
     document.getElementById("box").style.backgroundColor = 'blue';
