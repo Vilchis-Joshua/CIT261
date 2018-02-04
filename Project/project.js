@@ -8,3 +8,12 @@ function loadDoc() {
     xhttp.open("GET", "MalwareResearch.txt", true);
     xhttp.send();
 }
+
+
+function setup() {
+    createCanvas(600, 600);
+}
+
+function draw() {
+
+}
