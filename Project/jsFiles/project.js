@@ -1,5 +1,6 @@
 var snake;
 var scl = 20;
+var food;
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -15,8 +16,17 @@ function loadDoc() {
 
 function setup() {
     createCanvas(600, 600);
+    frameRate(10);
     snake = new Snake();
     food = new Food();
+    direction = pickLocation();
+    food.make(direction.x, direction.y);
+}
+
+function pickLocation() {
+    var cols = floor(width / scl);
+    var rows = floor(height / scl);
+    return createVector(floor(random(cols), floor(random(rows))));
 }
 
 function draw() {
