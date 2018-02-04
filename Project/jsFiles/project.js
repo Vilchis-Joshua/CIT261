@@ -20,7 +20,6 @@ function setup() {
     snake = new Snake();
     food = new Food();
     direction = pickLocation();
-    direction.mult(scl);
 
     food.make(direction.x, direction.y);
     console.log(direction.x, direction.y);
@@ -29,7 +28,10 @@ function setup() {
 function pickLocation() {
     var cols = floor(width / scl);
     var rows = floor(height / scl);
-    return createVector(floor(random(cols), floor(random(rows))));
+    direction = createVector(floor(random(cols), floor(random(rows))));
+    direction.mult(scl);
+
+    return direction;
 }
 
 function draw() {
