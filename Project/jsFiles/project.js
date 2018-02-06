@@ -35,10 +35,8 @@ function draw() {
 
     if (snake.eat(food.pos)) {
         food.pickLocation();
-        console.log("Works");
-    } else {
-        console.log("not working");
-    }
+    } 
+    console.log("Snake total: " + snake.total);
 }
 
 
