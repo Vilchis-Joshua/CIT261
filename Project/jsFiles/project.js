@@ -22,7 +22,6 @@ function setup() {
     food = new Food();
 
     //food.make(direction.x, direction.y);
-    console.log(direction.x, direction.y);
 }
 
 function draw() {
