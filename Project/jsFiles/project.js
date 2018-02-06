@@ -21,7 +21,7 @@ function setup() {
     snake = new Snake();
     food = new Food();
 
-    food.make(direction.x, direction.y);
+    //food.make(direction.x, direction.y);
     console.log(direction.x, direction.y);
 }
 
