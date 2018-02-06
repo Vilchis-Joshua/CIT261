@@ -16,6 +16,10 @@ function loadDoc() {
 }
 
 
+
+
+//Game play================================================================================
+
 function setup() {
     createCanvas(600, 600);
     frameRate(10);
@@ -51,5 +55,8 @@ function keyPressed() {
         snake.direction(-1, 0);
     }
 }
+
+
+
 
 

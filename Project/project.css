@@ -1,5 +1,5 @@
 .menu {
     display: flex;
     flex-direction: column;
-    align-content: flex-end;
+    align-items: flex-end;
 }
