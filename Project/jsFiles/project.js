@@ -35,15 +35,11 @@ function draw() {
 
     if (snake.eat(food.pos)) {
         food.pickLocation();
+        console.log("Works");
+    } else {
+        console.log("not working");
     }
 }
-
-//function pickLocation() {
-//    var cols = floor(width / scl);
-//    var rows = floor(height / scl);
-//    food.direction = createVector(floor(random(cols), floor(random(rows))));
-//    food.direction.mult(scl);
-//}
 
 
 function keyPressed() {
