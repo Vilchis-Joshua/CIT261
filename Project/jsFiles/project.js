@@ -19,4 +19,5 @@ function turnIntoString() {
 
 function displayStats() {
     var snakeObject = JSON.parse(obj);
+    console.log("length: " + snakeObject.total);
 }
