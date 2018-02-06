@@ -3,6 +3,7 @@ function Snake() {
     this.y = 0;
     this.xspeed = 1;
     this.yspeed = 0;
+    this.direction;
 
 
     this.update = function () {

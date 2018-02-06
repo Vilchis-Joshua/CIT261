@@ -35,10 +35,8 @@ function draw() {
 function pickLocation() {
     var cols = floor(width / scl);
     var rows = floor(height / scl);
-    direction = createVector(floor(random(cols), floor(random(rows))));
-    direction.mult(scl);
-
-    return direction;
+    food.direction = createVector(floor(random(cols), floor(random(rows))));
+    food.direction.mult(scl);
 }
 
 
