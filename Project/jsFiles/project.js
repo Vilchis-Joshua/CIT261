@@ -20,8 +20,7 @@ function setup() {
 
     snake = new Snake();
     food = new Food();
-
-    //food.make(direction.x, direction.y);
+    pickLocation();
 }
 
 function draw() {
@@ -30,6 +29,9 @@ function draw() {
     snake.show();
     food.show();
     food.update();
+    if (snake.eat(food)) {
+        pickLocation();
+    }
 }
 
 function pickLocation() {

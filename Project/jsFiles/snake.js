@@ -25,7 +25,12 @@ function Snake() {
     }
 
     this.eat = function (pos) {
-
+        var d = dist(this.x, this.y, pos.x, pos.y);
+        if (d < 2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     this.destroy = function () {
