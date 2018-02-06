@@ -4,6 +4,7 @@ function Food() {
     this.pos = createVector(floor(random(width / scl), floor(random(height / scl))));
 
     this.show = function () {
+        this.pos.mult(scl);
         fill(255, 0, 100);
         rect(this.pos.x, this.pos.y, scl, scl);
     }
