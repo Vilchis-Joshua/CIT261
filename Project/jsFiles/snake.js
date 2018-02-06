@@ -49,7 +49,7 @@ function Snake() {
     this.die = function () {
         for (var i = 0; i < this.tail.length; i++) {
             var pos = this.tail[i];
-            var d = dist(this.x, this.y.pos.x, pos.y);
+            var d = dist(this.x, this.y.pos.x, this.pos.y);
             if (d < 2) {
                 this.total = 0;
                 this.tail = [];
