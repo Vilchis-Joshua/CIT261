@@ -1,19 +1,25 @@
 function Food() {
     this.x = 0;
     this.y = 0;
+    this.pos = createVector(floor(random(width / scl), floor(random(height / scl))));
 
     this.update = function () {
 
     }
 
     this.show = function () {
-
         fill(255, 0, 100);
-        rect(this.x, this.y, scl, scl);
+        rect(this.pos.x, this.pos.y, scl, scl);
     }
 
-    this.make = function (x, y) {
-        this.x = x;
-        this.y = y;
+    this.initialPos() {
+    
+    }
+
+    this.pickLocation() {
+        var cols = floor(width / scl);
+        var rows = floor(height / scl);
+        this.pos = createVector(floor(random(cols), floor(random(rows))));
+        this.pos.mult(scl);
     }
 }

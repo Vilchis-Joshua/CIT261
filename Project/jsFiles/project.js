@@ -1,6 +1,8 @@
 var snake;
 var food;
 var scl = 20;
+var dir;
+var f;
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -20,7 +22,7 @@ function setup() {
 
     snake = new Snake();
     food = new Food();
-    pickLocation();
+    food.initialPos();
 }
 
 function draw() {
@@ -31,7 +33,7 @@ function draw() {
     food.show();
     food.update();
     if (snake.eat(food)) {
-        pickLocation();
+        food.pickLocation();
     }
 }
 
