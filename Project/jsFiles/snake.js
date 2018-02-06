@@ -12,8 +12,8 @@ function Snake() {
             for (var i = 0; i < this.tail.length - 1; i++) {
                 this.tail[i] = this.tail[i + 1];
             }
-            this.tail[this.total - 1] = createVector(this.x, this.y);
         }
+        this.tail[this.total - 1] = createVector(this.x, this.y);
 
         this.x = this.x + this.xspeed * scl;
         this.y = this.y + this.yspeed * scl;
