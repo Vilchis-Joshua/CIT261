@@ -29,7 +29,6 @@ function draw() {
     snake.show();
     snake.update();
 
-    food.update();
     food.show();
 
     if (snake.eat(food.pos)) {
