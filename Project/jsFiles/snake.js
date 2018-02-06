@@ -38,7 +38,7 @@ function Snake() {
     this.eat = function (pos) {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 2) {
-            total++;
+            this.total++;
             return true;
         } else {
             return false;
