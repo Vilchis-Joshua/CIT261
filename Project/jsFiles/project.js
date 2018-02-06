@@ -28,7 +28,7 @@ function setup() {
 function draw() {
     background(51);
 
-    snake.death();
+    snake.die();
     snake.update();
     snake.show();
 
