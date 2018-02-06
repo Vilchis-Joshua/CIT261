@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project",
-    "\\Project\\jsFiles"
+    "\\Project\\jsFiles",
+    "\\week07",
+    "\\week07\\TeachVideo"
   ],
-  "SelectedNode": "\\composer.lock",
+  "SelectedNode": "\\week07\\TeachVideo\\teaching.js",
   "PreviewInSolutionExplorer": false
 }
