@@ -13,6 +13,7 @@ function loadDoc() {
 
 function turnIntoString() {
     obj = JSON.stringify(snake);
+    localStorage.setItem("Snake", obj);
 }
 
 
