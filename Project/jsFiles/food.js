@@ -1,6 +1,6 @@
 function Food() {
-    this.x = random(width);
-    this.y = random(height);
+    this.x = 0;
+    this.y = 0;
 
     this.update = function () {
 

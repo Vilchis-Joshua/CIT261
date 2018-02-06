@@ -23,6 +23,10 @@ function Snake() {
         this.yspeed = y;
     }
 
+    this.eat = function (pos) {
+
+    }
+
     this.destroy = function () {
 
     }

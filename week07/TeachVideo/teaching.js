@@ -3,8 +3,7 @@ function makeVisible() {
 }
 
 function makeHidden() {
-    document.getElementById("box").style.visibility = 'hidden';
-
+    document.getElementById("box").style.visibility = "hidden";
 }
 
 function changeTextColorGreen() {

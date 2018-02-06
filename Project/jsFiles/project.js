@@ -1,6 +1,6 @@
 var snake;
-var scl = 20;
 var food;
+var scl = 20;
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -17,12 +17,20 @@ function loadDoc() {
 function setup() {
     createCanvas(600, 600);
     frameRate(10);
+
     snake = new Snake();
     food = new Food();
-    direction = pickLocation();
 
     food.make(direction.x, direction.y);
     console.log(direction.x, direction.y);
+}
+
+function draw() {
+    background(51);
+    snake.update();
+    snake.show();
+    food.show();
+    food.update();
 }
 
 function pickLocation() {
@@ -34,12 +42,6 @@ function pickLocation() {
     return direction;
 }
 
-function draw() {
-    background(51);
-    snake.update();
-    snake.show();
-    food.show();
-}
 
 function keyPressed() {
     if (keyCode === UP_ARROW) {
