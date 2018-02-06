@@ -1,3 +1,5 @@
+var obj;
+
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -10,6 +12,10 @@ function loadDoc() {
 }
 
 function turnIntoString() {
-    var obj = JSON.stringify(snake);
-    console.log(obj);
+    obj = JSON.stringify(snake);
+}
+
+
+function displayStats() {
+    var snakeObject = JSON.parse(obj);
 }
