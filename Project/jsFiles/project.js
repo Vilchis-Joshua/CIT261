@@ -25,8 +25,9 @@ function setup() {
 
 function draw() {
     background(51);
-    snake.update();
     snake.show();
+    snake.update();
+
     food.show();
     food.update();
     if (snake.eat(food)) {
