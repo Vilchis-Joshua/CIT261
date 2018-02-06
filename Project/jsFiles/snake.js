@@ -24,6 +24,7 @@ function Snake() {
 
     this.show = function () {
         for (var i = 0; i < this.tail.length; i++) {
+            console.log("total i: " + i);
             rect(this.tail[i].x, this.tail[i].y, scl, scl);
         }
         fill(255);
