@@ -22,7 +22,6 @@ function setup() {
 
     snake = new Snake();
     food = new Food();
-    food.initialPos();
 }
 
 function draw() {
@@ -30,19 +29,20 @@ function draw() {
     snake.show();
     snake.update();
 
-    food.show();
     food.update();
-    if (snake.eat(food)) {
+    food.show();
+
+    if (snake.eat(food.pos)) {
         food.pickLocation();
     }
 }
 
-function pickLocation() {
-    var cols = floor(width / scl);
-    var rows = floor(height / scl);
-    food.direction = createVector(floor(random(cols), floor(random(rows))));
-    food.direction.mult(scl);
-}
+//function pickLocation() {
+//    var cols = floor(width / scl);
+//    var rows = floor(height / scl);
+//    food.direction = createVector(floor(random(cols), floor(random(rows))));
+//    food.direction.mult(scl);
+//}
 
 
 function keyPressed() {
