@@ -22,6 +22,7 @@ function setup() {
 
     snake = new Snake();
     food = new Food();
+    food.pickLocation();
 }
 
 function draw() {
