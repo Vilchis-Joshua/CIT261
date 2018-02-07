@@ -10,8 +10,6 @@ function revealInfo() {
         items.push(localStorage.key(i));
     }
 
-
-    if (document.getElementById("displayInfo").innerHTML === NULL)
     if (localStorage.length != 0) {
         for (var i = 0; i < localStorage.length; i++) {
             document.getElementById("displayInfo").innerHTML += i + ") " + localStorage.getItem(items[i]) + "<br />";
