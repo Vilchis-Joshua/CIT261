@@ -8,7 +8,7 @@ function createButton() {
 
     btn.appendChild(text);
 
-    document.body.appendChild(button);
+    document.body.appendChild(btn);
 }
 
 function createDiv() {
