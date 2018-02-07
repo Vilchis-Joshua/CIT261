@@ -1,12 +1,12 @@
 function createButton() {
     //Create button elements
-    var button = document.createElement("BUTTON");
+    var btn = document.createElement("BUTTON");
 
     //create text
     var t = document.getElementById("name").value;
-    var text = document.createTextNode(name);
+    var text = document.createTextNode(t);
 
-    button.appendChild(text);
+    btn.appendChild(text);
 
     document.body.appendChild(button);
 }
