@@ -13,28 +13,28 @@ function createButton() {
 
 function createDiv() {
     //Create div elements
-    var btn = document.createElement("DIV");
+    var d = document.createElement("DIV");
 
     //create text
     var t = document.getElementById("name").value;
     var text = document.createTextNode(t);
 
-    btn.appendChild(text);
+    d.appendChild(text);
 
-    document.body.appendChild(btn);
+    document.body.appendChild(d);
 }
 
 function createH2() {
     //Create h2 elements
-    var btn = document.createElement("H2");
+    var h = document.createElement("H2");
 
     //create text
     var t = document.getElementById("name").value;
     var text = document.createTextNode(t);
 
-    btn.appendChild(text);
+    h.appendChild(text);
 
-    document.body.appendChild(btn);
+    document.body.appendChild(h);
 }
 
 
