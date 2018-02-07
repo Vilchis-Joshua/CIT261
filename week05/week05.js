@@ -1,6 +1,7 @@
 function localPractice() {
-    var y = document.getElementById("exampleInput").value;
-    localStorage.setItem("example:", y);
+    var text = document.getElementById("exampleInput").value;
+    var key = document.getElementById("exampleKey").value;
+    localStorage.setItem(key, text);
 }
 
 function revealInfo() {
