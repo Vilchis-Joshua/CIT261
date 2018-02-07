@@ -4,7 +4,7 @@ function createButton() {
 
     //create text
     var t = document.getElementById("name").value;
-    var text = document.createTextNode(t);
+    var text = document.createTextNode("t");
 
     btn.appendChild(text);
 
