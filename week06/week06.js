@@ -1,6 +1,6 @@
 function createButton() {
     //Create button elements
-    var button = document.createElement("button");
+    var button = document.createElement("BUTTON");
 
     //create text
     var t = document.getElementById("name").value;
