@@ -12,7 +12,7 @@ function revealInfo() {
 
     if (localStorage.length != 0) {
         for (var i = 0; i < localStorage.length; i++) {
-            document.getElementById("displayInfo").innerHTML += i + ") " + localStorage.getItem(items[i]) + "<br />";
+            document.getElementById("displayInfo").innerHTML += (i + 1) + ") " + localStorage.getItem(items[i]) + "<br />";
         }
     }
     else {
@@ -20,6 +20,6 @@ function revealInfo() {
     }
 } 
 
-function clear() {
+function clearLStorage() {
     localStorage.clear();
 }
