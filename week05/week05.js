@@ -14,7 +14,7 @@ function revealInfo() {
     }
 
     for (var i = 0; i < localStorage.length; i++) {
-        document.getElementById("displayInfo").value += localStorage.getItem(items[i]) + "<br />; 
+        document.getElementById("displayInfo").value += localStorage.getItem(items[i]) + "<br />";
     }
 } 
 
