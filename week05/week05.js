@@ -3,6 +3,9 @@ function localPractice() {
     var key = document.getElementById("exampleKey").value;
     localStorage.setItem(key, text);
     console.log("key: " + key + " " + "text: " + text);
+    for (var i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.key(i));
+    }
 }
 
 function revealInfo() {
