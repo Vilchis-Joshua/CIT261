@@ -3,6 +3,12 @@ function createButton() {
     var button = document.createElement("button");
 
     //create text
+    var t = document.getElementById("name").value;
+    var text = document.createTextNode(name);
+
+    button.appendChild(text);
+
+    document.body.appendChild(button);
 }
 
 function createDiv() {
