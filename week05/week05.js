@@ -7,12 +7,11 @@ function localPractice() {
 function revealInfo() {
     var items = new Array();
     for (var i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.key(i));
         items.push(localStorage.key(i));
     }
 
     for (var i = 0; i < localStorage.length; i++) {
-        document.getElementById("displayInfo").value += localStorage.getItem(items[i]) + "<br />";
+        document.getElementById("displayInfo").innerHTML += localStorage.getItem(items[i]) + "<br />";
     }
 } 
 
