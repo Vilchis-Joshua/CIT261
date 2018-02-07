@@ -3,13 +3,19 @@ function localPractice() {
     var key = document.getElementById("exampleKey").value;
     localStorage.setItem(key, text);
     console.log("key: " + key + " " + "text: " + text);
-    for (var i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.key(i));
-    }
+
 }
 
 function revealInfo() {
-    document.getElementById("displayInfo").value = localStorage.getItem("example:");
+    var items = new Array();
+    for (var i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.key(i));
+        items.push(localStorage.key(i));
+    }
+
+    for (var i = 0; i < localStorage.length; i++) {
+        document.getElementById("displayInfo").value += localStorage.getItem(items[i]) + "<br />; 
+    }
 } 
 
 function clear() {
