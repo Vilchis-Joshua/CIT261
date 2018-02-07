@@ -10,8 +10,13 @@ function revealInfo() {
         items.push(localStorage.key(i));
     }
 
-    for (var i = 0; i < localStorage.length; i++) {
-        document.getElementById("displayInfo").innerHTML += localStorage.getItem(items[i]) + "<br />";
+    if (localStorage.length != 0) {
+        for (var i = 0; i < localStorage.length; i++) {
+            document.getElementById("displayInfo").innerHTML += i + ") " + localStorage.getItem(items[i]) + "<br />";
+        }
+    }
+    else {
+        document.getElementById("displayInfo").value = "You have nothing in local storage";
     }
 } 
 
