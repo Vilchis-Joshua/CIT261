@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\week05",
+    "\\week06"
   ],
-  "SelectedNode": "\\composer.lock",
+  "SelectedNode": "\\week05\\week05.html",
   "PreviewInSolutionExplorer": false
 }

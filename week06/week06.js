@@ -9,7 +9,6 @@ function createButton() {
     var name = document.getElementById("getName").value;
 
     btn.appendChild(text);
-    btn.appendChild.getElementById.appendChild(name);
     document.body.appendChild(btn);
 }
 
