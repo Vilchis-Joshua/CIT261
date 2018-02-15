@@ -3,17 +3,18 @@ function Food(ctx) {
     this.y = 0;
     this.pos = [this.x, this.y];
     this.ctx = ctx;
+    this.ctx.fillStyle = "red";
 
     this.show = function () {
         console.log("x: " + this.pos[0] + " y: " + this.pos[1]);
         this.ctx.rect(this.pos[0], this.pos[1], scl, scl);
-        this.ctx.fillStyle("red");
+        this.ctx.fillStyle = "red";
         this.ctx.fill();
     }
 
     this.pickLocation = function () {
         var cols = Math.floor(c.width / scl);
-        var rows = Math.floor(-c.height / scl);
+        var rows = Math.floor(c.height / scl);
         this.pos[0] = Math.floor((Math.random() * canvasWidth) / scl);
         this.pos[1] = Math.floor((Math.random() * canvasHeight) / scl);
         //this.mat.multiply(this.pos[0]);
