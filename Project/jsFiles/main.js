@@ -1,7 +1,9 @@
 var c = document.getElementById('canvas');
-var ctx = new cs312Context(c, ctx);
+var ctx = new cs312Context(c);
+
 var canvasWidth = c.width;
 var canvasHeight = c.height;
+
 var scl = 10;
 document.onkeydown = checkKey;
 
@@ -11,8 +13,8 @@ var snake;
 var food;
 
 function loop() {
-    //ctx.fillStyle = "#000000";
-    //ctx.fill(0, 0, gameBoardWid, gameBoardHei);
+    ctx.fillStyle = "#000000";
+    ctx.fill(0, 0, canvasWidth, canvasHeight);
 
     // Snake stuff
     snake.die();
@@ -28,11 +30,11 @@ function loop() {
 
 
 function main() {
-    ctx.translate(canvasWidth / 2, canvasHeight / 2);
     snake = new Snake(ctx);
-    food = new Food(ctx);
-    setInterval(loop, 1000 / 30);
+    food = new Food(ctx); \
+    ctx.translate(canvasWidth / 2, canvasHeight / 2);
     food.pickLocation();
+    setInterval(loop, 1000 / 30);
 }
 
 
