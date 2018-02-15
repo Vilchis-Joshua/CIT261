@@ -1,7 +1,7 @@
 function Food(ctx) {
     this.x = 0;
     this.y = 0;
-    this.pos = [this.x, this.y]
+    this.pos = [this.x, this.y];
     this.ctx = ctx;
 
     this.show = function () {
