@@ -7,7 +7,7 @@ var canvasHeight = c.height;
 var scl = 10;
 document.onkeydown = checkKey;
 
-var gameBoardWid = -canvasWidth / 2;
+var gameBoardWid = canvasWidth / 2;
 var gameBoardHei = canvasHeight / 2;
 var snake;
 var food;
