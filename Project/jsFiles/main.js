@@ -12,7 +12,7 @@ var food;
 
 function loop() {
     ctx.fillStyle = "#00000";
-    ctx.fill(0, 0, canvasWidth, canvasHeight);
+    ctx.fill(0, 0, gameBoardWid, gameBoardHei);
 
 
     // Snake stuff
