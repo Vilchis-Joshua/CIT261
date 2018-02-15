@@ -31,7 +31,7 @@ function loop() {
 
 function main() {
     snake = new Snake(ctx);
-    food = new Food(ctx); \
+    food = new Food(ctx); 
     ctx.translate(canvasWidth / 2, canvasHeight / 2);
     food.pickLocation();
     setInterval(loop, 1000 / 30);
