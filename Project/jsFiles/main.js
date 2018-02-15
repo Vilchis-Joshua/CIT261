@@ -35,6 +35,12 @@ function main() {
     ctx.translate(canvasWidth / 2, canvasHeight / 2);
     food.pickLocation();
     setInterval(loop, 1000 / 30);
+
+    console.log('canvasWidth = ' + canvasWidth);
+    console.log('canvasHeight = ' + canvasHeight);
+
+    console.log('gameBoardMin = ' + gameBoardMin);
+    console.log('gameBoardMax = ' + gameBoardMax);
 }
 
 
