@@ -1,9 +1,88 @@
+/* The animation code */
+@keyframes part1 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+/* The animation code */
+@keyframes part2 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
 #animationFun {
     width: 100px;
     height: 100px;
     position: relative;
     background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
+    animation-name: part1;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
 }
+
+
+#animationFun2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: green;
+    animation-name: part2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2, start)
+}
+
