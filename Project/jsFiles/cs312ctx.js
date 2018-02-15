@@ -39,7 +39,6 @@ cs312Context.prototype = {
 
   rect: function (x, y, width, height) {
       return this.ctx.rect(x, y, width, height);
-
   },
 
   // ********************
@@ -145,4 +144,8 @@ cs312Context.prototype = {
     this.ctx.fillRect(l, t, w, h);
   },
 
+
+  color: function (color) {
+      this.ctx.fillStyle = color;
+  }
 };
