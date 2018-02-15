@@ -16,7 +16,7 @@ function Food(ctx) {
         var cols = Math.floor(c.width / scl);
         var rows = Math.floor(c.height / scl);
         this.pos[0] = Math.floor((Math.random() * canvasWidth) / -scl);
-        this.pos[1] = Math.floor((Math.random() * canvasHeight) / -scl);
+        this.pos[1] = Math.floor((Math.random() * canvasHeight) / scl);
         //this.mat.multiply(this.pos[0]);
     }
 }
