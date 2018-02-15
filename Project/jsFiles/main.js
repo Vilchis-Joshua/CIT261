@@ -39,8 +39,8 @@ function main() {
     console.log('canvasWidth = ' + canvasWidth);
     console.log('canvasHeight = ' + canvasHeight);
 
-    console.log('gameBoardMin = ' + gameBoardMin);
-    console.log('gameBoardMax = ' + gameBoardMax);
+    console.log('gameBoardMin = ' + gameBoardWid);
+    console.log('gameBoardMax = ' + gameBoardHei);
 }
 
 
