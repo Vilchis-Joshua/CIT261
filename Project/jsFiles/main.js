@@ -12,8 +12,7 @@ var food;
 
 function loop() {
     ctx.fillStyle = "#000000";
-    ctx.fill(0, 0, gameBoardWid, gameBoardHei);
-    console.log("working");
+    //ctx.fill(0, 0, gameBoardWid, gameBoardHei);
 
     // Snake stuff
     snake.die();
