@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Pong",
+    "\\Pong\\jsFiles",
     "\\Project",
-    "\\Project\\jsFiles",
-    "\\week07\\TeachVideo"
+    "\\Project\\jsFiles"
   ],
-  "SelectedNode": "\\Project\\jsFiles\\food2.js",
+  "SelectedNode": "\\Pong\\jsFiles\\main.js",
   "PreviewInSolutionExplorer": false
 }

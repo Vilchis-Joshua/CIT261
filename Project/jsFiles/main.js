@@ -1,11 +1,10 @@
 var c = document.getElementById('canvas');
-var ctx = new cs312Context(c);
+var ctx = c.getContext('2d');
 
 var canvasWidth = c.width;
 var canvasHeight = c.height;
 
 var scl = 10;
-document.onkeydown = checkKey;
 
 var gameBoardWid = -canvasWidth / 2;
 var gameBoardHei = canvasHeight / 2;
