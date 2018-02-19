@@ -63,6 +63,38 @@
         top: 0px;
     }
 }
+/* The animation code */
+@keyframes part3 {
+    0% {
+        background-color: red;
+        transform: rotate(0deg);
+        left: 0%;
+    }
+
+    25% {
+        background-color: yellow;
+        transform: rotate(25deg);
+        left: 25%;
+    }
+
+    50% {
+        background-color: blue;
+        transform: rotate(50deg);
+        left: 50%;
+    }
+
+    75% {
+        background-color: green;
+        transform: rotate(75deg);
+        left: 75%;
+    }
+
+    100% {
+        background-color: red;
+        transform: rotate(100deg);
+        left: 100%;
+    }
+}
 
 #animationFun {
     width: 100px;
@@ -81,6 +113,18 @@
     position: relative;
     background-color: green;
     animation-name: part2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2, start)
+}
+
+
+#rotate {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: green;
+    animation-name: part3;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(2, start)
