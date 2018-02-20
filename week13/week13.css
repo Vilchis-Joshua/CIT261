@@ -120,12 +120,15 @@
 
 
 #rotate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
     height: 100px;
     position: relative;
     background-color: green;
     animation-name: part3;
-    animation-duration: 4s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 
