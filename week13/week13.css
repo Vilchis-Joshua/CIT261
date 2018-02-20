@@ -127,6 +127,5 @@
     animation-name: part3;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(2, start)
 }
 
