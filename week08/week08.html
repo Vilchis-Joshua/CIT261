@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Week08 - CSS3 Transitions and Animations</title>
+    <link rel="stylesheet" type="text/css" href="week08.css" />
+    <script src="week08.js"></script>
 </head>
 <body>
     <h2>CSS3 Transitions and Animations</h2>
@@ -9,6 +11,83 @@
         <p>
             CSS3 Transitions and Animations and triggering them with JavaScript
         </p>
+    </div>
+
+
+    <div>
+        <p>
+            Animations and transitions in CSS3 can be triggered via CSS3, or with javascript. The snytax is similar to what we have done before<br />
+            but with the exception of needing to include the '' symbols. Below, there is a box.
+        </p>
+    </div>
+
+    <div id="box"></div>
+
+    <div>
+        <p>
+            Normally, one would use the syntax as stated in the w3schools that talks about doing things with transitions and animations<br />
+            that syntax looks like this in the .css file.
+        </p>
+        <p class="code">
+            .box {<br />
+            &emsp;&emsp;width: 100px;<br />
+            &emsp;&emsp;height: 100px;<br />
+            &emsp;&emsp;position: relative;<br />
+            &emsp;&emsp;background-color: green;<br />
+            &emsp;&emsp;animation-name: part1;<br />
+            &emsp;}<br /><br />
+
+            @keyframes part1 {<br />
+            &emsp;0% {<br />
+            &emsp;&emsp;background-color: red;<br />
+            &emsp;&emsp;left: 0px;<br />
+            &emsp;&emsp;top: 0px;<br />
+            &emsp;}<br /><br />
+
+            &emsp;25% {<br />
+            &emsp;&emsp;background-color: yellow;<br />
+            &emsp;&emsp;left: 100px;<br />
+            &emsp;&emsp;top: 0px;<br />
+            &emsp;}<br /><br />
+
+            &emsp;50% {<br />
+            &emsp;&emsp;background-color: blue;<br />
+            &emsp;&emsp;left: 100px;<br />
+            &emsp;&emsp;top: 100px;<br />
+            &emsp;}<br /><br />
+
+            &emsp;75% {<br />
+            &emsp;&emsp;background-color: green;<br />
+            &emsp;&emsp;left: 0px;<br />
+            &emsp;&emsp;top: 100px;<br />
+            &emsp;}<br /><br />
+
+            &emsp;100% {<br />
+            &emsp;&emsp;background-color: red;<br />
+            &emsp;&emsp;left: 0px;<br />
+            &emsp;&emsp;top: 0px;<br />
+            &emsp;}<br />
+            }
+        </p>
+    </div>
+    <div>
+        <p>Now take that same box and apply some transitions to it.</p>
+        <div id="box2"></div>
+    </div>
+    <br /><br /><br />
+    <br /><br />
+    <div>
+        <p>Now that the initial animation (repeated transition) is in place, we can use javascript to change even more.</p>
+        <p id="info"></p>
+        <button onclick="changeState()">State</button>
+        <button onclick="changeDirection()">Direction</button>
+        <button onclick="changeTimingFunction()">Timing function</button>
+        <button onclick="delay()">Delay</button>
+    </div>
+
+    <div>
+        <br />
+        <a href="../index.html">Index</a>
     </div>
 </body>
 </html>

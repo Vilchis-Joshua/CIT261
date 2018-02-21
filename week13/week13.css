@@ -63,6 +63,7 @@
         top: 0px;
     }
 }
+
 /* The animation code */
 @keyframes part3 {
     0% {
@@ -74,26 +75,38 @@
     25% {
         background-color: yellow;
         transform: rotate(25deg);
-        left: 25%;
+        left: 15%;
     }
 
     50% {
         background-color: blue;
         transform: rotate(50deg);
-        left: 50%;
+        left: 30%;
     }
 
     75% {
         background-color: green;
         transform: rotate(75deg);
-        left: 75%;
+        left: 45%;
     }
 
     100% {
         background-color: red;
-        transform: rotate(100deg);
-        left: 100%;
+        transform: rotate(90deg);
+        left: 60%;
     }
+}
+
+
+#rotate {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: green;
+    animation-name: part3;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #animationFun {
@@ -118,16 +131,6 @@
     animation-timing-function: steps(2, start)
 }
 
-
-#rotate {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-color: green;
-    animation-name: part3;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
 
 circle:nth-child(1) {
     animation-name:pulse;

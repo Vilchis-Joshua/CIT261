@@ -1,0 +1,60 @@
+#box {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(24, 254, 251);
+}
+
+#box2 {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transition: width 2s, transform 2s;
+    background-color: rgb(24, 254, 251);
+    animation-name: part1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#box2:hover {
+    width: 200px;
+    transform: rotate(180deg);
+}
+
+.code {
+    font-family: Courier New, Courier, monospace;
+    background: rgb(200, 200, 200);
+    font-size: 11px;
+}
+
+/* The animation code */
+@keyframes part1 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
