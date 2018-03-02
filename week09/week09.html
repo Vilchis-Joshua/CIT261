@@ -2,14 +2,50 @@
 <html>
 <head>
     <title>Week09 - JavaScript Events</title>
+    <script src="week09.js"></script>
+    <link rel="stylesheet" type="text/css" href="week09.css" />
 </head>
-<body>
+<body onload="firstFunction()">
     <h2>JavaScript Events</h2>
     <div>
         <p>
             Especially for Mobile Devices (onTouchBegin) and Animation and Transition Events
             There are many many events – key press, mouse, touch, document loaded… You need to experiment with more than just mouse over.
         </p>
+    </div>
+    <div>
+        <button onclick="alertExample()">Time?</button>
+    </div>
+    <div>
+        <!--onchange-->
+        <p>What is the best of these blizzard games?</p>
+        <select id="select" onchange="changeFunction()">
+            <option value="Overwatch" />Overwatch
+            <option value="Starcraft II" />Starcraft II
+            <option value="Starcraft" />Starcraft
+            <option value="Diablo III" />Diablo III
+        </select>
+        <p id="answer"></p>
+    </div>
+
+    <!--onmouseover
+    onmouseout-->
+    <div class="container">
+        <img onmouseover="mouseOver(this)" onmouseout="normalImg(this)" src="eragon.jpg" alt="Book" class="image" height="150" width="100">
+        <div class="overlay">
+            <div class="text">Favorite Book!</div>
+        </div>
+    </div>
+
+    <div>
+        <!--onkeydown-->
+        <input type="text" onkeyup="keyDown(this.value, 'pnumber')" />
+        <span class="pnumber" style="color:red">Input a valid phone number with or without a '-' between and no (xxx)</span>
+    </div>
+
+    <div>
+        <br />
+        <a href="../index.html">Index</a>
     </div>
 </body>
 </html>
