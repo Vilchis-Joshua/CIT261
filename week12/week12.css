@@ -1,0 +1,12 @@
+#outside {
+    display: flex;
+    justify-content: center;
+}
+
+#box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+
+    position: relative;
+}
