@@ -1,0 +1,13 @@
+#box {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transition: width 2s, transform 2s;
+    background-color: rgb(24, 254, 251);
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#box:hover {
+    width: 200px;
+}
