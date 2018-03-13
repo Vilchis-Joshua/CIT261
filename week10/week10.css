@@ -6,3 +6,8 @@
 #radios {
     padding: 10px;
 }
+
+vid {
+    display: flex;
+    justify-content: center;
+}

@@ -4,27 +4,49 @@
     <title>Week10 - HTML5</title>
     <link rel="stylesheet" type="text/css" href="week10.css" />
 </head>
-<body>
+<body onload="init()">
     <h2>Tags - Video, Audio, and Canvas</h2>
     <div>
         <p>
             Show me you can imbed and play a audio or video clip. Show me something cool with Canvas (draw a graph, use your finger to finger paint)
         </p>
 
-        <canvas id="canvas" width="500" height="500">
-            Your browswer does not support the HTML5 canvas
-        </canvas>
+        <div>
+            <canvas id="canvas" width="500" height="500">
+                Your browswer does not support the HTML5 canvas
+            </canvas>
 
+        </div>
+
+        <input id="colorChoice" type="color" />
+
+        <div>
+            <button onclick="erase()">Erase</button>
+        </div>
+
+        <script src="week10.js"></script>
     </div>
 
+    <br /><br />
     <div>
-        <div id='radios'>
-            <input type='radio' id='repeatRadio' name='patternRadio' checked />repeat
-            <input type='radio' id='repeatXRadio' name='patternRadio' />repeat-x
-            <input type='radio' id='repeatYRadio' name='patternRadio' />repeat-y
-            <input type='radio' id='noRepeatRadio' name='patternRadio' />no repeat
+        <h2>This is a video</h2>
+        <div id="videoDiv">
+            <video id="vid" src="nature.mp4" width="400" height="350">Your browser does not support this</video>
+        </div>
+
+        <div>
+            <button onclick="play()">play/pause</button>
+            <!--<button onclick="makeTheatre()">Theatre</button>-->
         </div>
     </div>
-    <script src="week10.js"></script>
+
+
+    <div>
+        <h2>This is one of my favorite talks</h2>
+        <p>"Behold, the Enemy is Combined" - Neal A. Maxwell. April 1993 </p>
+        <audio controls>
+            <source src="1993-04-5010-elder-neal-a-maxwell-64k-eng.mp3" />
+        </audio>
+    </div>
 </body>
 </html>
