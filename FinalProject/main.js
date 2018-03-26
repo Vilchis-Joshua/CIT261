@@ -2,6 +2,17 @@ function startUp() {
     loadDocs();
 }
 
+function chooseBook() {
+    var bom = document.getElementById('bom');  
+    var dac = document.getElementById('dac');   
+    var ot = document.getElementById('ot');   
+    var nt = document.getElementById('nt');   
+
+    if (bom.checked == true) {
+        console.log('bom working');
+    }
+}
+
 //function loadSearchResults() {
 //    var search = document.getElementById('recipeSearchBar');
 //    var xhttp = new XMLHttpRequest();
@@ -26,7 +37,7 @@ function loadDocs() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById('display').innerHTML = this.responseText;
+            chooseBook();
         }
     }
     xhttp.open("GET", "JSON/book-of-mormon.json", true);
