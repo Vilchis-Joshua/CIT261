@@ -20,6 +20,19 @@ function startUp() {
 //< !--Edamam app id: e31800e7a9e3b04dd7accb15bee93ee9-- >
 
 
+function loadDocs() {
+    var search = document.getElementById('recipeSearchBar');
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('display').innerHTML = this.responseText;
+        }
+    }
+    xhttp.open("GET", "JSON/book-of-mormon.json" + , true);
+    xhttp.send();
+}
+
 function bomSearch() {
     var search = document.getElementById('recipeSearchBar');
     var xhttp = new XMLHttpRequest();
