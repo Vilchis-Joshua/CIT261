@@ -10,6 +10,14 @@ function chooseBook() {
 
     if (bom.checked == true) {
         console.log('bom working');
+    } else if (dac.checked == true) {
+        console.log('dac working');
+    } else if (ot.checked == true) {
+        console.log('ot working');
+    } else if (nt.checked == true) {
+        console.log('nt working');
+    } else {
+        console.log('error');
     }
 }
 
