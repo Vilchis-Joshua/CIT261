@@ -29,7 +29,7 @@ function loadDocs() {
             document.getElementById('display').innerHTML = this.responseText;
         }
     }
-    xhttp.open("GET", "JSON/book-of-mormon.json" + , true);
+    xhttp.open("GET", "JSON/book-of-mormon.json", true);
     xhttp.send();
 }
 
