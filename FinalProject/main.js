@@ -42,7 +42,7 @@ function bomSearch() {
             prepareSearch(this);
         }
     }
-    xhttp.open("GET", "JSON/book-of-mormon.json" + , true);
+    xhttp.open("GET", "JSON/book-of-mormon.json", true);
     xhttp.send();
 }
 
@@ -56,7 +56,7 @@ function dacSearch() {
             prepareSearch(this);
         }
     }
-    xhttp.open("GET", "JSON/doctrine-and-covenants.json" + , true);
+    xhttp.open("GET", "JSON/doctrine-and-covenants.json", true);
     xhttp.send();
 }
 
@@ -70,7 +70,7 @@ function oldTestSearch() {
             prepareSearch(this);
         }
     }
-    xhttp.open("GET", "JSON/old-testament.json" + , true);
+    xhttp.open("GET", "JSON/old-testament.json", true);
     xhttp.send();
 }
 
@@ -84,7 +84,7 @@ function newTestSearch() {
             prepareSearch(this);
         }
     }
-    xhttp.open("GET", "JSON/new-testament.json" + , true);
+    xhttp.open("GET", "JSON/new-testament.json", true);
     xhttp.send();
 }
 
