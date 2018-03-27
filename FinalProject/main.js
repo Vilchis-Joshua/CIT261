@@ -1,6 +1,6 @@
-function startUp() {
-    loadDocs();
-}
+//function startUp() {
+//    loadDocs();
+//}
 
 function chooseBook(obj) {
     // I need these so I can get the right information
