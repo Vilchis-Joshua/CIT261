@@ -64,12 +64,13 @@ function loadDoc() {
     var bookToParse = "";
     if (document.getElementById('bom').attributes.checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
+        console.log('Book to parse: ' + bookToParse);
     } else if (document.getElementById('dac').attributes.checked == true) {
-        bookToParse += "JSON/doctrine-and-covenants";
+        bookToParse += "JSON/doctrine-and-covenants.json";
     } else if (document.getElementById('ot').attributes.checked == true) {
-        bookToParse += "JSON/doctrine-and-covenants";
+        bookToParse += "JSON/doctrine-and-covenants.json";
     } else if (document.getElementById('nt').attributes.checked == true) {
-        bookToParse += "JSON/new-testament";
+        bookToParse += "JSON/new-testament.json";
     } else {
         console.log('There was an error loading the book')
     } 
@@ -81,7 +82,7 @@ function loadDoc() {
 
         }
     }
-    xhttp.open("GET", bookToParse , true);
+    xhttp.open("GET", bookToParse, true);
     xhttp.send();
 }
 
