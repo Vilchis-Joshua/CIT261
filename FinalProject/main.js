@@ -10,6 +10,7 @@ function chooseBook(json) {
 
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
+        document.getElementById('display').innerHTML = json;
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
