@@ -62,8 +62,17 @@ function loadDoc() {
     var xhttp = new XMLHttpRequest();
 
     var bookToParse = "";
-    bookToParse = getBookValue();
-    console.log('Book to parse: ' + bookToParse);
+    if (document.getElementById('bom').attributes.checked == true) {
+        bookToParse += "JSON/book-of-mormon.json"
+    } else if (document.getElementById('dac').attributes.checked == true) {
+
+    } else if (document.getElementById('ot').attributes.checked == true) {
+
+    } else if (document.getElementById('nt').attributes.checked == true) {
+
+    } else {
+        console.log('There was an error loading the book')
+    } 
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -74,23 +83,6 @@ function loadDoc() {
     }
     xhttp.open("GET", bookToParse , true);
     xhttp.send();
-}
-
-function getBookValue() {
-
-    if (document.getElementById('bom').attributes.checked == true) {
-        var bom = "";
-        bom += "JSON/book-of-mormon.json"
-        return bom;
-    } else if (document.getElementById('dac').attributes.checked == true) {
-
-    } else if (document.getElementById('ot').attributes.checked == true) {
-
-    } else if (document.getElementById('nt').attributes.checked == true) {
-
-    } else {
-        console.log('There was an error loading the book')
-    } 
 }
 
 
