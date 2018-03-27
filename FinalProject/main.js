@@ -10,7 +10,6 @@ function chooseBook(json) {
 
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
-        document.getElementById('display').innerHTML = json['books'];
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
@@ -46,8 +45,9 @@ function loadDocs() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            chooseBook(this);
-            var xjson = JSON.parse(this.responseText);
+            var json = JSON.parse(this.responseText);
+            chooseBook(json);
+
         }
     }
     xhttp.open("GET", "JSON/book-of-mormon.json", true);
