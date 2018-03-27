@@ -28,7 +28,6 @@ function chooseBook(obj) {
     } else {
         console.log('error');
     }
-    document.getElementById('display').innerHTML = dom;
 
 }
 
