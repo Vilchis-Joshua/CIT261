@@ -3,11 +3,7 @@
 //}
 
 function chooseBook(obj) {
-    // I need these so I can get the right information
-    var bom = document.getElementById('bom');  
-    var dac = document.getElementById('dac');   
-    var ot = document.getElementById('ot');   
-    var nt = document.getElementById('nt');   
+ 
 
     var sel = document.createElement('select');
     sel.setAttribute('id', 'bookSelect');
@@ -59,21 +55,22 @@ function chooseBook(obj) {
 
 
 function loadDoc() {
-    var xhttp = new XMLHttpRequest();
 
     var bookToParse = "";
-    if (document.getElementById('bom').attributes.checked == 'true') {
+    if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
         console.log('Book to parse: ' + bookToParse);
-    } else if (document.getElementById('dac').attributes.checked == 'true') {
+    } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
-    } else if (document.getElementById('ot').attributes.checked == 'true') {
+    } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
     } else if (document.getElementById('nt').attributes.checked == 'true') {
         bookToParse += "JSON/new-testament.json";
     } else {
         console.log('There was an error loading the book')
     } 
+
+    var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
