@@ -77,8 +77,11 @@ function loadDoc() {
 }
 
 function getBookValue() {
+
     if (document.getElementById('bom').attributes.checked == true) {
-        return "JSON/book-of-mormon.json";
+        var bom = "";
+        bom = "JSON/book-of-mormon.json"
+        return bom;
     } else if (document.getElementById('dac').attributes.checked == true) {
 
     } else if (document.getElementById('ot').attributes.checked == true) {
