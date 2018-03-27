@@ -58,11 +58,12 @@ function chooseBook(obj) {
 
 
 
-function loadDoc() {
-    var search = document.getElementById('recipeSearchBar');
+function loadDocs() {
     var xhttp = new XMLHttpRequest();
+
     var bookToParse = getBookValue();
     console.log('Book to parse: ' + bookToParse);
+
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
