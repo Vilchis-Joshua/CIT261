@@ -61,7 +61,8 @@ function chooseBook(obj) {
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
 
-    var bookToParse = getBookValue();
+    var bookToParse = "";
+    bookToParse = getBookValue();
     console.log('Book to parse: ' + bookToParse);
 
     xhttp.onreadystatechange = function () {
