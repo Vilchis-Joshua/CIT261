@@ -11,11 +11,10 @@ function chooseBook(obj) {
     var dom = "";
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
-        document.getElementById('display').innerHTML = obj.books[0].book;
         for (i in obj.books) {
             dom += '<p>' + obj.books[i] + '</p><br />';
         }
-
+        document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
