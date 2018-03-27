@@ -10,11 +10,13 @@ function chooseBook(obj) {
     var sel = document.createElement('select');
     sel.setAttribute('id', 'bookSelect');
     var dom = "";
+    var bookName = "";
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
             dom += '<option>' + obj.books[i].book + '</option>';
-            sel.setAttribute('value', obj.book[i].book);
+            bookName = obj.books[i].book;
+            sel.setAttribute('value', );
         }
         document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
