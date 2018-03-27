@@ -17,6 +17,7 @@ function chooseBook(obj) {
             dom += '<option>' + obj.books[i].book + '</option>';
             //bookName = obj.books[i].book;
             //sel.setAttribute('value', bookName);
+            document.getElementById('displayBooks').appendChild(dom);
         }
     } else if (dac.checked == true) {
         console.log('dac working');
