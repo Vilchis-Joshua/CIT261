@@ -12,7 +12,7 @@ function chooseBook(obj) {
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
-            dom += '<p>' + obj.books[i] + '</p><br />';
+            dom += '<p>' + obj.books[i].book + '</p><br />';
         }
         document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
