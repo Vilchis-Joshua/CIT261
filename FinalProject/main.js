@@ -18,7 +18,6 @@ function chooseBook(obj) {
             bookName = obj.books[i].book;
             sel.setAttribute('value', bookName);
         }
-        document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
@@ -28,6 +27,8 @@ function chooseBook(obj) {
     } else {
         console.log('error');
     }
+    document.getElementById('display').innerHTML = dom;
+
 }
 
 //function loadSearchResults() {
