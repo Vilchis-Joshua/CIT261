@@ -20,6 +20,8 @@ function chooseBook(obj) {
             //dom += '<option>' + obj.books[i].book + '</option>';
             //bookName = obj.books[i].book;
             var opt = document.createElement('option');
+            opt.setAttribute('id', obj.books[i].book);
+            opt.setAttribute('value', obj.books[i].book);
             document.getElementById('bookSelect').appendChild(opt);
 
             //sel.setAttribute('value', obj.books[i].book);
