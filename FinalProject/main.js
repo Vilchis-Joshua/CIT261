@@ -7,12 +7,14 @@ function chooseBook(obj) {
     var dac = document.getElementById('dac');   
     var ot = document.getElementById('ot');   
     var nt = document.getElementById('nt');   
-
+    var sel = document.createElement('select');
+    sel.setAttribute('id', 'bookSelect');
     var dom = "";
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
-            dom += '<p>' + obj.books[i].book + '</p><br />';
+            dom += '<option>' + obj.books[i].book + '</option>';
+            sel.setAttribute('value', obj.book[i].book);
         }
         document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
