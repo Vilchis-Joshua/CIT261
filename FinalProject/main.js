@@ -50,6 +50,6 @@ function loadDocs() {
             var xjson = JSON.parse(this.responseText);
         }
     }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
+    xhttp.open("GET", "JSON/book-of-mormon.json");
     xhttp.send();
 }
