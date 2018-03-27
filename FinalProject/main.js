@@ -9,7 +9,8 @@ function chooseBook() {
     var nt = document.getElementById('nt');   
 
     if (bom.checked == true) {
-        console.log('bom working');
+        var json = JSON.parse('JSON/book-of-mormon.json');
+        document.getElementById('display').innerHTML = json;
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
@@ -51,59 +52,3 @@ function loadDocs() {
     xhttp.open("GET", "JSON/book-of-mormon.json", true);
     xhttp.send();
 }
-
-function bomSearch() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            prepareSearch(this);
-        }
-    }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
-    xhttp.send();
-}
-
-
-function dacSearch() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            prepareSearch(this);
-        }
-    }
-    xhttp.open("GET", "JSON/doctrine-and-covenants.json", true);
-    xhttp.send();
-}
-
-
-function oldTestSearch() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            prepareSearch(this);
-        }
-    }
-    xhttp.open("GET", "JSON/old-testament.json", true);
-    xhttp.send();
-}
-
-
-function newTestSearch() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            prepareSearch(this);
-        }
-    }
-    xhttp.open("GET", "JSON/new-testament.json", true);
-    xhttp.send();
-}
-
