@@ -58,7 +58,7 @@ function chooseBook(obj) {
 
 
 
-function loadDocs() {
+function loadDoc() {
     var xhttp = new XMLHttpRequest();
 
     var bookToParse = getBookValue();
