@@ -14,29 +14,41 @@ function chooseBook(obj) {
     document.getElementById('displayBooks').appendChild(sel);
     var bookName = "";
     if (bom.checked == true) {
-
-        //var json = JSON.stringify('JSON/book-of-mormon.json');
+        document.getElementById('displayBooks').attributes.length = 0;
         for (i in obj.books) {
-            //dom += '<option>' + obj.books[i].book + '</option>';
-            //bookName = obj.books[i].book;
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
             opt.innerHTML += obj.books[i].book;
             document.getElementById('bookSelect').appendChild(opt);
-
-            //sel.setAttribute('value', obj.books[i].book);
-            //document.getElementById('displayBooks').appendChild(sel);
         }
     } else if (dac.checked == true) {
-        console.log('dac working');
-    } else if (ot.checked == true) {
+        document.getElementById('displayBooks').attributes.length = 0;
+        for (i in obj.books) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.sections[i].section);
+            opt.setAttribute('value', obj.sections[i].section);
+            opt.innerHTML += obj.sections[i].section;
+            document.getElementById('bookSelect').appendChild(opt);
+        }    } else if (ot.checked == true) {
         console.log('ot working');
     } else if (nt.checked == true) {
-        console.log('nt working');
-    } else {
-        console.log('error');
-    }
+        document.getElementById('displayBooks').attributes.length = 0;
+        for (i in obj.books) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.books[i].book);
+            opt.setAttribute('value', obj.books[i].book);
+            opt.innerHTML += obj.books[i].book;
+            document.getElementById('bookSelect').appendChild(opt);
+        }    } else {
+        document.getElementById('displayBooks').attributes.length = 0;
+        for (i in obj.books) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.books[i].book);
+            opt.setAttribute('value', obj.books[i].book);
+            opt.innerHTML += obj.books[i].book;
+            document.getElementById('bookSelect').appendChild(opt);
+        }    }
 
 }
 
