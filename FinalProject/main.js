@@ -15,8 +15,8 @@ function chooseBook(obj) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
             dom += '<option>' + obj.books[i].book + '</option>';
-            bookName = obj.books[i].book;
-            sel.setAttribute('value', bookName);
+            //bookName = obj.books[i].book;
+            //sel.setAttribute('value', bookName);
         }
     } else if (dac.checked == true) {
         console.log('dac working');
