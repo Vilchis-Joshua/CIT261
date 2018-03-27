@@ -2,14 +2,14 @@ function startUp() {
     loadDocs();
 }
 
-function chooseBook() {
+function chooseBook(json) {
     var bom = document.getElementById('bom');  
     var dac = document.getElementById('dac');   
     var ot = document.getElementById('ot');   
     var nt = document.getElementById('nt');   
 
     if (bom.checked == true) {
-        var json = JSON.stringify('JSON/book-of-mormon.json');
+        //var json = JSON.stringify('JSON/book-of-mormon.json');
         document.getElementById('display').innerHTML = json;
     } else if (dac.checked == true) {
         console.log('dac working');
@@ -46,7 +46,8 @@ function loadDocs() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            chooseBook();
+            chooseBook(this);
+            var xjson = JSON.parse(this.responseText);
         }
     }
     xhttp.open("GET", "JSON/book-of-mormon.json", true);
