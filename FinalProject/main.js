@@ -16,7 +16,7 @@ function chooseBook(obj) {
         for (i in obj.books) {
             dom += '<option>' + obj.books[i].book + '</option>';
             bookName = obj.books[i].book;
-            sel.setAttribute('value', );
+            sel.setAttribute('value', bookName);
         }
         document.getElementById('display').innerHTML = dom;
     } else if (dac.checked == true) {
