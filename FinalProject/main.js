@@ -15,6 +15,7 @@ function chooseBook(obj) {
     var bookName = "";
     if (bom.checked == true) {
         document.getElementById('displayBooks').attributes.length = 0;
+
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
@@ -24,31 +25,37 @@ function chooseBook(obj) {
         }
     } else if (dac.checked == true) {
         document.getElementById('displayBooks').attributes.length = 0;
-        for (i in obj.books) {
+
+        for (i in obj.sections) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.sections[i].section);
             opt.setAttribute('value', obj.sections[i].section);
             opt.innerHTML += obj.sections[i].section;
             document.getElementById('bookSelect').appendChild(opt);
-        }    } else if (ot.checked == true) {
-        console.log('ot working');
+        }
+    } else if (ot.checked == true) {
+        document.getElementById('displayBooks').attributes.length = 0;
+
+        for (i in obj.books) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.books[i].book);
+            opt.setAttribute('value', obj.books[i].book);
+            opt.innerHTML += obj.books[i].book;
+            document.getElementById('bookSelect').appendChild(opt);
+        }
     } else if (nt.checked == true) {
         document.getElementById('displayBooks').attributes.length = 0;
+
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
             opt.innerHTML += obj.books[i].book;
             document.getElementById('bookSelect').appendChild(opt);
-        }    } else {
-        document.getElementById('displayBooks').attributes.length = 0;
-        for (i in obj.books) {
-            var opt = document.createElement('option');
-            opt.setAttribute('id', obj.books[i].book);
-            opt.setAttribute('value', obj.books[i].book);
-            opt.innerHTML += obj.books[i].book;
-            document.getElementById('bookSelect').appendChild(opt);
-        }    }
+        }
+    } else {
+        console.log('error');
+    }
 
 }
 
