@@ -14,10 +14,10 @@ function chooseBook(obj) {
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
-            dom += '<option>' + obj.books[i].book + '</option>';
+            //dom += '<option>' + obj.books[i].book + '</option>';
             //bookName = obj.books[i].book;
-            //sel.setAttribute('value', bookName);
-            document.getElementById('displayBooks').appendChild(dom);
+            sel.setAttribute('value', obj.books[i].book);
+            document.getElementById('displayBooks').appendChild(sel);
         }
     } else if (dac.checked == true) {
         console.log('dac working');
