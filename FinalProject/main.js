@@ -3,21 +3,27 @@ function startUp() {
 }
 
 function chooseBook(obj) {
+    // I need these so I can get the right information
     var bom = document.getElementById('bom');  
     var dac = document.getElementById('dac');   
     var ot = document.getElementById('ot');   
     var nt = document.getElementById('nt');   
+
     var sel = document.createElement('select');
     sel.setAttribute('id', 'bookSelect');
-    var dom = "";
+    document.getElementById('displayBooks').appendChild(sel);
     var bookName = "";
     if (bom.checked == true) {
+
         //var json = JSON.stringify('JSON/book-of-mormon.json');
         for (i in obj.books) {
             //dom += '<option>' + obj.books[i].book + '</option>';
             //bookName = obj.books[i].book;
-            sel.setAttribute('value', obj.books[i].book);
-            document.getElementById('displayBooks').appendChild(sel);
+            var opt = document.createElement('option');
+            document.getElementById('bookSelect').appendChild('opt');
+
+            //sel.setAttribute('value', obj.books[i].book);
+            //document.getElementById('displayBooks').appendChild(sel);
         }
     } else if (dac.checked == true) {
         console.log('dac working');
