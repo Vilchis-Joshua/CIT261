@@ -80,7 +80,7 @@ function getBookValue() {
 
     if (document.getElementById('bom').attributes.checked == true) {
         var bom = "";
-        bom = "JSON/book-of-mormon.json"
+        bom += "JSON/book-of-mormon.json"
         return bom;
     } else if (document.getElementById('dac').attributes.checked == true) {
 
