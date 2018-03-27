@@ -14,47 +14,43 @@ function chooseBook(obj) {
     document.getElementById('displayBooks').appendChild(sel);
     var bookName = "";
     if (bom.checked == true) {
-        document.getElementById('displayBooks').attributes.length = 0;
-
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
             opt.innerHTML += obj.books[i].book;
             document.getElementById('bookSelect').appendChild(opt);
+            bom.checked = false;
         }
     } else if (dac.checked == true) {
-        document.getElementById('displayBooks').attributes.length = 0;
-
         for (i in obj.sections) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.sections[i].section);
             opt.setAttribute('value', obj.sections[i].section);
             opt.innerHTML += obj.sections[i].section;
             document.getElementById('bookSelect').appendChild(opt);
+            dac.checked = false;
         }
     } else if (ot.checked == true) {
-        document.getElementById('displayBooks').attributes.length = 0;
-
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
             opt.innerHTML += obj.books[i].book;
             document.getElementById('bookSelect').appendChild(opt);
+            ot.checked = false;
         }
     } else if (nt.checked == true) {
-        document.getElementById('displayBooks').attributes.length = 0;
-
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
             opt.innerHTML += obj.books[i].book;
             document.getElementById('bookSelect').appendChild(opt);
+            nt.checked = false;
         }
     } else {
-        console.log('error');
+        console.log('Nothing checked');
     }
 
 }
