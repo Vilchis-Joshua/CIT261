@@ -55,25 +55,83 @@ function chooseBook(obj) {
 
 }
 
-//function loadSearchResults() {
-//    var search = document.getElementById('recipeSearchBar');
-//    var xhttp = new XMLHttpRequest();
-
-//    xhttp.onreadystatechange = function () {
-//        if (this.readyState == 4 && this.status == 200) {
-//            prepareSearch(this);
-//        }
-//    }
-//    xhttp.open("GET", "" + , true);
-//    xhttp.send();
-//}
-
-//xhttp.open("GET", "https://api.edamam.com/search?q=" + search + "&app_id=${e31800e7a9e3b04dd7accb15bee93ee9}&app_key=${52b59a95}" + , true);
-//< !--Edamam api key: 52b59a95-- >
-//< !--Edamam app id: e31800e7a9e3b04dd7accb15bee93ee9-- >
 
 
-function loadDocs() {
+
+function loadDoc() {
+    var search = document.getElementById('recipeSearchBar');
+    var xhttp = new XMLHttpRequest();
+    var bookToParse = getBookValue();
+    console.log('Book to parse: ' + bookToParse);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            chooseBook(obj);
+
+        }
+    }
+    xhttp.open("GET", bookToParse , true);
+    xhttp.send();
+}
+
+function getBookValue() {
+    if (document.getElementById('bom').attributes.checked == true) {
+        return "JSON/book-of-mormon.json";
+    } else if (document.getElementById('dac').attributes.checked == true) {
+
+    } else if (document.getElementById('ot').attributes.checked == true) {
+
+    } else if (document.getElementById('nt').attributes.checked == true) {
+
+    } else {
+        console.log('There was an error loading the book')
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function loadDac() {
+    var search = document.getElementById('recipeSearchBar');
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            chooseBook(obj);
+
+        }
+    }
+    xhttp.open("GET", "JSON/book-of-mormon.json", true);
+    xhttp.send();
+}
+
+function loadNt() {
+    var search = document.getElementById('recipeSearchBar');
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            chooseBook(obj);
+
+        }
+    }
+    xhttp.open("GET", "JSON/book-of-mormon.json", true);
+    xhttp.send();
+}
+
+function loadOt() {
     var search = document.getElementById('recipeSearchBar');
     var xhttp = new XMLHttpRequest();
 
