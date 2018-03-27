@@ -2,7 +2,7 @@ function startUp() {
     loadDocs();
 }
 
-function chooseBook(json) {
+function chooseBook(obj) {
     var bom = document.getElementById('bom');  
     var dac = document.getElementById('dac');   
     var ot = document.getElementById('ot');   
@@ -10,7 +10,7 @@ function chooseBook(json) {
 
     if (bom.checked == true) {
         //var json = JSON.stringify('JSON/book-of-mormon.json');
-        document.getElementById('display').innerHTML = json;
+        document.getElementById('display').innerHTML = obj[0];
     } else if (dac.checked == true) {
         console.log('dac working');
     } else if (ot.checked == true) {
@@ -46,8 +46,8 @@ function loadDocs() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var json = JSON.parse(this.responseText);
-            chooseBook(json);
+            var obj = JSON.parse(this.responseText);
+            chooseBook(json['books']);
 
         }
     }
