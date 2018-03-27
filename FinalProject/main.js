@@ -57,14 +57,14 @@ function chooseBook(obj) {
 function loadDoc() {
 
     var bookToParse = "";
-    if (document.getElementById('dac').checked == true) {
+    if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
         console.log('Book to parse: ' + bookToParse);
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
     } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
-    } else if (document.getElementById('nt').attributes.checked == 'true') {
+    } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
     } else {
         console.log('There was an error loading the book')
