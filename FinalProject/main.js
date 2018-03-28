@@ -129,7 +129,7 @@ function chooseReference() {
                     for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
                             document.getElementById('displayVerse').innerHTML =
-                                obj.books[i].chapters[j].verses[k].verse;
+                                obj.books[i].chapters[j].verses[k].text;
                         }
                         return;
                     }
