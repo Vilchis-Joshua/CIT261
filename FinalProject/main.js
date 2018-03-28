@@ -163,6 +163,7 @@ function otherBooks() {
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
                         if (obj.books[i].chapters[j].verses[k].verse == 1) {
+                            console.log('yooooooooo');
                             opt.setAttribute('selected', true);
                         }
                         document.getElementById('verseSelect').appendChild(opt);
