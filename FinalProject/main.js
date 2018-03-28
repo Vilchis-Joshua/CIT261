@@ -70,7 +70,6 @@ function chooseVerse() {
     }
 
     var v = document.getElementById('bookSelect').value;
-    console.log('v: ' + v);
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == v) {
@@ -94,6 +93,7 @@ function chooseVerse() {
                         document.getElementById('verseSelect').appendChild(opt);
                     }
                 }
+                return;
             }
         }
     }
