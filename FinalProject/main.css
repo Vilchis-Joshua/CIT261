@@ -1,4 +1,4 @@
-#displayBooks, #displayVerses, #displayVerse {
+#displayBooks, #displayVerses, #displayVerse, h2 {
     display: flex;
     justify-content: center;
 }

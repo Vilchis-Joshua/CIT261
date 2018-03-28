@@ -82,7 +82,17 @@ function chooseVerse() {
             }
         }
     } else {
-        console.log('Not D&C');
+        for (i in obj.books) {
+            if (obj.books[i].book == v) {
+                for (j in obj.books[i].verses) {
+                    var opt = document.createElement('option');
+                    opt.setAttribute('id', obj.books[i].verses[j].verse);
+                    opt.innerHTML += obj.books[i].verses[j].verse;
+                    document.getElementById('verseSelect').appendChild(opt);
+                }
+                return;
+            }
+        }
     }
 }
 
