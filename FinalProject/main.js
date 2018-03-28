@@ -79,10 +79,12 @@ function chooseVerse() {
                     opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
                 }
+                document.getElementById('deeper').style.visibility = 'hidden';
                 return;
             }
         }
     } else {
+        document.getElementById('deeper').style.visibility = 'visible';
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
@@ -109,7 +111,7 @@ function chooseReference() {
                 for (j in obj.sections[i].verses) {
                     if (obj.sections[i].verses[j].verse == v) {
                         document.getElementById('displayVerse').innerHTML =
-                            obj.sections[i].verses[j].text; 
+                            obj.sections[i].verses[j].text;
                         return;
                     }
                 }
@@ -118,4 +120,8 @@ function chooseReference() {
     } else {
         console.log('Not D&C');
     }
+}
+
+function otherBooks() {
+
 }
