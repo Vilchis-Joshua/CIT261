@@ -149,14 +149,15 @@ function otherBooks() {
     for (i in obj.books) {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].book) {
-                for (k in obj.books[i].book[j].verses)
-                var opt = document.createElement('option');
-                opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
-                opt.innerHTML += obj.books[i].book[j].verses[k].verse;
-                document.getElementById('verseSelect').appendChild(opt);
+                for (k in obj.books[i].book[j].verses) {
+                    var opt = document.createElement('option');
+                    opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
+                    opt.innerHTML += obj.books[i].book[j].verses[k].verse;
+                    document.getElementById('verseSelect').appendChild(opt);
+                }
+                //document.getElementById('deeper').style.visibility = 'hidden';
+                return;
             }
-            //document.getElementById('deeper').style.visibility = 'hidden';
-            return;
         }
     }
 }
