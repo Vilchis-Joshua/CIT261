@@ -8,16 +8,15 @@ function chooseBook(obj, b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
         for (var i = 0; i < sel.options.length; i++) {
-            sel.options.remove(i);
+            sel.removeChild(i);
         }
-        document.getElementById('bookSelect').style.visibility = 'hidden';
     }
 
     // Check it it's d&c or not
     if (b == 0) {
-        document.getElementById('bookSelect').style.visibility = 'visible';
 
         for (i in obj.books) {
+
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
@@ -25,8 +24,8 @@ function chooseBook(obj, b) {
             document.getElementById('bookSelect').appendChild(opt);
         }
     } else {
+
         for (i in obj.sections) {
-            document.getElementById('bookSelect').style.visibility = 'visible';
 
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.sections[i].section);
