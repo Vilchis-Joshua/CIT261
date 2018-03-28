@@ -88,11 +88,13 @@ function chooseVerse() {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
-                        if (obj.books[i].chapters[j].verses[k])
-                        var opt = document.createElement('option');
-                        opt.setAttribute('id', obj.books[i].chapters[j].verse);
-                        opt.innerHTML += obj.books[i].verses[j].verse;
-                        document.getElementById('verseSelect').appendChild(opt);
+                        if (obj.books[i].chapters[j].verses[k] == v) {
+                            var opt = document.createElement('option');
+                            opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
+                            opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                            document.getElementById('verseSelect').appendChild(opt);
+                            return;
+                        }
                     }
                 }
             }
