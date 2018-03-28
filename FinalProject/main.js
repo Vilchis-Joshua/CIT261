@@ -94,8 +94,7 @@ function chooseReference() {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
                 for (j in obj.sections[i].verses) {
-                    if (obj.sections[i].verses == v) {
-                        console.log('are you here?');
+                    if (obj.sections[i].verses[j] == v) {
                         document.getElementById('displayVerse') =
                             obj.sections[i].verses[j].text; 
                         return;
