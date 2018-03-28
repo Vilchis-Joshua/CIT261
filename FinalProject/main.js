@@ -131,7 +131,7 @@ function chooseReference() {
                             document.getElementById('displayVerse').innerHTML =
                                 obj.books[i].book[j].verses[k].verse;
                         }
-                      
+                        return;
                     }
                 }
             }
