@@ -70,11 +70,11 @@ function chooseVerse() {
             console.log('1: ' + obj.sections[i].section);
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
-                    console.log('2: ' + obj.sections[i].section.verses[j]);
+                    console.log('2: ' + obj.sections[i].verses[j]);
                     console.log('3: ' + obj.sections[i].section.reference[j]);
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.sections[i].section.reference[j]);
-                    opt.innerHTML += obj.sections[i].section.reference[j];
+                    opt.setAttribute('id', obj.sections[i].reference[j]);
+                    opt.innerHTML += obj.sections[i].reference[j];
                     document.getElementById('verseSelect').appendChild(opt);
                     console.log('verse #: ' + j);
                     return;
