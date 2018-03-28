@@ -114,7 +114,6 @@ function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
 
-    console.log('v: ' + v);
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
@@ -129,10 +128,10 @@ function chooseReference() {
         }
     } else {
         for (i in obj.books) {
-            if (obj.books[i].book == v) {
-                for (j in obj.books[i].chapters) {
-                    console.log('1');
-                    for (k in obj.books[i].chapters[j].verses) {
+            for (j in obj.books[i].chapters) {
+                console.log('1');
+                for (k in obj.books[i].chapters[j].verses) {
+                    if (obj.books[i].chapters[j].verses[k].verse == v) {
                         console.log('2');
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
                             console.log('3');
