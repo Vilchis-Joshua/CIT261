@@ -6,6 +6,10 @@ function chooseBook(b) {
     if (sel.options.length != 0) {
         sel.options.length = 0;
     }
+    var sel2 = document.getElementById('verseSelect');
+    if (sel2.options.length != 0) {
+        sel2.options.length = 0;
+    }
 
     // Check it it's d&c or not
     if (b == 0) {
@@ -64,6 +68,7 @@ function loadDoc() {
 }
 
 function chooseVerse() {
+
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
