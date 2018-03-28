@@ -128,16 +128,15 @@ function chooseReference() {
         }
     } else {
         for (i in obj.books) {
-            for (j in obj.books[i].chapters) {
-                console.log('1');
-                for (k in obj.books[i].chapters[j].verses) {
-                    if (obj.books[i].chapters[j].verses[k].verse == v) {
-                        console.log('2');
+            if (obj.books[i].book == a) {
+                for (j in obj.books[i].chapters) {
+                    for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
-                            console.log('3');
-                            document.getElementById('displayVerse').innerHTML =
-                                obj.books[i].chapters[j].verses[k].text;
-                            return;
+                            if (obj.books[i].chapters[j].verses[k].verse == v) {
+                                document.getElementById('displayVerse').innerHTML =
+                                    obj.books[i].chapters[j].verses[k].text;
+                                return;
+                            }
                         }
                     }
                 }
