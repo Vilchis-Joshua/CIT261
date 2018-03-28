@@ -56,22 +56,25 @@ function chooseBook(obj) {
 
 function loadDoc() {
 
+    if (bookToParse.length != 0) {
+        bookToParse.length = 0;
+    }
     var bookToParse = "";
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
-        console.log('Book to parse: ' + bookToParse);
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
     } else if (document.getElementById('ot').checked == true) {
-        bookToParse += "JSON/doctrine-and-covenants.json";
+        bookToParse += "JSON/old-testament.json";
     } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
     } else {
         console.log('There was an error loading the book')
     } 
 
-    var xhttp = new XMLHttpRequest();
 
+    console.log('Book to parse: ' + bookToParse);
+    var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
