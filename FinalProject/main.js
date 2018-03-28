@@ -79,7 +79,6 @@ function chooseVerse() {
         other.options.length = 0;
     }
 
-
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
@@ -163,6 +162,9 @@ function otherBooks() {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                        if (obj.books[i].chapters[j].verses[k].verse == 1) {
+                            opt.setAttribute('selected', true);
+                        }
                         document.getElementById('verseSelect').appendChild(opt);
                     }
                     return;
