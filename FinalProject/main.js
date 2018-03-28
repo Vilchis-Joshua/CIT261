@@ -7,7 +7,6 @@ function chooseBook(b) {
         sel.options.length = 0;
     }
 
-
     // Check it it's d&c or not
     if (b == 0) {
 
@@ -96,6 +95,7 @@ function chooseReference() {
             if (obj.sections[i].section == a) {
                 for (j in obj.sections[i].verses) {
                     if (obj.sections[i].verses == v) {
+                        console.log('are you here?');
                         document.getElementById('displayVerse') =
                             obj.sections[i].verses[j].text; 
                         return;
