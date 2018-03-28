@@ -68,7 +68,9 @@ function chooseVerse() {
     if (sel.options.length != 0) {
         sel.options.length = 0;
     }
+
     var v = document.getElementById('bookSelect').value;
+    console.log('v: ' + v);
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == v) {
@@ -84,13 +86,15 @@ function chooseVerse() {
     } else {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
-                for (j in obj.books[i].verses) {
-                    var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.books[i].verses[j].verse);
-                    opt.innerHTML += obj.books[i].verses[j].verse;
-                    document.getElementById('verseSelect').appendChild(opt);
+                for (j in obj.books[i].chapters) {
+                    for (k in obj.books[i].chapters[j].verses) {
+                        if (obj.books[i].chapters[j].verses[k])
+                        var opt = document.createElement('option');
+                        opt.setAttribute('id', obj.books[i].chapters[j].verse);
+                        opt.innerHTML += obj.books[i].verses[j].verse;
+                        document.getElementById('verseSelect').appendChild(opt);
+                    }
                 }
-                return;
             }
         }
     }
