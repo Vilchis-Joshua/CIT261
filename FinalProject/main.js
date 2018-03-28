@@ -70,20 +70,15 @@ function chooseVerse() {
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
                     console.log('2: ' + obj.sections[i].verses[j]);
-                    console.log('3: ' + obj.sections[i].reference[j]);
+                    console.log('3: ' + obj.sections[i].reference);
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.sections[i].reference[j]);
-                    opt.innerHTML += obj.sections[i].reference[j];
+                    opt.setAttribute('id', obj.sections[i].reference);
+                    opt.innerHTML += obj.sections[i].reference;
                     document.getElementById('verseSelect').appendChild(opt);
                     console.log('verse #: ' + j);
                 }
                 return;
             }
-            //var opt = document.createElement('option');
-            //opt.setAttribute('id', obj.sections[i].section);
-            //opt.setAttribute('value', obj.sections[i].section);
-            //opt.innerHTML += obj.sections[i].section;
-            //document.getElementById('bookSelect').appendChild(opt);
         }
     } else {
         console.log('Not D&C');
