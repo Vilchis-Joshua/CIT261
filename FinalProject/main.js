@@ -97,11 +97,14 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
-                    console.log('chapters' + obj.books[i].chapters[j].chapter);
                     for (k in obj.books[i].chapters[j].verses) {
+                        //var opt = document.createElement('option');
+                        //opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
+                        //opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                        //document.getElementById('deeper').appendChild(opt);
                         var opt = document.createElement('option');
-                        opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
-                        opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                        opt.setAttribute('id', obj.books[i].chapters[j].chapter);
+                        opt.innerHTML += obj.books[i].chapters[j].chapter;
                         document.getElementById('deeper').appendChild(opt);
                     }
                     return;
