@@ -67,7 +67,6 @@ function chooseVerse() {
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
-            console.log('1: ' + obj.sections[i].section);
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
                     console.log('2: ' + obj.sections[i].verses[j]);
@@ -77,8 +76,8 @@ function chooseVerse() {
                     opt.innerHTML += obj.sections[i].reference[j];
                     document.getElementById('verseSelect').appendChild(opt);
                     console.log('verse #: ' + j);
-                    return;
                 }
+                return;
             }
             //var opt = document.createElement('option');
             //opt.setAttribute('id', obj.sections[i].section);
