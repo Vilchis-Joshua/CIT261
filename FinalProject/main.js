@@ -67,6 +67,7 @@ function loadDoc() {
     xhttp.send();
 }
 
+// Not great naming. It is really choosing the chapter/section
 function chooseVerse() {
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
@@ -96,6 +97,7 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
+                    console.log('chapters' + obj.books[i].chapters[j]);
                     for (k in obj.books[i].chapters[j].verses) {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
