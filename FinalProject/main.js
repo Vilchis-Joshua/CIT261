@@ -68,7 +68,9 @@ function chooseVerse() {
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section === v) {
+                console.log('here');
                 for (j in obj.sections[i].section.verses[j]) {
+                    console.log('there');
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].section.reference[j]);
                     opt.innerHTML += obj.sections[i].section.reference[j];
