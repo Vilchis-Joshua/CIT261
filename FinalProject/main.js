@@ -122,9 +122,8 @@ function chooseReference() {
         }
     } else {
         for (i in obj.books) {
-            console.log('coming?');
-
             if (obj.books[i].book == v) {
+                console.log('here?');
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
