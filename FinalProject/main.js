@@ -102,8 +102,8 @@ function chooseVerse() {
                     //opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
                     //document.getElementById('deeper').appendChild(opt);
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.books[i].chapters[j]);
-                    opt.innerHTML += obj.books[i].chapters[j];
+                    opt.setAttribute('id', obj.books[i].chapters[j].chapter);
+                    opt.innerHTML += obj.books[i].chapters[j].chapter;
                     document.getElementById('deeper').appendChild(opt);
                 }
                 return;
