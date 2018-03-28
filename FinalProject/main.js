@@ -1,7 +1,7 @@
 var bookToParse = "";
 var obj;
 
-function chooseBook(obj, b) {
+function chooseBook(b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
         sel.options.length = 0;
