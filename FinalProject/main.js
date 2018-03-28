@@ -146,10 +146,9 @@ function otherBooks() {
     }
     var v = document.getElementById('bookSelect').value;
 
-    console.log('v: ' + v);
-
     for (i in obj.books) {
         if (obj.books[i].book == v) {
+            console.log('coming here?');
             for (j in obj.books[i].book) {
                 for (k in obj.books[i].book[j].verses) {
                     var opt = document.createElement('option');
