@@ -67,6 +67,7 @@ function chooseVerse() {
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
+            console.log('ugh');
             if (obj.sections[i].section === v) {
                 console.log('here');
                 for (j in obj.sections[i].section.verses[j]) {
