@@ -146,6 +146,8 @@ function otherBooks() {
     }
     var v = document.getElementById('bookSelect').value;
 
+    console.log('v: ' + v);
+
     for (i in obj.books) {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].book) {
