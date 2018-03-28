@@ -71,7 +71,7 @@ function chooseVerse() {
                 for (j in obj.sections[i].section.verses[j]) {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].section.reference[j]);
-                    opt.innerHTML++ obj.sections[i].section.reference[j];
+                    opt.innerHTML += obj.sections[i].section.reference[j];
                     document.getElementById('verseSelect').appendChild(opt);
                     return;
                 }
