@@ -1,3 +1,5 @@
+var bookToParse = "";
+
 //function startUp() {
 //    loadDocs();
 //}
@@ -59,7 +61,6 @@ function loadDoc() {
     if (bookToParse.length != 0) {
         bookToParse.length = 0;
     }
-    var bookToParse = "";
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
     } else if (document.getElementById('dac').checked == true) {
