@@ -58,8 +58,8 @@ function chooseBook(obj) {
 
 function loadDoc() {
 
-    if (bookToParse.length != 0) {
-        bookToParse.length = 0;
+    if (bookToParse != null) {
+        bookToParse = null;
     }
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
