@@ -83,12 +83,10 @@ function chooseVerse() {
                     opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
                 }
-                //document.getElementById('deeper').style.visibility = 'hidden';
                 return;
             }
         }
     } else {
-        //document.getElementById('deeper').style.visibility = 'visible';
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
@@ -148,9 +146,9 @@ function otherBooks() {
 
     for (i in obj.books) {
         if (obj.books[i].book == v) {
-            console.log('coming here?');
             for (j in obj.books[i].book) {
                 for (k in obj.books[i].book[j].verses) {
+                    console.log('here?');
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
                     opt.innerHTML += obj.books[i].book[j].verses[k].verse;
