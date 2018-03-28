@@ -69,7 +69,7 @@ function chooseVerse() {
         for (i in obj.sections) {
             console.log('1: ' + obj.sections[i].section);
             if (obj.sections[i].section == v) {
-                for (j in obj.sections[i].section.verses[j]) {
+                for (j in obj.sections[i].section.verses) {
                     console.log('2: ' + obj.sections[i].section.verses[j]);
                     console.log('3: ' + obj.sections[i].section.reference[j]);
                     var opt = document.createElement('option');
