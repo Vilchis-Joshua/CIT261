@@ -69,13 +69,30 @@ function chooseVerse() {
         for (i in obj.sections) {
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
-                    console.log('2: ' + obj.sections[i].verses[j]);
-                    console.log('3: ' + obj.sections[i].reference);
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].reference);
                     opt.innerHTML += obj.sections[i].reference;
                     document.getElementById('verseSelect').appendChild(opt);
-                    console.log('verse #: ' + j);
+                }
+                return;
+            }
+        }
+    } else {
+        console.log('Not D&C');
+    }
+}
+
+
+function chooseReference() {
+    var a = document.getElementById('bookSelect').value;
+    var v = document.getElementById('verseSelect').value;
+    if (obj.sections) {
+        for (i in obj.sections) {
+            if (obj.sections[i].section == a) {
+                for (j in obj.sections[i].verses) {
+                    if (obj.sections[i].verses == v) {
+                        document.getElementById('displayVerse') = obj.sections[i].verses[j].text;
+                    }
                 }
                 return;
             }
