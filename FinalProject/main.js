@@ -70,8 +70,8 @@ function chooseVerse() {
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.sections[i].reference);
-                    opt.innerHTML += obj.sections[i].reference;
+                    opt.setAttribute('id', obj.sections[i].reference.verses[j]);
+                    opt.innerHTML += obj.sections[i].reference.verses[j];
                     document.getElementById('verseSelect').appendChild(opt);
                 }
                 return;
@@ -91,7 +91,8 @@ function chooseReference() {
             if (obj.sections[i].section == a) {
                 for (j in obj.sections[i].verses) {
                     if (obj.sections[i].verses == v) {
-                        document.getElementById('displayVerse') = obj.sections[i].verses[j].text;
+                        document.getElementById('displayVerse') =
+                            obj.sections[i].verses[j].text;
                     }
                 }
                 return;
