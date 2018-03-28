@@ -38,15 +38,19 @@ function loadDoc() {
     }
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
+        document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
+        document.getElementById('deeper').style.visibility = 'hidden';
         b = 1;
     } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/old-testament.json";
+        document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
+        document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else {
         console.log('There was an error loading the book')
@@ -79,12 +83,12 @@ function chooseVerse() {
                     opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
                 }
-                document.getElementById('deeper').style.visibility = 'hidden';
+                //document.getElementById('deeper').style.visibility = 'hidden';
                 return;
             }
         }
     } else {
-        document.getElementById('deeper').style.visibility = 'visible';
+        //document.getElementById('deeper').style.visibility = 'visible';
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
