@@ -97,7 +97,7 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
-                    console.log('chapters' + obj.books[i].chapters[j]);
+                    console.log('chapters' + obj.books[i].chapters[j].chapter);
                     for (k in obj.books[i].chapters[j].verses) {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
