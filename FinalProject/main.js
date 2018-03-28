@@ -71,7 +71,7 @@ function chooseVerse() {
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
                     console.log('2: ' + obj.sections[i].verses[j]);
-                    console.log('3: ' + obj.sections[i].section.reference[j]);
+                    console.log('3: ' + obj.sections[i].reference[j]);
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].reference[j]);
                     opt.innerHTML += obj.sections[i].reference[j];
