@@ -65,14 +65,22 @@ function loadDoc() {
 
 function chooseVerse() {
     var v = document.getElementById('bookSelect').value;
-    console.log('v: ' + v);
     if (obj.sections) {
         for (i in obj.sections) {
-            var opt = document.createElement('option');
-            opt.setAttribute('id', obj.sections[i].section);
-            opt.setAttribute('value', obj.sections[i].section);
-            opt.innerHTML += obj.sections[i].section;
-            document.getElementById('bookSelect').appendChild(opt);
+            if (obj.sections[i].section === v) {
+                for (j in obj.sections[i].section.verses[j]) {
+                    var opt = document.createElement('option');
+                    opt.setAttribute('id', obj.sections[i].section.reference[j]);
+                    opt.innerHTML++ obj.sections[i].section.reference[j];
+                    document.getElementById('verseSelect').appendChild(opt);
+                    return;
+                }
+            }
+            //var opt = document.createElement('option');
+            //opt.setAttribute('id', obj.sections[i].section);
+            //opt.setAttribute('value', obj.sections[i].section);
+            //opt.innerHTML += obj.sections[i].section;
+            //document.getElementById('bookSelect').appendChild(opt);
         }
     } else {
         console.log('Not D&C');
