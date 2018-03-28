@@ -153,6 +153,7 @@ function otherBooks() {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
                     opt.innerHTML += obj.books[i].book[j].verses[k].verse;
+                    console.log('verse: ' + obj.books[i].book[j].veres[k].verse);
                     document.getElementById('verseSelect').appendChild(opt);
                 }
                 //document.getElementById('deeper').style.visibility = 'hidden';
