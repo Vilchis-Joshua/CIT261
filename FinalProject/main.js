@@ -63,7 +63,7 @@ function loadDoc() {
     xhttp.send();
 }
 
-function chooseBook() {
+function chooseVerse() {
     var v = document.getElementById('bookSelect').value; 
     if (obj.sections) {
         //for (i in obj.sections) {
