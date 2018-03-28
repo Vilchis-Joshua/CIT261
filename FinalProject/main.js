@@ -144,6 +144,7 @@ function otherBooks() {
     if (sel.options.length != 0) {
         sel.options.length = 0;
     }
+    var v = document.getElementById('bookSelect').value;
 
     for (i in obj.books) {
         if (obj.books[i].book == v) {
