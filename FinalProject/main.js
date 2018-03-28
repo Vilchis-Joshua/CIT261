@@ -70,8 +70,8 @@ function chooseVerse() {
             if (obj.sections[i].section == v) {
                 for (j in obj.sections[i].verses) {
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.sections[i].verses[j]);
-                    opt.innerHTML += obj.sections[i].verses[j];
+                    opt.setAttribute('id', obj.sections[i].verses[j].verse);
+                    opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
                 }
                 return;
