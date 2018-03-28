@@ -1,4 +1,4 @@
-#displayBooks, #verseSelect {
+#displayBooks, #displayVerses, #displayVerse {
     display: flex;
     justify-content: center;
 }
