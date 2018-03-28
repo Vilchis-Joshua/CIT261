@@ -64,16 +64,16 @@ function loadDoc() {
 }
 
 function chooseVerse() {
-    var v = document.getElementById('bookSelect').value; 
+    var v = document.getElementById('bookSelect').value;
+    console.log('v: ' + v);
     if (obj.sections) {
-        //for (i in obj.sections) {
-        //    var opt = document.createElement('option');
-        //    opt.setAttribute('id', obj.sections[i].section);
-        //    opt.setAttribute('value', obj.sections[i].section);
-        //    opt.innerHTML += obj.sections[i].section;
-        //    document.getElementById('bookSelect').appendChild(opt);
-        //}
-        console.log('D&C');
+        for (i in obj.sections) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.sections[i].section);
+            opt.setAttribute('value', obj.sections[i].section);
+            opt.innerHTML += obj.sections[i].section;
+            document.getElementById('bookSelect').appendChild(opt);
+        }
     } else {
         console.log('Not D&C');
     }
