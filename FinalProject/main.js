@@ -127,7 +127,7 @@ function chooseReference() {
                     for (k in obj.books[i].book[j].verses) {
                         if (obj.books[i].book[j].verses[k].verse == v) {
                             document.getElementById('displayVerse').innerHTML =
-                                obj.books[i].book[j].verses[k].verse;
+                                obj.books[i].chapters[j].verses[k].verse;
                         }
                         return;
                     }
@@ -147,16 +147,14 @@ function otherBooks() {
     for (i in obj.books) {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].book) {
-                console.log('coming here?');
-                for (k in obj.books[i].book[j].verses) {
+                for (k in obj.books[i].chapters[j].verses) {
                     console.log('here?');
                     var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
-                    opt.innerHTML += obj.books[i].book[j].verses[k].verse;
-                    console.log('verse: ' + obj.books[i].book[j].veres[k].verse);
+                    opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
+                    opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                    console.log('verse: ' + obj.books[i].chapters[j].verses[k].verse);
                     document.getElementById('verseSelect').appendChild(opt);
                 }
-                //document.getElementById('deeper').style.visibility = 'hidden';
                 return;
             }
         }
