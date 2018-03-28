@@ -125,6 +125,7 @@ function chooseReference() {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
+                        console.log('coming?');
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
                             document.getElementById('displayVerse').innerHTML =
                                 obj.books[i].chapters[j].verses[k].verse;
