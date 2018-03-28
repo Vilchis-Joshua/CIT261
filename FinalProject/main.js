@@ -92,8 +92,8 @@ function chooseVerse() {
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
                         document.getElementById('verseSelect').appendChild(opt);
                     }
+                    return;
                 }
-                return;
             }
         }
     }
