@@ -10,7 +10,7 @@ function chooseBook(obj, b) {
         //for (var i = 0; i < sel.options.length; i++) {
         //    sel.removeChild(sel.options[i]);
         //}
-        removeAllOptions(sel, true);
+        sel.options.length = 0;
     }
 
     // Check it it's d&c or not
