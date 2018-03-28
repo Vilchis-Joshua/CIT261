@@ -6,14 +6,17 @@ var bookToParse = "";
 
 function chooseBook(obj, b) {
     var sel = document.getElementById('bookSelect');
-    if (sel.options.length == 0) {
-        console.log('true');
-    } else {
-        console.log('false');
+    if (sel.options.length != 0) {
+        for (var i = 0; i < sel.options.length; i++) {
+            sel.remove(i);
+        }
+        document.getElementById('bookSelect').style.visibility = 'hidden';
     }
 
     // Check it it's d&c or not
     if (b == 0) {
+        document.getElementById('bookSelect').style.visibility = 'visible';
+
         for (i in obj.books) {
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
@@ -23,6 +26,8 @@ function chooseBook(obj, b) {
         }
     } else {
         for (i in obj.sections) {
+            document.getElementById('bookSelect').style.visibility = 'visible';
+
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.sections[i].section);
             opt.setAttribute('value', obj.sections[i].section);
