@@ -10,7 +10,7 @@
     <div>
         <p>Come and memorize some scriptures!</p>
     </div>
-
+    <hr />
     <div id="selectScripture">
         <input id="bom" name="book" type="radio" value="Book Of Mormon" checked/>Book of Mormon
         <input id="dac" name="book" type="radio" value="Doctrine And Covenants" />Doctrine and Covenants
@@ -18,9 +18,12 @@
         <input id="nt"  name="book" type="radio" value="New Testament" />New Testament<br />
         <input type="submit" value="Search" onclick="loadDoc()" />
     </div>
-    <hr />
     <div id="displayBooks">
-        <select id="bookSelect"></select>
+        <select id="bookSelect" onchange="chooseBook()"></select>
+    </div>
+    <hr />
+    <div>
+        
     </div>
 </body>
 </html>

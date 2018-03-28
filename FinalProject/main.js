@@ -1,15 +1,9 @@
 var bookToParse = "";
-
-//function startUp() {
-//    loadDocs();
-//}
+var obj;
 
 function chooseBook(obj, b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
-        //for (var i = 0; i < sel.options.length; i++) {
-        //    sel.removeChild(sel.options[i]);
-        //}
         sel.options.length = 0;
     }
 
@@ -35,51 +29,7 @@ function chooseBook(obj, b) {
             document.getElementById('bookSelect').appendChild(opt);
         }
     }
-
-
-    //if (bom.checked == true) {
-    //    for (i in obj.books) {
-    //        var opt = document.createElement('option');
-    //        opt.setAttribute('id', obj.books[i].book);
-    //        opt.setAttribute('value', obj.books[i].book);
-    //        opt.innerHTML += obj.books[i].book;
-    //        document.getElementById('bookSelect').appendChild(opt);
-    //    }
-    //} else if (dac.checked == true) {
-    //    for (i in obj.sections) {
-    //        var opt = document.createElement('option');
-    //        opt.setAttribute('id', obj.sections[i].section);
-    //        opt.setAttribute('value', obj.sections[i].section);
-    //        opt.innerHTML += obj.sections[i].section;
-    //        document.getElementById('bookSelect').appendChild(opt);
-    //        dac.checked = false;
-    //    }
-    //} else if (ot.checked == true) {
-    //    for (i in obj.books) {
-    //        var opt = document.createElement('option');
-    //        opt.setAttribute('id', obj.books[i].book);
-    //        opt.setAttribute('value', obj.books[i].book);
-    //        opt.innerHTML += obj.books[i].book;
-    //        document.getElementById('bookSelect').appendChild(opt);
-    //        ot.checked = false;
-    //    }
-    //} else if (nt.checked == true) {
-    //    for (i in obj.books) {
-    //        var opt = document.createElement('option');
-    //        opt.setAttribute('id', obj.books[i].book);
-    //        opt.setAttribute('value', obj.books[i].book);
-    //        opt.innerHTML += obj.books[i].book;
-    //        document.getElementById('bookSelect').appendChild(opt);
-    //        nt.checked = false;
-    //    }
-    //} else {
-    //    console.log('Nothing checked');
-    //}
-
 }
-
-
-
 
 function loadDoc() {
     var b = 0;
@@ -105,69 +55,26 @@ function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            chooseBook(obj, b);
-
+            obj = JSON.parse(this.responseText);
+            chooseBook(b);
         }
     }
     xhttp.open("GET", bookToParse, true);
     xhttp.send();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-function loadDac() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            chooseBook(obj);
-
-        }
+function chooseBook() {
+    var v = document.getElementById('bookSelect').value; 
+    if (obj.sections) {
+        //for (i in obj.sections) {
+        //    var opt = document.createElement('option');
+        //    opt.setAttribute('id', obj.sections[i].section);
+        //    opt.setAttribute('value', obj.sections[i].section);
+        //    opt.innerHTML += obj.sections[i].section;
+        //    document.getElementById('bookSelect').appendChild(opt);
+        //}
+        console.log('D&C');
+    } else {
+        console.log('Not D&C');
     }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
-    xhttp.send();
-}
-
-function loadNt() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            chooseBook(obj);
-
-        }
-    }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
-    xhttp.send();
-}
-
-function loadOt() {
-    var search = document.getElementById('recipeSearchBar');
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var obj = JSON.parse(this.responseText);
-            chooseBook(obj);
-
-        }
-    }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
-    xhttp.send();
 }
