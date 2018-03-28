@@ -155,10 +155,14 @@ function otherBooks() {
     }
 
     var v = document.getElementById('bookSelect').value;
+    var a = document.getElementById('deeper').value;
 
     for (i in obj.books) {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].chapters) {
+                if (obj.books[i].chapters[j].chapter == a) {
+                    console.log('here');
+                }
                 for (k in obj.books[i].chapters[j].verses) {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
