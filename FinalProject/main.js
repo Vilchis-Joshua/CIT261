@@ -147,6 +147,7 @@ function otherBooks() {
     for (i in obj.books) {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].book) {
+                console.log('coming here?');
                 for (k in obj.books[i].book[j].verses) {
                     console.log('here?');
                     var opt = document.createElement('option');
