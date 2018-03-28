@@ -5,10 +5,12 @@ var bookToParse = "";
 //}
 
 function chooseBook(obj, b) {
- 
-    var sel = document.createElement('select');
-    sel.setAttribute('id', 'bookSelect');
-    document.getElementById('displayBooks').appendChild(sel);
+    var sel = document.getElementById('bookSelect');
+    if (sel.options.length == 0) {
+        console.log('true');
+    } else {
+        console.log('false');
+    }
 
     // Check it it's d&c or not
     if (b == 0) {
