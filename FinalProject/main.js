@@ -7,9 +7,10 @@ var bookToParse = "";
 function chooseBook(obj, b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
-        for (var i = 0; i < sel.options.length; i++) {
-            sel.removeChild(sel.options[i]);
-        }
+        //for (var i = 0; i < sel.options.length; i++) {
+        //    sel.removeChild(sel.options[i]);
+        //}
+        removeAllOptions(sel, true);
     }
 
     // Check it it's d&c or not
