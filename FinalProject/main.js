@@ -6,7 +6,6 @@ var bookToParse = "";
 
 function chooseBook(obj, b) {
  
-
     var sel = document.createElement('select');
     sel.setAttribute('id', 'bookSelect');
     document.getElementById('displayBooks').appendChild(sel);
@@ -21,11 +20,13 @@ function chooseBook(obj, b) {
             document.getElementById('bookSelect').appendChild(opt);
         }
     } else {
-        var opt = document.createElement('option');
-        opt.setAttribute('id', obj.sections[i].section);
-        opt.setAttribute('value', obj.sections[i].section);
-        opt.innerHTML += obj.sections[i].section;
-        document.getElementById('bookSelect').appendChild(opt);
+        for (i in obj.sections) {
+            var opt = document.createElement('option');
+            opt.setAttribute('id', obj.sections[i].section);
+            opt.setAttribute('value', obj.sections[i].section);
+            opt.innerHTML += obj.sections[i].section;
+            document.getElementById('bookSelect').appendChild(opt);
+        }
     }
 
 
