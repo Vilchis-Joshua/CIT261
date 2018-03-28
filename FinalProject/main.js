@@ -73,6 +73,12 @@ function chooseVerse() {
         sel.options.length = 0;
     }
 
+    var other = document.getElementById('deeper');
+    if (other.options.length != 0) {
+        other.options.length = 0;
+    }
+
+
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
@@ -142,11 +148,6 @@ function otherBooks() {
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
         sel.options.length = 0;
-    }
-
-    var other = document.getElementById('deeper');
-    if (other.options.length != 0) {
-        other.options.length = 0;
     }
 
     var v = document.getElementById('bookSelect').value;
