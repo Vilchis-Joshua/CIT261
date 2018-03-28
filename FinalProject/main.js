@@ -92,7 +92,7 @@ function chooseVerse() {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
-                        document.getElementById('verseSelect').appendChild(opt);
+                        document.getElementById('deeper').appendChild(opt);
                     }
                     return;
                 }
