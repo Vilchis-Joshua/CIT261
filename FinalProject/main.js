@@ -90,11 +90,13 @@ function chooseVerse() {
 function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
+    console.log('v: ' + v);
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
                 for (j in obj.sections[i].verses) {
-                    if (obj.sections[i].verses[j] == v) {
+                    console.log('verse: ' + obj.sections[i].verses[j].verse)
+                    if (obj.sections[i].verses[j].verse == v) {
                         document.getElementById('displayVerse') =
                             obj.sections[i].verses[j].text; 
                         return;
