@@ -109,6 +109,7 @@ function chooseVerse() {
 function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
+
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
@@ -122,10 +123,39 @@ function chooseReference() {
             }
         }
     } else {
-        console.log('Not D&C');
+        for (i in obj.books) {
+            if (obj.books[i].book == v) {
+                for (j in obj.books[i].book) {
+                    for (k in obj.books[i].book[j].verses) {
+                        if (obj.books[i].book[j].verses[k].verse == v) {
+                            document.getElementById('displayVerse').innerHTML =
+                                obj.books[i].book[j].verses[k].verse;
+                        }
+                      
+                    }
+                }
+            }
+        }
     }
 }
 
 function otherBooks() {
+    var sel = document.getElementById('verseSelect');
+    if (sel.options.length != 0) {
+        sel.options.length = 0;
+    }
 
+    for (i in obj.books) {
+        if (obj.books[i].book == v) {
+            for (j in obj.books[i].book) {
+                for (k in obj.books[i].book[j].verses)
+                var opt = document.createElement('option');
+                opt.setAttribute('id', obj.books[i].book[j].verses[k].verse);
+                opt.innerHTML += obj.books[i].book[j].verses[k].verse;
+                document.getElementById('verseSelect').appendChild(opt);
+            }
+            //document.getElementById('deeper').style.visibility = 'hidden';
+            return;
+        }
+    }
 }
