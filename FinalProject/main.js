@@ -87,10 +87,12 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
-                    var opt = document.createElement('option');
-                    opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
-                    opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
-                    document.getElementById('verseSelect').appendChild(opt);
+                    for (k in obj.books[i].chapters[j].verses) {
+                        var opt = document.createElement('option');
+                        opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
+                        opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
+                        document.getElementById('verseSelect').appendChild(opt);
+                    }
                 }
             }
         }
