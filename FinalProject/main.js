@@ -67,11 +67,11 @@ function chooseVerse() {
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
-            console.log('ugh');
+            console.log('1: ' + obj.sections[i].section);
             if (obj.sections[i].section === v) {
-                console.log('here');
+                console.log('2: ' + obj.sections[i].section.verses[j]);
                 for (j in obj.sections[i].section.verses[j]) {
-                    console.log('there');
+                    console.log('3: ' + obj.sections[i].section.reference[j]);
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].section.reference[j]);
                     opt.innerHTML += obj.sections[i].section.reference[j];
