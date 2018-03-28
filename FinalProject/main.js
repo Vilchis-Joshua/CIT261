@@ -8,7 +8,7 @@ function chooseBook(obj, b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
         for (var i = 0; i < sel.options.length; i++) {
-            sel.removeChild(i);
+            sel.removeChild(sel.options[i]);
         }
     }
 
