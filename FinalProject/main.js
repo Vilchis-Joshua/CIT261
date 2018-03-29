@@ -9,7 +9,6 @@ function chooseBook(b) {
 
     // Check it it's d&c or not
     if (b == 0) {
-
         for (i in obj.books) {
 
             var opt = document.createElement('option');
@@ -19,7 +18,6 @@ function chooseBook(b) {
             document.getElementById('bookSelect').appendChild(opt);
         }
     } else {
-
         for (i in obj.sections) {
 
             var opt = document.createElement('option');
@@ -96,10 +94,6 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
-                    //var opt = document.createElement('option');
-                    //opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
-                    //opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
-                    //document.getElementById('deeper').appendChild(opt);
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].chapters[j].chapter);
                     opt.innerHTML += obj.books[i].chapters[j].chapter;
@@ -145,6 +139,7 @@ function chooseReference() {
     }
 }
 
+// In the case it's not D&C, you need another layer to choose from.
 function otherBooks() {
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
@@ -162,10 +157,7 @@ function otherBooks() {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
-                        if (obj.books[i].chapters[j].verses[k].verse == 1) {
-                            console.log('yooooooooo');
-                            opt.setAttribute('selected', true);
-                        }
+
                         document.getElementById('verseSelect').appendChild(opt);
                     }
                     return;
