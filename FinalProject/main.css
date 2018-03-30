@@ -7,3 +7,7 @@ select {
     border-radius: 8px;
     background-color: black;
 }
+
+body {
+    background-color: rgb(205, 198, 198)
+}
