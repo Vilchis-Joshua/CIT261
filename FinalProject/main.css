@@ -5,6 +5,7 @@
 
 h2 {
     color: rgb(212, 116, 106);
+    justify-content: center;
 }
 
 select {
