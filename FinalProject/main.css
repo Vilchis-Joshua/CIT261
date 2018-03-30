@@ -29,3 +29,14 @@ input.color1 {
     border: 5px;
     box-shadow: 0 4px 8px 0 rgba(255, 229, 170, 0.2), 0 6px 20px 0 rgba(255, 229, 170, 0.19);
 }
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    background-color: rgb(106, 149, 157);
+}
