@@ -9,9 +9,10 @@ select {
 }
 
 body {
-    background-color: rgb(235, 234, 234);
+    background-color: rgb(247, 247, 247);
 }
 
 #mainDiv {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(15, 69, 79);
 }
