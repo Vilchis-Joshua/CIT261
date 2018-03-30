@@ -1,6 +1,12 @@
 var bookToParse = "";
 var obj;
 
+function start() {
+    documnet.getElementById('deeper').style.visibility = 'hidden';
+    documnet.getElementById('verseSelect').style.visibility = 'hidden';
+}
+
+
 function chooseBook(b) {
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
@@ -84,6 +90,7 @@ function chooseVerse() {
                 for (j in obj.sections[i].verses) {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].verses[j].verse);
+                    opt.setAttribute('selected', 'selected')
                     opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
                 }
@@ -107,6 +114,8 @@ function chooseVerse() {
 
 
 function chooseReference() {
+    document.getElementById('verseSelect').style.visibility = 'visible';
+
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
 
@@ -141,6 +150,7 @@ function chooseReference() {
 
 // In the case it's not D&C, you need another layer to choose from.
 function otherBooks() {
+    document.getElementById('deeper').style.visibility = 'visible';
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
         sel.options.length = 0;
