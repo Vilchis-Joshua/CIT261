@@ -82,7 +82,6 @@ function chooseVerse() {
     if (other.options.length != 0) {
         other.options.length = 0;
     }
-
     var v = document.getElementById('bookSelect').value;
     if (obj.sections) {
         for (i in obj.sections) {
