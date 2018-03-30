@@ -5,4 +5,10 @@
 
 select {
     border-radius: 8px;
+    background-color: black;
+}
+
+#mainDiv {
+    border: 50px;
+    padding: 50px;
 }

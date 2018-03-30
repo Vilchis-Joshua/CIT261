@@ -6,35 +6,37 @@
     <script src="main.js"></script>
 </head>
 <body onload="start()">
-    <h1>Scripture List!</h1>
-    <div>
-        <p>Come and memorize some scriptures!</p>
-    </div>
-    <hr />
-    <h2>Choose a book/section!</h2>
-    <div id="selectScripture">
-        <input id="bom" name="book" type="radio" value="Book Of Mormon" checked />Book of Mormon
-        <input id="dac" name="book" type="radio" value="Doctrine And Covenants" />Doctrine and Covenants
-        <input id="ot" name="book" type="radio" value="Old Testament" />Old Testament
-        <input id="nt" name="book" type="radio" value="New Testament" />New Testament<br />
-        <input type="submit" value="Search" onclick="loadDoc()" />
-    </div>
+    <div id="mainDiv">
+        <h1>Scripture List!</h1>
+        <div>
+            <p>Come and memorize some scriptures!</p>
+        </div>
+        <hr />
+        <h2>Choose a book/section!</h2>
+        <div id="selectScripture">
+            <input id="bom" name="book" type="radio" value="Book Of Mormon" checked />Book of Mormon
+            <input id="dac" name="book" type="radio" value="Doctrine And Covenants" />Doctrine and Covenants
+            <input id="ot" name="book" type="radio" value="Old Testament" />Old Testament
+            <input id="nt" name="book" type="radio" value="New Testament" />New Testament<br />
+            <input type="submit" value="Search" onclick="loadDoc()" />
+        </div>
 
-    <div id="displayBooks">
-        <select id="bookSelect" onchange="chooseVerse()"></select>
-    </div>
-    <br />
-    <div id="displayBooks">
-        <select id="deeper" onchange="otherBooks()" ></select>
-    </div>
-    <hr />
-    <h2 id="chapter">Verse</h2>
-    <div id="displayVerses">
-        <select id="verseSelect" onchange="chooseReference()"></select>
-    </div>
-    <hr />
-    <div>
-        <p id="displayVerse"></p>
+        <div id="displayBooks">
+            <select id="bookSelect" onchange="chooseVerse()"></select>
+        </div>
+        <br />
+        <div id="displayBooks">
+            <select id="deeper" onchange="otherBooks()"></select>
+        </div>
+        <hr />
+        <h2 id="chapter">Verse</h2>
+        <div id="displayVerses">
+            <select id="verseSelect" onchange="chooseReference()"></select>
+        </div>
+        <hr />
+        <div>
+            <p id="displayVerse"></p>
+        </div>
     </div>
 </body>
 </html>
