@@ -3,7 +3,6 @@ var obj;
 
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
-    document.getElementById('verseSelect').style.visibility = 'hidden';
 }
 
 
