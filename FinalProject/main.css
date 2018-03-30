@@ -3,6 +3,10 @@
     justify-content: center;
 }
 
+h2 {
+    color: rgb(212, 116, 106);
+}
+
 select {
     border-radius: 8px;
     background-color: black;
