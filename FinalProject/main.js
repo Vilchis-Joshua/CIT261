@@ -2,8 +2,8 @@ var bookToParse = "";
 var obj;
 
 function start() {
-    documnet.getElementById('deeper').style.visibility = 'hidden';
-    documnet.getElementById('verseSelect').style.visibility = 'hidden';
+    document.getElementById('deeper').style.visibility = 'hidden';
+    document.getElementById('verseSelect').style.visibility = 'hidden';
 }
 
 
@@ -166,6 +166,7 @@ function otherBooks() {
                     for (k in obj.books[i].chapters[j].verses) {
                         var opt = document.createElement('option');
                         opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
+                        opt.setAttribute('selected', 'selected');
                         opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
 
                         document.getElementById('verseSelect').appendChild(opt);
