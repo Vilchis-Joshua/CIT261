@@ -11,4 +11,9 @@ select {
 #mainDiv {
     border: 50px;
     padding: 50px;
+    background-color: aqua;
+}
+
+body {
+    background-color: grey;
 }
