@@ -7,18 +7,22 @@
 </head>
 <body onload="start()">
     <div id="mainDiv">
-        <h1>Scripture List!</h1>
+        <h1 class="textColor">Scripture List to Memorize!</h1>
         <div>
-            <p>Come and memorize some scriptures!</p>
+            <p class="textColor cen">Come and memorize some scriptures!</p>
         </div>
         <hr />
-        <h2>Choose a book!</h2>
+        <h2 class="textColor">Choose a book!</h2>
         <div id="selectScripture">
-            <input id="bom" name="container" type="radio" value="Book Of Mormon" checked />Book of Mormon
-            <input id="dac" name="container" type="radio" value="Doctrine And Covenants" />Doctrine and Covenants
-            <input id="ot" name="container" type="radio" value="Old Testament" />Old Testament
-            <input id="nt" name="container" type="radio" value="New Testament" />New Testament<br />
-            <input class="color1" type="submit" value="Search" onclick="loadDoc()" />
+            <div id="separate">
+                <input class="bord" id="bom" name="container" type="radio" value="Book Of Mormon" checked />Book of Mormon
+                <input class="bord" id="dac" name="container" type="radio" value="Doctrine And Covenants" />Doctrine and Covenants
+                <input class="bord" id="ot" name="container" type="radio" value="Old Testament" />Old Testament
+                <input class="bord" id="nt" name="container" type="radio" value="New Testament" />New Testament<br />
+            </div>
+            <div id="separate">
+                <input class="color1" type="submit" value="Search" onclick="loadDoc()" />
+            </div>
         </div>
 
         <div id="displayBooks">
@@ -29,16 +33,19 @@
             <select id="deeper" onchange="otherBooks()"></select>
         </div>
         <hr />
-        <h2 id="chapter">Verse</h2>
+        <h2 id="chapter" class="textColor">Verse</h2>
         <div id="displayVerses">
             <select id="verseSelect" onchange="chooseReference()"></select>
         </div>
         <hr />
-        <div>
-            <p id="displayVerse"></p>
+        <div id="versesStuff">
+            <p id="displayBookTitle"></p><br />
+            <p id="displayChapterAndVerse"></p><br />
+            <p class="textColor verseText" id="displayVerse"></p>
         </div>
         <hr />
-        <div id="versesToMemorize">
+
+        <div id="insertDisplaysHere">
 
         </div>
     </div>

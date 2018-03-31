@@ -72,6 +72,7 @@ function loadDoc() {
 
 // Not great naming. It is really choosing the chapter/section
 function chooseVerse() {
+    var temp = 1;
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
         sel.options.length = 0;
@@ -88,6 +89,10 @@ function chooseVerse() {
                 for (j in obj.sections[i].verses) {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].verses[j].verse);
+                    if (temp == 1) {
+                        opt.setAttribute('selected', 'selected');
+                        temp++;
+                    }
                     opt.setAttribute('selected', 'selected')
                     opt.innerHTML += obj.sections[i].verses[j].verse;
                     document.getElementById('verseSelect').appendChild(opt);
@@ -117,6 +122,8 @@ function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
 
+    document.getElementById('insertDisplaysHere').remove()
+
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
@@ -135,8 +142,10 @@ function chooseReference() {
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
-                            document.getElementById('displayVerse').innerHTML =
-                                obj.books[i].chapters[j].verses[k].text;
+                            var e = document.createElement('div');
+                            e.setAttribute('id', 'versesToMemorize');
+                            e.innerHTML = obj.books[i].chapters[j].verses[k].text;
+                            document.getElementById('insertDisplaysHere').appendChild(e);
                             return;                            
                         }
                     }
@@ -148,6 +157,7 @@ function chooseReference() {
 
 // In the case it's not D&C, you need another layer to choose from.
 function otherBooks() {
+    var temp = 1;
     document.getElementById('deeper').style.visibility = 'visible';
     var sel = document.getElementById('verseSelect');
     if (sel.options.length != 0) {
@@ -162,11 +172,15 @@ function otherBooks() {
             for (j in obj.books[i].chapters) {
                 if (obj.books[i].chapters[j].chapter == a) {
                     for (k in obj.books[i].chapters[j].verses) {
-                        var opt = document.createElement('option');
-                        opt.setAttribute('id', obj.books[i].chapters[j].verses[k].verse);
-                        opt.setAttribute('selected', 'selected');
-                        opt.innerHTML += obj.books[i].chapters[j].verses[k].verse;
 
+                        if (obj.books[i].chapters[j].verses[k].length == 1) {
+                            console.log('Success');
+                        }
+                        var opt = document.createElement('option');
+                        var z = obj.books[i].chapters[j].verses[k].verse
+                        opt.setAttribute('id', z);
+                        opt.setAttribute('selected', 'selected');
+                        opt.innerHTML += z;
                         document.getElementById('verseSelect').appendChild(opt);
                     }
                     return;
