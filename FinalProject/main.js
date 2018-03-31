@@ -122,7 +122,6 @@ function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
 
-    document.getElementById('insertDisplaysHere').remove()
 
     if (obj.sections) {
         for (i in obj.sections) {
