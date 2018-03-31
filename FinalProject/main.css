@@ -31,10 +31,10 @@ body {
 
 }
 
-input.bord {
-    border: 10px;
-    padding 10px;
+div#separate {
+    color: rgb(212, 116, 106);
 }
+
 
 input.color1 {
     background-color: rgb(128, 95, 21);
@@ -44,6 +44,10 @@ input.color1 {
     border: 5px;
     /*box-shadow: 0 4px 8px 0 rgba(255, 229, 170, 0.2), 0 6px 20px 0 rgba(255, 229, 170, 0.19);*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input.color1:hover {
+    box-shadow: none;
 }
 
 hr {

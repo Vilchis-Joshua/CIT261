@@ -7,6 +7,7 @@ function start() {
 
 
 function chooseBook(b) {
+    var temp = 1;
     var sel = document.getElementById('bookSelect');
     if (sel.options.length != 0) {
         sel.options.length = 0;
@@ -15,7 +16,13 @@ function chooseBook(b) {
     // Check it it's d&c or not
     if (b == 0) {
         for (i in obj.books) {
-
+            if (temp == 1) {
+                var tempOpt = document.createElement('option');
+                tempOpt.setAttribute('id', 'BookPlaceholder');
+                tempOpt.innerHTML += "Book";
+                document.getElementById('bookSelect').appendChild(tempOpt);
+                temp++;
+            }
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.books[i].book);
             opt.setAttribute('value', obj.books[i].book);
@@ -24,7 +31,13 @@ function chooseBook(b) {
         }
     } else {
         for (i in obj.sections) {
-
+            if (temp == 1) {
+                var tempOpt = document.createElement('option');
+                tempOpt.setAttribute('id', 'sectionPlaceholder');
+                tempOpt.innerHTML += "Section";
+                document.getElementById('bookSelect').appendChild(tempOpt);
+                temp++;
+            }
             var opt = document.createElement('option');
             opt.setAttribute('id', obj.sections[i].section);
             opt.setAttribute('value', obj.sections[i].section);
@@ -90,7 +103,10 @@ function chooseVerse() {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].verses[j].verse);
                     if (temp == 1) {
-                        opt.setAttribute('selected', 'selected');
+                        var tempOpt = document.createElement('option');
+                        tempOpt.setAttribute('id', 'versePlaceholder');
+                        tempOpt.innerHTML += "Verse";
+                        document.getElementById('verseSelect').appendChild(tempOpt);
                         temp++;
                     }
                     opt.setAttribute('selected', 'selected')
@@ -104,6 +120,13 @@ function chooseVerse() {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
                 for (j in obj.books[i].chapters) {
+                    if (temp == 1) {
+                        var tempOpt = document.createElement('option');
+                        tempOpt.setAttribute('id', 'chapterNumberPlaceholder');
+                        tempOpt.innerHTML += "Chapter";
+                        document.getElementById('deeper').appendChild(tempOpt);
+                        temp++;
+                    }
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].chapters[j].chapter);
                     opt.innerHTML += obj.books[i].chapters[j].chapter;
@@ -168,14 +191,16 @@ function otherBooks() {
             for (j in obj.books[i].chapters) {
                 if (obj.books[i].chapters[j].chapter == a) {
                     for (k in obj.books[i].chapters[j].verses) {
-
-                        if (obj.books[i].chapters[j].verses[k].length == 1) {
-                            console.log('Success');
-                        }
                         var opt = document.createElement('option');
+                        if (temp == 1) {
+                            var tempOpt = document.createElement('option');
+                            tempOpt.setAttribute('id', 'versePlaceholder');
+                            tempOpt.innerHTML += "Verse";
+                            document.getElementById('verseSelect').appendChild(tempOpt);
+                            temp++;
+                        }
                         var z = obj.books[i].chapters[j].verses[k].verse
                         opt.setAttribute('id', z);
-                        opt.setAttribute('selected', 'selected');
                         opt.innerHTML += z;
                         document.getElementById('verseSelect').appendChild(opt);
                     }
