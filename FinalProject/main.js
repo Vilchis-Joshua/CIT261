@@ -122,7 +122,6 @@ function chooseReference() {
     var a = document.getElementById('bookSelect').value;
     var v = document.getElementById('verseSelect').value;
 
-
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == a) {
@@ -141,10 +140,8 @@ function chooseReference() {
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
-                            var e = document.createElement('div');
-                            e.setAttribute('id', 'versesToMemorize');
-                            e.innerHTML = obj.books[i].chapters[j].verses[k].text;
-                            document.getElementById('insertDisplaysHere').appendChild(e);
+                            document.getElementById('displayVerse').innerHTML =
+                                obj.books[i].chapters[j].verses[k].text;
                             return;                            
                         }
                     }
