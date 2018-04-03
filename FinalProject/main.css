@@ -112,9 +112,6 @@ h1 {
     position: relative;
     background-color: coral;
     color: white;
-    top: 0px;
-    -webkit-animation: myverse 2s 1; /* Safari 4.0 - 8.0 */
-    animation: myverse 2s 1;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -193,8 +190,9 @@ h1 {
 .verse-text {
     position: relative;
     color: #F0EBA3;
-    animation-name: bottomFadeOut;
-    animation-duration: 15s;
+    top: 0px;
+    -webkit-animation: myverse 2s 1; /* Safari 4.0 - 8.0 */
+    animation: myverse 2s 1;
 }
 
 @keyframes part1 {
