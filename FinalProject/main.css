@@ -1,9 +1,16 @@
 html, body {
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
 }
 
+
+body {
+    background-color: rgb(247, 247, 247);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 20px;
+    border-right: 20px;
+}
 
 
 #displayBooks, #displayVerses, h2, #selectScripture {
@@ -29,15 +36,7 @@ select {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
 body {
-    height:100%;
-    display:flex;
     background-color: rgb(247, 247, 247);
     padding-left: 20px;
     padding-right: 20px;
@@ -45,13 +44,11 @@ body {
     border-right: 20px;
 }
 
-body > * {
-    flex-shrink: 0;
-}
 
 #mainDiv {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(15, 69, 79);
+    height: 100%;
 }
 
 div#separate {
@@ -98,6 +95,9 @@ h1 {
 .verseText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    top: 350px;
 }
 
 .transformAni {
@@ -115,13 +115,13 @@ h1 {
 @keyframes bottomFadeOut {
     0% {
         position: absolute;
-        bottom: -5rem;
+        left: -5rem;
         opacity: 0;
     }
 
     75% {
         position: absolute;
-        bottom: 25%;
+        left: 25%;
         opacity: 1;
     }
 
@@ -133,7 +133,6 @@ h1 {
 .verse-text {
     position: relative;
     color: #F0EBA3;
-    opacity: 0;
     animation-name: bottomFadeOut;
     animation-duration: 1s;
 }
