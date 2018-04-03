@@ -177,9 +177,13 @@ function chooseReference() {
                             parent.removeChild(child);
 
                             var par = document.createElement('p');
+                            par.className = 'textColor';
+                            par.className = 'verseText';
                             par.textContent = obj.books[i].chapters[j].verses[k].text;
-                            par.setAttribute('class', 'textColor');
+                            //par.setAttribute('class', 'textColor');
+                            par.setAttribute('id', 'displayVerse');
                             parent.appendChild(par);
+
                             //========================THis is what I need====================
                             //document.getElementById('displayVerse').innerHTML =
                             //    obj.books[i].chapters[j].verses[k].text;
