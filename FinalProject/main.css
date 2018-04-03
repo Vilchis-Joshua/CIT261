@@ -114,7 +114,7 @@ h1 {
 }
 
 @keyframes bottomFadeOut {
-    0% {
+    /*0% {
         position: absolute;
         bottom: -5rem;
         opacity: 0;
@@ -127,7 +127,38 @@ h1 {
     }
 
     100% {
+        bottom:100%;
         opacity: 0;
+    }*/
+
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: 0;
+    }
+
+    25% {
+        position: absolute;
+        bottom: 15%;
+        opacity: .25;
+    }
+
+    50% {
+        position:absolute;
+        bottom: 30%;
+        opacity: .50;
+    }
+
+    75% {
+        position: absolute;
+        bottom: 45%;
+        opacity: .75;
+    }
+
+    100% {
+        position: absolute;
+        bottom: 52.5%;
+        opacity: 1;
     }
 }
 
@@ -135,7 +166,7 @@ h1 {
     position: relative;
     color: #F0EBA3;
     animation-name: bottomFadeOut;
-    animation-duration: 5s;
+    animation-duration: 2s;
 }
 
 @keyframes part1 {
