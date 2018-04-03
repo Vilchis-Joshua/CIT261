@@ -113,8 +113,9 @@ h1 {
 .verse-text {
     position: relative;
     color: #F0EBA3;
+    opacity: 0;
     animation-name: bottomFadeOut;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 @keyframes part1 {
@@ -147,23 +148,5 @@ h1 {
 
     100% {
         right: 0px;
-    }
-}
-
-.swap {
-    animation-name: swap;
-}
-
-@keyframes swap {
-    0% {
-        opacity: 0;
-        transform-origin: 0 100%;
-        transform: scale(0, 0) translate(-700px, 0px);
-    }
-
-    100% {
-        opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scale(1, 1) translate(0px, 0px);
     }
 }
