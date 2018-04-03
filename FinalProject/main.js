@@ -1,3 +1,5 @@
+//get the files to load onload
+
 var bookToParse = "";
 var obj;
 
@@ -167,9 +169,17 @@ function chooseReference() {
                 for (j in obj.books[i].chapters) {
                     for (k in obj.books[i].chapters[j].verses) {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
-                            document.getElementById('displayVerse').innerHTML =
-                                obj.books[i].chapters[j].verses[k].text;
-                            document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
+                            //var el = document.getElementById('displayVerse');
+                            //var newEl = obj.books[i].chapters[j].verses[k].text;
+                            //el.parentNode.replaceChild(newEl, el);
+                            var x = document.getElementById('verse-div');
+                            x.removeChild(x.childNodes[0]);
+
+                            //========================THis is what I need====================
+                            //document.getElementById('displayVerse').innerHTML =
+                            //    obj.books[i].chapters[j].verses[k].text;
+                            //document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
+                            //===================================================================
 
                             //var pa = document.createElement('p');
                             //pa.setAttribute('class', 'textColor');
@@ -194,6 +204,8 @@ function otherBooks() {
 
     var v = document.getElementById('bookSelect').value;
     var a = document.getElementById('deeper').value;
+
+    var di = document.createElement('div');
 
     for (i in obj.books) {
         if (obj.books[i].book == v) {
