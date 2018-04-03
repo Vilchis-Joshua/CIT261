@@ -177,7 +177,7 @@ function chooseReference() {
                             parent.removeChild(child);
 
                             var par = document.createElement('p');
-                            par.className = 'textColor verseText verse-text';
+                            par.className = 'verse-text';
                             par.textContent = obj.books[i].chapters[j].verses[k].text;
                             //par.setAttribute('class', 'textColor');
                             par.setAttribute('id', 'displayVerse');
