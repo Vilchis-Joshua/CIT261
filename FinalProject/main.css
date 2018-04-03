@@ -72,8 +72,8 @@ input.color1 {
 
 hr {
     display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     border-style: inset;
@@ -92,14 +92,7 @@ h1 {
 }
 
 
-.verseText {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    top: 350px;
-    font-size: 16px;
-}
+
 
 .transformAni {
     /*position: relative;
@@ -111,6 +104,30 @@ h1 {
     animation-name: part1;
     /*animation-duration: 6s;
     animation-iteration-count: 1;*/
+}
+
+.verseText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    background-color: coral;
+    color: white;
+    top: 0px;
+    -webkit-animation: myverse 2s 1; /* Safari 4.0 - 8.0 */
+    animation: myverse 2s 1;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myverse {
+    50% {
+        top: 0px;
+    }
+}
+
+@keyframes myverse {
+    50% {
+        top: 0px;
+    }
 }
 
 @keyframes bottomFadeOut {
@@ -131,7 +148,7 @@ h1 {
         opacity: 0;
     }*/
 
-    0% {
+    /*0% {
         position: absolute;
         bottom: -5rem;
         opacity: 0;
@@ -159,6 +176,17 @@ h1 {
         position: absolute;
         bottom: 52.5%;
         opacity: 1;
+    }*/
+
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: .5;
+    }
+
+    100% {
+        bottom:100%;
+        opacity: 1;
     }
 }
 
@@ -166,7 +194,7 @@ h1 {
     position: relative;
     color: #F0EBA3;
     animation-name: bottomFadeOut;
-    animation-duration: 5s;
+    animation-duration: 15s;
 }
 
 @keyframes part1 {
