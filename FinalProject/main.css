@@ -114,19 +114,6 @@ h1 {
     color: white;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes myverse {
-    50% {
-        top: 0px;
-    }
-}
-
-@keyframes myverse {
-    50% {
-        top: 0px;
-    }
-}
-
 @keyframes bottomFadeOut {
     /*0% {
         position: absolute;
@@ -191,8 +178,21 @@ h1 {
     position: relative;
     color: #F0EBA3;
     top: 0px;
-    -webkit-animation: myverse 2s 1; /* Safari 4.0 - 8.0 */
-    animation: myverse 2s 1;
+    -webkit-animation: myverse 10s 1; /* Safari 4.0 - 8.0 */
+    animation: myverse 10s 1;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myverse {
+    50% {
+        top: 300px;
+    }
+}
+
+@keyframes myverse {
+    50% {
+        top: 300px;
+    }
 }
 
 @keyframes part1 {
