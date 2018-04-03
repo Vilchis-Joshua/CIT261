@@ -172,9 +172,14 @@ function chooseReference() {
                             //var el = document.getElementById('displayVerse');
                             //var newEl = obj.books[i].chapters[j].verses[k].text;
                             //el.parentNode.replaceChild(newEl, el);
-                            var x = document.getElementById('verse-div');
-                            x.removeChild(x.childNodes[0]);
+                            var parent = document.getElementById('verse-div');
+                            var child = document.getElementById('displayVerse');
+                            parent.removeChild(child);
 
+                            var par = document.createElement('p');
+                            par.textContent = obj.books[i].chapters[j].verses[k].text;
+                            par.setAttribute('class', 'textColor');
+                            parent.appendChild(par);
                             //========================THis is what I need====================
                             //document.getElementById('displayVerse').innerHTML =
                             //    obj.books[i].chapters[j].verses[k].text;
