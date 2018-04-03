@@ -81,16 +81,45 @@ h1 {
 }
 
 .transformAni {
-    display: flex;
-    position: relative;
+    /*position: relative;
     border: solid;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
     -o-transition: all 1s ease-in-out 0s;
-    /*animation-name: part1;
-    animation-duration: 6s;
+    animation-name: part1;
+    /*animation-duration: 6s;
     animation-iteration-count: 1;*/
+}*/
+
+@keyframes bottomFadeOut {
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        bottom: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.verse-text {
+    font-size: 5rem;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: bottomFadeOut;
+    animation-delay: 10s;
+    animation-duration: 9s;
 }
 
 @keyframes part1 {
