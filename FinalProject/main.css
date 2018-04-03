@@ -111,10 +111,7 @@ h1 {
 }
 
 .verse-text {
-    font-size: 5rem;
-    position: absolute;
-    left: 5%;
-    bottom: 25%;
+    position: relative;
     opacity: 0;
     color: #F0EBA3;
     animation-name: bottomFadeOut;
