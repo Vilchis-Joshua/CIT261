@@ -139,7 +139,10 @@ function chooseVerse() {
 }
 
 
+
+// Another bad naming. This is for choosing the verse
 function chooseReference() {
+
     document.getElementById('verseSelect').style.visibility = 'visible';
 
     var a = document.getElementById('bookSelect').value;
@@ -152,6 +155,7 @@ function chooseReference() {
                     if (obj.sections[i].verses[j].verse == v) {
                         document.getElementById('displayVerse').innerHTML =
                             obj.sections[i].verses[j].text;
+                        document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
                         return;
                     }
                 }
@@ -165,6 +169,11 @@ function chooseReference() {
                         if (obj.books[i].chapters[j].verses[k].verse == v) {
                             document.getElementById('displayVerse').innerHTML =
                                 obj.books[i].chapters[j].verses[k].text;
+                            document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
+
+                            //var pa = document.createElement('p');
+                            //pa.setAttribute('class', 'textColor');
+                            //pa.innerHTML += obj.books[i].chapters[j].verses[k].text;
                             return;                            
                         }
                     }
@@ -210,3 +219,5 @@ function otherBooks() {
         }
     }
 }
+
+

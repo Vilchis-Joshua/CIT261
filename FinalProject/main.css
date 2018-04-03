@@ -9,7 +9,8 @@ div#separate {
     padding: 10px;
 }
 
-h2 {
+h2, div#infoDisplays {
+    display: flex;
     justify-content: center;
 }
 
@@ -22,13 +23,15 @@ select {
 
 body {
     background-color: rgb(247, 247, 247);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 20px;
+    border-right: 20px;
 }
 
 #mainDiv {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(15, 69, 79);
-
-
 }
 
 div#separate {
@@ -46,9 +49,9 @@ input.color1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-input.color1:hover {
-    box-shadow: none;
-}
+    input.color1:hover {
+        box-shadow: none;
+    }
 
 hr {
     display: block;
@@ -73,17 +76,14 @@ h1 {
 
 
 .verseText {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
-}
-
-.cen {
-    justify-content: center;
 }
 
 #versesStuff {
     display: flex;
     position: relative;
+    border: solid;
     animation-name: part1;
     animation-duration: 6s;
     animation-iteration-count: 1;
@@ -112,12 +112,30 @@ h1 {
     0% {
         right: 500px;
     }
-    
+
     50% {
         right: 250px;
     }
-   
+
     100% {
         right: 0px;
+    }
+}
+
+.swap {
+    animation-name: swap;
+}
+
+@keyframes swap {
+    0% {
+        opacity: 0;
+        transform-origin: 0 100%;
+        transform: scale(0, 0) translate(-700px, 0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: 100% 100%;
+        transform: scale(1, 1) translate(0px, 0px);
     }
 }
