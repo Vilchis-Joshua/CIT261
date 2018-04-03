@@ -176,6 +176,14 @@ function chooseReference() {
                             var child = document.getElementById('displayVerse');
                             parent.removeChild(child);
 
+                            var parentDiv = document.getElementById('verse-div');
+                            parentDiv.removeChild(parent);
+
+                            var divToAdd = document.createElement('div');
+                            divToAdd.setAttribute('id', 'verse-div');
+                            divToAdd.setAttribute('class', 'verse-text');
+                            document.getElementById('versesStuff').appendChild(divToAdd);
+
                             var par = document.createElement('p');
                             par.className = 'verse-text';
                             par.textContent = obj.books[i].chapters[j].verses[k].text;
