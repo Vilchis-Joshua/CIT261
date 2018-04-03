@@ -115,7 +115,7 @@ h1 {
     color: #F0EBA3;
     animation-name: bottomFadeOut;
     animation-delay: 10s;
-    animation-duration: 15s;
+    animation-duration: 5s;
 }
 
 @keyframes part1 {

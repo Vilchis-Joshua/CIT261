@@ -182,10 +182,9 @@ function chooseReference() {
                             var divToAdd = document.createElement('div');
                             divToAdd.setAttribute('id', 'verse-div');
                             divToAdd.setAttribute('class', 'verse-text');
-                            document.getElementById('versesStuff').appendChild(divToAdd);
+                            parentDiv.appendChild(divToAdd);
 
                             var par = document.createElement('p');
-                            par.className = 'verse-text';
                             par.textContent = obj.books[i].chapters[j].verses[k].text;
                             //par.setAttribute('class', 'textColor');
                             par.setAttribute('id', 'displayVerse');
