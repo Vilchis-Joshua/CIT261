@@ -66,9 +66,16 @@ input.color1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-    input.color1:hover {
-        box-shadow: none;
-    }
+input[type=submit] {
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 4s linear 4s;
+}
+
+input[type=submit]:hover {
+    box-shadow: none;
+    width: 150%;
+}
+
 
 hr {
     display: block;
