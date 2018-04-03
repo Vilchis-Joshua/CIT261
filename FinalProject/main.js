@@ -5,6 +5,15 @@ var obj;
 
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
+    //var xhttp = new XMLHttpRequest();
+    //xhttp.onreadystatechange = function () {
+    //    if (this.readyState == 4 && this.status == 200) {
+    //        obj = JSON.parse(this.responseText);
+    //        chooseBook(b);
+    //    }
+    //}
+    //xhttp.open("GET", bookToParse, true);
+    //xhttp.send();
 }
 
 
@@ -179,16 +188,18 @@ function chooseReference() {
                             var parentDiv = document.getElementById('versesStuff');
                             parentDiv.removeChild(parent);
 
-                            var divToAdd = document.createElement('div');
-                            divToAdd.setAttribute('id', 'verse-div');
-                            divToAdd.setAttribute('class', 'verse-text');
-                            parentDiv.appendChild(divToAdd);
-
                             var par = document.createElement('p');
                             par.textContent = obj.books[i].chapters[j].verses[k].text;
                             //par.setAttribute('class', 'textColor');
                             par.setAttribute('id', 'displayVerse');
-                            parent.appendChild(par);
+
+                            var divToAdd = document.createElement('div');
+                            divToAdd.setAttribute('id', 'verse-div');
+                            //divToAdd.setAttribute('class', 'verse-text');
+                            divToAdd.className = 'verse-text';
+
+                            divToAdd.appendChild(par);
+                            parentDiv.appendChild(divToAdd);
 
                             //========================THis is what I need====================
                             //document.getElementById('displayVerse').innerHTML =
