@@ -98,6 +98,7 @@ h1 {
     position: absolute;
     bottom: 0;
     top: 350px;
+    font-size: 16px;
 }
 
 .transformAni {
@@ -115,13 +116,13 @@ h1 {
 @keyframes bottomFadeOut {
     0% {
         position: absolute;
-        left: -5rem;
+        bottom: -5rem;
         opacity: 0;
     }
 
     75% {
         position: absolute;
-        left: 25%;
+        bottom: 25%;
         opacity: 1;
     }
 
@@ -134,7 +135,7 @@ h1 {
     position: relative;
     color: #F0EBA3;
     animation-name: bottomFadeOut;
-    animation-duration: 1s;
+    animation-duration: 5s;
 }
 
 @keyframes part1 {
