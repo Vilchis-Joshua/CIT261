@@ -176,7 +176,7 @@ function chooseReference() {
                             var child = document.getElementById('displayVerse');
                             parent.removeChild(child);
 
-                            var parentDiv = document.getElementById('verse-div');
+                            var parentDiv = document.getElementById('versesStuff');
                             parentDiv.removeChild(parent);
 
                             var divToAdd = document.createElement('div');
