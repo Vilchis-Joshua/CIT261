@@ -157,7 +157,7 @@ function chooseReference() {
                     if (obj.sections[i].verses[j].verse == v) {
                         document.getElementById('displayVerse').innerHTML =
                             obj.sections[i].verses[j].text;
-                        document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
+                        //document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
                         return;
                     }
                 }

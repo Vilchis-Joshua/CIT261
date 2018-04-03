@@ -112,11 +112,10 @@ h1 {
 
 .verse-text {
     position: relative;
-    /*opacity: 0;*/
     color: #F0EBA3;
     animation-name: bottomFadeOut;
     animation-delay: 10s;
-    animation-duration: 9s;
+    animation-duration: 10s;
 }
 
 @keyframes part1 {
