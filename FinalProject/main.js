@@ -238,7 +238,7 @@ function chooseReference() {
                         infoPar.setAttribute('class', 'textColor');
                         infoPar.innerHTML += (
                             'D&C ' +
-                            sect +
+                            sec +
                             ':' +
                             obj.sections[i].verses[j].verse)
                         document.getElementById('infoDisplays').appendChild(infoPar);
