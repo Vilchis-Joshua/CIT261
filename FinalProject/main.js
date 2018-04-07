@@ -115,26 +115,26 @@ function loadDoc() {
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
         source = 'Pictures/book_of_mormon.jpg';
-        document.getElementById('deeper').style.visibility = 'visible';
+        //document.getElementById('deeper').style.visibility = 'visible';
 
         b = 0;
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
         source = 'Pictures/doctrine_and_covenants.jpg';
         document.getElementById('deeper').style.visibility = 'hidden';
-        document.getElementById('displayBookImage').style.visibility = 'visible';
+        //document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 1;
     } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/old-testament.json";
         source = 'Pictures/old_testament.jpg';
         document.getElementById('deeper').style.visibility = 'visible';
-        document.getElementById('displayBookImage').style.visibility = 'visible';
+        //document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
         source = 'Pictures/new_testament.jpg';
         document.getElementById('deeper').style.visibility = 'visible';
-        document.getElementById('displayBookImage').style.visibility = 'visible';
+        //document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 0;
     } else {
         console.log('There was an error loading the book')
