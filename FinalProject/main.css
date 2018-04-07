@@ -160,19 +160,20 @@ h1 {
 }
 
 #displayVerse:hover {
-    opacity: 1;
-    -webkit-animation: myverse 4s 1; /* Safari 4.0 - 8.0 */
-    animation: myverse 4s 1;
+opacity: 1;
+-webkit-animation: myverse 4s 1; /* Safari 4.0 - 8.0 */
+animation: myverse 4s 1;
 }
 
-#displayBookImage:hover {
+img#displayBookImage:hover {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);
     -o-transform: scale(.9) rotateY(180deg);
 }
-#displayBookImage {
+
+img#displayBookImage {
     display: flex;
     justify-content: center;
     opacity: 1;
