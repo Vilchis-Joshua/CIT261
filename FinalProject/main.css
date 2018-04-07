@@ -155,8 +155,15 @@ h1 {
     }
 }
 
+#displayVerse {
+    opacity: 0;
+}
 
 #displayVerse:hover {
+    opacity: 1;
+}
+
+#displayBookImage:over {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
