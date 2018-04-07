@@ -182,13 +182,13 @@ img#displayBookImage {
     position: relative;
 }
 
-div#versesStuff {
+/*div#versesStuff {
     display: flex;
     justify-content: center;
     opacity: 1;
-}
+}*/
 
-.bookFlip p#displayVerse img#displayBookImage {
+.bookFlip img {
     opacity: 1 !important;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
@@ -196,12 +196,16 @@ div#versesStuff {
     -o-transition: all 4s ease-in-out 0s;
 }
 
-.bookFlip p#displayVerse:hover img#displayBookImage {
+.bookFlip img {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);
     -o-transform: scale(.9) rotateY(180deg);
+}
+
+.bookFlip .verseContainer {
+
 }
 
 /*div.bookFlip img {

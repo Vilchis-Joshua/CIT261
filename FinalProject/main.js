@@ -256,6 +256,7 @@ function chooseReference() {
                             obj.sections[i].verses[j].verse)
                         var otherDiv = document.createElement('div');
 
+
                         //==============================================
 
                         var parent = document.getElementById('verse-div');
