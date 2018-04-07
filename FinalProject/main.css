@@ -13,7 +13,7 @@ body {
 }
 
 
-#displayBooks, #displayVerses, h2, #selectScripture {
+#displayBooks, #displayVerses, h2, #selectScripture, #instructions {
     display: flex;
     justify-content: center;
 }
