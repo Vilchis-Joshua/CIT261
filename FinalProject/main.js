@@ -9,6 +9,8 @@ var newT = "";
 var chap = "";
 var sec = "";
 
+var source = "";
+
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
     document.getElementById('displayBookImage').style.visibility = 'hidden';
@@ -112,25 +114,25 @@ function loadDoc() {
     }
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
-        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/book_of_mormon.jpg');
+        source = 'Pictures/book_of_mormon.jpg';
         document.getElementById('deeper').style.visibility = 'visible';
-        document.getElementById('displayBookImage').style.visibility = 'visible';
+
         b = 0;
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
-        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/doctrine_and_covenants.jpg');
+        source = 'Pictures/doctrine_and_covenants.jpg';
         document.getElementById('deeper').style.visibility = 'hidden';
         document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 1;
     } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/old-testament.json";
-        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/old_testament.jpg');
+        source = 'Pictures/old_testament.jpg';
         document.getElementById('deeper').style.visibility = 'visible';
         document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
-        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/new_testament.jpg');
+        source = 'Pictures/new_testament.jpg';
         document.getElementById('deeper').style.visibility = 'visible';
         document.getElementById('displayBookImage').style.visibility = 'visible';
         b = 0;
@@ -229,6 +231,16 @@ function chooseReference() {
                     if (obj.sections[i].verses[j].verse == v) {
                         //document.getElementById('displayVerse').innerHTML =
                         //    obj.sections[i].verses[j].text;
+
+                        //========= This is to make the img
+                        var imgParent = document.getElementById('dipslayVerse');
+                        var imgChild = document.getElementById('displayBookImage');
+                        infoParent.removeChild(infoChild);
+                        var imgInsert = document.createElement('img');
+                        imgInsert.setAttribute('id', 'displayBookImage');
+                        imgInsert.setAttribute('height', '200');
+                        imgInsert.setAttribute('width', '200');
+
                         //========= This is to make the book information 
                         var infoParent = document.getElementById('infoDisplays');
                         var infoChild = document.getElementById('displayInformation');
@@ -243,9 +255,8 @@ function chooseReference() {
                             obj.sections[i].verses[j].verse)
                         var otherDiv = document.createElement('div');
 
-                        document.getElementById('infoDisplays').appendChild(infoPar);
-
                         //==============================================
+
                         var parent = document.getElementById('verse-div');
                         var child = document.getElementById('displayVerse');
                         parent.removeChild(child);
@@ -263,6 +274,8 @@ function chooseReference() {
                         divToAdd.setAttribute('class', 'verse-text');
                         //divToAdd.className = 'verse-text';
 
+                        imgParent.append(imgInsert);
+                        infoParent.appendChild(infoPar);
                         divToAdd.appendChild(par);
                         parentDiv.appendChild(divToAdd);
                         return;
