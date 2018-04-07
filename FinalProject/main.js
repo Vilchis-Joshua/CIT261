@@ -383,7 +383,7 @@ function chooseReference() {
                             newDiv.setAttribute('class', 'verseContainer');
 
                             var par = document.createElement('p');
-                            par.textContent = (/*obj.sections[i].verses[j].verse + ' ' + */obj.books[i].chapters[j].text);
+                            par.textContent = (/*obj.sections[i].verses[j].verse + ' ' + */obj.books[i].chapters[j].chapter[k].text);
                             //par.setAttribute('class', 'textColor');
                             par.setAttribute('id', 'displayVerse');
 
