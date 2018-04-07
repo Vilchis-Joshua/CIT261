@@ -249,7 +249,12 @@ function chooseReference() {
                         var infoPar = document.createElement('p');
                         infoPar.setAttribute('id', 'displayInformation');
                         infoPar.setAttribute('class', 'textColor');
-                        infoPar.innerHTML += obj.sections[i].verses[j].reference;
+                        infoPar.innerHTML += (
+                            'D&C ' +
+                            obj.sections[i].section +
+                            ' ' +
+                            ':' +
+                            obj.sections[i].verses[j].text);
                         var otherDiv = document.createElement('div');
 
 
@@ -365,7 +370,12 @@ function chooseReference() {
                             var infoPar = document.createElement('p');
                             infoPar.setAttribute('id', 'displayInformation');
                             infoPar.setAttribute('class', 'textColor');
-                            infoPar.innerHTML += obj.chapters[i].chapter[j].verses[k].reference;
+                            infoPar.innerHTML += (
+                                obj.books[i].book +
+                                ' ' +
+                                obj.books[i].chapters[j].chapter +
+                                ':' +    
+                                obj.chapters[i].chapter[j].verses[k].reference);
                             var otherDiv = document.createElement('div');
 
 
