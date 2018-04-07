@@ -187,15 +187,15 @@ div#versesStuff {
     opacity: 1;
 }
 
-p#displayVerse img {
-    opacity: 1;
+.bookFlip p#displayVerse img {
+    opacity: 1 !important;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
     -o-transition: all 4s ease-in-out 0s;
 }
 
-p#displayVerse:hover img {
+.bookFlip p#displayVerse:hover img {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
