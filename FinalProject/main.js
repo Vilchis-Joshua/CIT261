@@ -243,12 +243,15 @@ function chooseReference() {
                             //el.parentNode.replaceChild(newEl, el);
 
                             //========= This is to make the booko information 
+                            var infoParent = document.getElementById('infoDisplays');
+                            var infoChild = document.getElementById('displayInformation');
+                            infoParent.removeChild(infoChild);
                             var infoPar = document.createElement('p');
                             infoPar.setAttribute('id', 'displayInformation');
                             infoPar.innerHTML = (
                                 obj.books[i].book +
                                 ' ' +
-                                obj.books[i].chapters[j].chapter + 
+                                obj.books[i].chapters[j].chapter +
                                 ':' +
                                 obj.books[i].chapters[j].verses[k].verse)
                             document.getElementById('infoDisplays').appendChild(infoPar);
