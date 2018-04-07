@@ -233,7 +233,7 @@ function chooseReference() {
                         //    obj.sections[i].verses[j].text;
 
                         //========= This is to make the img
-                        var imgParent = document.getElementById('dipslayVerse');
+                        var imgParent = document.getElementById('displayVerse');
                         var imgChild = document.getElementById('displayBookImage');
                         imgParent.removeChild(imgChild);
                         var imgInsert = document.createElement('img');
