@@ -7,6 +7,7 @@ var bookofmorm = "";
 var oldT = "";
 var newT = "";
 var chap = "";
+var sec = "";
 
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
@@ -171,6 +172,7 @@ function chooseVerse() {
     if (obj.sections) {
         for (i in obj.sections) {
             if (obj.sections[i].section == v) {
+                sec = v;
                 for (j in obj.sections[i].verses) {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.sections[i].verses[j].verse);
@@ -233,12 +235,12 @@ function chooseReference() {
                         infoParent.removeChild(infoChild);
                         var infoPar = document.createElement('p');
                         infoPar.setAttribute('id', 'displayInformation');
+                        infoPar.setAttribute('class', 'textColor');
                         infoPar.innerHTML += (
-                            obj.books[i].book +
-                            ' ' +
-                            chap +
+                            'D&C ' +
+                            sect +
                             ':' +
-                            obj.books[i].chapters[j].verses[k].verse)
+                            obj.sections[i].verses[j].verse)
                         document.getElementById('infoDisplays').appendChild(infoPar);
 
                         //==============================================
@@ -282,6 +284,7 @@ function chooseReference() {
                             infoParent.removeChild(infoChild);
                             var infoPar = document.createElement('p');
                             infoPar.setAttribute('id', 'displayInformation');
+                            infoPar.setAttribute('class', 'textColor');
                             infoPar.innerHTML += (
                                 obj.books[i].book +
                                 ' ' +

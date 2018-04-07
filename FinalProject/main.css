@@ -62,7 +62,7 @@ body {
 
 }
 
-div#separate {
+div#separate, div#infoDisplays {
     color: rgb(212, 116, 106);
 }
 
