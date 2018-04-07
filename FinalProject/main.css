@@ -170,3 +170,8 @@ h1 {
     -webkit-transform: scale(.9) rotateY(180deg);
     -o-transform: scale(.9) rotateY(180deg);
 }
+#displayBooksImage {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
