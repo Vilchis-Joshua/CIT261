@@ -109,18 +109,22 @@ function loadDoc() {
     }
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
+        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/book_of_mormon.jpg');
         document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
+        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/doctrine_and_covenants.jpg');
         document.getElementById('deeper').style.visibility = 'hidden';
         b = 1;
     } else if (document.getElementById('ot').checked == true) {
         bookToParse += "JSON/old-testament.json";
+        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/old_testament.jpg');
         document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('nt').checked == true) {
         bookToParse += "JSON/new-testament.json";
+        document.getElementById('displayBookImage').setAttribute('src', 'Pictures/new_testament.jpg');
         document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else {
