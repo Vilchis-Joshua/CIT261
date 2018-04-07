@@ -198,7 +198,7 @@ img#displayBookImage {
 
 .bookFlip:hover img {
     border: 20px;
-    padding 20px;
+    padding: 20px;
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
@@ -207,6 +207,8 @@ img#displayBookImage {
 }
 
 .bookFlip .verseContainer {
+    border: 20px;
+    padding: 20px;
     transition: .75s ease;
     opacity: 0;
     position: absolute;
