@@ -225,9 +225,42 @@ function chooseReference() {
             if (obj.sections[i].section == a) {
                 for (j in obj.sections[i].verses) {
                     if (obj.sections[i].verses[j].verse == v) {
-                        document.getElementById('displayVerse').innerHTML =
-                            obj.sections[i].verses[j].text;
-                        //document.getElementById('displayBookTitle').innerHTML += obj.books[i].book;
+                        //document.getElementById('displayVerse').innerHTML =
+                        //    obj.sections[i].verses[j].text;
+                        //========= This is to make the book information 
+                        var infoParent = document.getElementById('infoDisplays');
+                        var infoChild = document.getElementById('displayInformation');
+                        infoParent.removeChild(infoChild);
+                        var infoPar = document.createElement('p');
+                        infoPar.setAttribute('id', 'displayInformation');
+                        infoPar.innerHTML += (
+                            obj.books[i].book +
+                            ' ' +
+                            chap +
+                            ':' +
+                            obj.books[i].chapters[j].verses[k].verse)
+                        document.getElementById('infoDisplays').appendChild(infoPar);
+
+                        //==============================================
+                        var parent = document.getElementById('verse-div');
+                        var child = document.getElementById('displayVerse');
+                        parent.removeChild(child);
+
+                        var parentDiv = document.getElementById('versesStuff');
+                        parentDiv.removeChild(parent);
+
+                        var par = document.createElement('p');
+                        par.textContent = obj.books[i].chapters[j].verses[k].text;
+                        //par.setAttribute('class', 'textColor');
+                        par.setAttribute('id', 'displayVerse');
+
+                        var divToAdd = document.createElement('div');
+                        divToAdd.setAttribute('id', 'verse-div');
+                        divToAdd.setAttribute('class', 'verse-text');
+                        //divToAdd.className = 'verse-text';
+
+                        divToAdd.appendChild(par);
+                        parentDiv.appendChild(divToAdd);
                         return;
                     }
                 }
@@ -243,7 +276,7 @@ function chooseReference() {
                             //var newEl = obj.books[i].chapters[j].verses[k].text;
                             //el.parentNode.replaceChild(newEl, el);
 
-                            //========= This is to make the booko information 
+                            //========= This is to make the book information 
                             var infoParent = document.getElementById('infoDisplays');
                             var infoChild = document.getElementById('displayInformation');
                             infoParent.removeChild(infoChild);
@@ -252,7 +285,7 @@ function chooseReference() {
                             infoPar.innerHTML += (
                                 obj.books[i].book +
                                 ' ' +
-                                obj.books[i].chapters[j].chapter +
+                                chap +
                                 ':' +
                                 obj.books[i].chapters[j].verses[k].verse)
                             document.getElementById('infoDisplays').appendChild(infoPar);
