@@ -155,12 +155,7 @@ h1 {
     }
 }
 
-#displayVerse {
-    opacity: 0;
-}
-
 #displayVerse:hover {
-    opacity: 1;
     -webkit-animation: myverse 4s 1; 
     animation: myverse 2s 1;
 }
@@ -180,6 +175,12 @@ img#displayBookImage {
     -o-transition: all 1s ease-in-out 0s;
 }*/
 
+.bookFlip {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
 
 div#versesStuff {
     display: flex;
