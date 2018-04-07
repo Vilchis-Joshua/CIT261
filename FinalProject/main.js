@@ -115,8 +115,7 @@ function loadDoc() {
     if (document.getElementById('bom').checked == true) {
         bookToParse += "JSON/book-of-mormon.json";
         source = 'Pictures/book_of_mormon.jpg';
-        //document.getElementById('deeper').style.visibility = 'visible';
-
+        document.getElementById('deeper').style.visibility = 'visible';
         b = 0;
     } else if (document.getElementById('dac').checked == true) {
         bookToParse += "JSON/doctrine-and-covenants.json";
@@ -254,7 +253,7 @@ function chooseReference() {
                             obj.sections[i].section +
                             ' ' +
                             ':' +
-                            obj.sections[i].verses[j].text);
+                            obj.sections[i].verses[j].verse);
                         var otherDiv = document.createElement('div');
 
 
