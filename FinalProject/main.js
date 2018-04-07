@@ -241,6 +241,19 @@ function chooseReference() {
                             //var el = document.getElementById('displayVerse');
                             //var newEl = obj.books[i].chapters[j].verses[k].text;
                             //el.parentNode.replaceChild(newEl, el);
+
+                            //========= This is to make the booko information 
+                            var infoPar = document.createElement('p');
+                            infopar.setAttribute('id', 'displayInformation');
+                            infoPar.innerHTML = (
+                                obj.books[i].book +
+                                ' ' +
+                                obj.books[i].chapters[j].chapter + 
+                                ':' +
+                                obj.books[i].chapters[j].verses[k].verse)
+                            document.getElementById('infoDisplays').appendChild(infoPar);
+
+                            //==============================================
                             var parent = document.getElementById('verse-div');
                             var child = document.getElementById('displayVerse');
                             parent.removeChild(child);
