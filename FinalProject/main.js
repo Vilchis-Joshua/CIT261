@@ -259,12 +259,35 @@ function chooseReference() {
 
                         //==============================================
 
+                        //var parent = document.getElementById('verse-div');
+                        //var child = document.getElementById('displayVerse');
+                        //parent.removeChild(child);
+
+                        //var parentDiv = document.getElementById('versesStuff');
+                        //parentDiv.removeChild(parent);
+
+                        //var par = document.createElement('p');
+                        //par.textContent = (/*obj.sections[i].verses[j].verse + ' ' + */obj.sections[i].verses[j].text);
+                        ////par.setAttribute('class', 'textColor');
+                        //par.setAttribute('id', 'displayVerse');
+
+                        //var divToAdd = document.createElement('div');
+                        //divToAdd.setAttribute('id', 'verse-div');
+                        //divToAdd.setAttribute('class', 'verse-text');
+
+                        var verseChild = document.getElementById('displayVerse');
+
                         var parent = document.getElementById('verse-div');
-                        var child = document.getElementById('displayVerse');
+                        var child = document.getElementById('vc');
+                        child.removeChild(verseChild);
                         parent.removeChild(child);
 
-                        var parentDiv = document.getElementById('versesStuff');
-                        parentDiv.removeChild(parent);
+                        //var parentDiv = document.getElementById('versesStuff');
+                        //parentDiv.removeChild(parent);
+
+                        var newDiv = document.createElement('div');
+                        newDiv.setAttribute('id', 'vc');
+                        newDiv.setAttribute('class', 'verseContainer');
 
                         var par = document.createElement('p');
                         par.textContent = (/*obj.sections[i].verses[j].verse + ' ' + */obj.sections[i].verses[j].text);
@@ -274,12 +297,12 @@ function chooseReference() {
                         var divToAdd = document.createElement('div');
                         divToAdd.setAttribute('id', 'verse-div');
                         divToAdd.setAttribute('class', 'verse-text');
-                        //divToAdd.className = 'verse-text';
 
                         par.appendChild(imgInsert);
                         infoParent.appendChild(infoPar);
-                        divToAdd.appendChild(par);
+                        parent.appendChild(newDiv);
                         parentDiv.appendChild(divToAdd);
+                        
                         document.getElementById('displayBookImage').style.visibility = 'visible';
                         return;
                     }
