@@ -182,14 +182,10 @@ img#displayBookImage {
     position: relative;
 }
 
-/*div#versesStuff {
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-}*/
 
 .bookFlip img {
     opacity: 1 !important;
+    border-radius: 20%;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
