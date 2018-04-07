@@ -374,7 +374,7 @@ function chooseReference() {
                                 ' ' +
                                 obj.books[i].chapters[j].chapter +
                                 ':' +    
-                                obj.chapters[i].chapter[j].verses[k].reference);
+                                obj.chapters[i].chapter[j].verses[k].verse);
                             var otherDiv = document.createElement('div');
 
 
