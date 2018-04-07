@@ -244,7 +244,7 @@ function chooseReference() {
 
                             //========= This is to make the booko information 
                             var infoPar = document.createElement('p');
-                            infopar.setAttribute('id', 'displayInformation');
+                            infoPar.setAttribute('id', 'displayInformation');
                             infoPar.innerHTML = (
                                 obj.books[i].book +
                                 ' ' +
