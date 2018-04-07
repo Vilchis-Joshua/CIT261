@@ -155,7 +155,7 @@ h1 {
     }
 }
 
-#displayVerse:hover {
+#infoDisplays {
     -webkit-animation: myverse 4s 1; 
     animation: myverse 2s 1;
 }
@@ -199,7 +199,7 @@ img#displayBookImage {
 .bookFlip:hover img {
     border: 20px;
     padding: 20px;
-    opacity: 0.25;
+    opacity: 0.05;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);

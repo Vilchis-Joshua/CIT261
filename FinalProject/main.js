@@ -250,7 +250,7 @@ function chooseReference() {
                         infoPar.setAttribute('class', 'textColor');
                         infoPar.innerHTML += (
                             'D&C ' +
-                            obj.sections[i].section +
+                            sec +
                             ' ' +
                             ':' +
                             obj.sections[i].verses[j].verse);
@@ -373,7 +373,7 @@ function chooseReference() {
                             infoPar.innerHTML += (
                                 obj.books[i].book +
                                 ' ' +
-                                obj.books[i].chapters[j].chapter +
+                                chap +
                                 ':' +    
                                 obj.books[i].chapters[j].verses[k].verse);
                             var otherDiv = document.createElement('div');
