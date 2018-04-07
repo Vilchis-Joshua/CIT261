@@ -12,8 +12,8 @@ var sec = "";
 var source = "";
 
 function start() {
-    document.getElementById('deeper').style.visibility = 'hidden';
     document.getElementById('displayBookImage').style.visibility = 'hidden';
+    document.getElementById('deeper').style.visibility = 'hidden';
     //getBom();
     //getDac();
     //getOt();
