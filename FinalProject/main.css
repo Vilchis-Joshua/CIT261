@@ -187,7 +187,23 @@ div#versesStuff {
     opacity: 1;
 }
 
-div.bookFlip img {
+p#displayVerse img {
+    transition: all 1s ease-in-out 0s;
+    -moz-transition: all 1s ease-in-out 0s;
+    -webkit-transition: all 1s ease-in-out 0s;
+    -o-transition: all 4s ease-in-out 0s;
+}
+
+p#displayVerse:hover img {
+    opacity: 0.25;
+    background-color: deeppink;
+    transform: scale(.9) rotateY(180deg);
+    -moz-transform: scale(.9) rotateY(180deg);
+    -webkit-transform: scale(.9) rotateY(180deg);
+    -o-transform: scale(.9) rotateY(180deg);
+}
+
+/*div.bookFlip img {
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
@@ -201,4 +217,4 @@ div.bookFlip:hover img {
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);
     -o-transform: scale(.9) rotateY(180deg);
-}
+}*/
