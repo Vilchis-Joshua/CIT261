@@ -156,13 +156,13 @@ h1 {
 }
 
 #displayVerse {
-    opacity: 1;
+    opacity: 0;
 }
 
 #displayVerse:hover {
-opacity: 1;
--webkit-animation: myverse 4s 1; /* Safari 4.0 - 8.0 */
-animation: myverse 2s 1;
+    opacity: 1;
+    -webkit-animation: myverse 4s 1; 
+    animation: myverse 2s 1;
 }
 
 /*img#displayBookImage:hover {
@@ -188,6 +188,7 @@ div#versesStuff {
 }
 
 p#displayVerse img {
+    opacity: 1;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
