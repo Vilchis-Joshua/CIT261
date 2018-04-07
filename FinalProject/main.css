@@ -188,7 +188,7 @@ div#versesStuff {
 }
 
 p#displayVerse img {
-    opacity: 0;
+    opacity: 1;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
@@ -197,16 +197,10 @@ p#displayVerse img {
 
 p#displayVerse:hover img {
     opacity: 0.25;
-    background-color: deeppink;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);
     -o-transform: scale(.9) rotateY(180deg);
-}
-
-
-#displayBookImage {
-    opacity: 1;
 }
 
 /*div.bookFlip img {
