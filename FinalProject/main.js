@@ -191,6 +191,8 @@ function chooseVerse() {
     } else {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
+                chap = obj.books[i].chapters[j].chapter;
+                console.log(chap);
                 for (j in obj.books[i].chapters) {
                     if (temp == 1) {
                         var tempOpt = document.createElement('option');
@@ -202,8 +204,6 @@ function chooseVerse() {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].chapters[j].chapter);
                     opt.innerHTML += obj.books[i].chapters[j].chapter;
-                    chap = obj.books[i].chapters[j].chapter;
-                    console.log(chap);
                     document.getElementById('deeper').appendChild(opt);
                 }
                 return;
