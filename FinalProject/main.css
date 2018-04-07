@@ -156,7 +156,7 @@ h1 {
 }
 
 #displayVerse {
-    opacity: 0;
+    opacity: 1;
 }
 
 #displayVerse:hover {
@@ -165,7 +165,7 @@ opacity: 1;
 animation: myverse 2s 1;
 }
 
-img#displayBookImage:hover {
+/*img#displayBookImage:hover {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
@@ -178,7 +178,7 @@ img#displayBookImage {
     -moz-transition: all 1s ease-in-out 0s;
     -webkit-transition: all 1s ease-in-out 0s;
     -o-transition: all 1s ease-in-out 0s;
-}
+}*/
 
 
 div#versesStuff {
@@ -186,3 +186,19 @@ div#versesStuff {
     justify-content: center;
     opacity: 1;
 }
+
+div.bookFlip {
+    transition: all 1s ease-in-out 0s;
+    -moz-transition: all 1s ease-in-out 0s;
+    -webkit-transition: all 1s ease-in-out 0s;
+    -o-transition: all 1s ease-in-out 0s;
+}
+
+    div.bookFlip:hover #displayBookImage {
+        opacity: 0.25;
+        background-color: deeppink;
+        transform: scale(.9) rotateY(180deg);
+        -moz-transform: scale(.9) rotateY(180deg);
+        -webkit-transform: scale(.9) rotateY(180deg);
+        -o-transform: scale(.9) rotateY(180deg);
+    }
