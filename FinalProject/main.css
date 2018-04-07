@@ -196,7 +196,7 @@ img#displayBookImage {
     -o-transition: all 4s ease-in-out 0s;
 }
 
-.bookFlip img {
+.bookFlip:hover img {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
