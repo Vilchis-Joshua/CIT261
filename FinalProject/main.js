@@ -6,6 +6,7 @@ var dandc = "";
 var bookofmorm = "";
 var oldT = "";
 var newT = "";
+var chap = "";
 
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
@@ -201,6 +202,8 @@ function chooseVerse() {
                     var opt = document.createElement('option');
                     opt.setAttribute('id', obj.books[i].chapters[j].chapter);
                     opt.innerHTML += obj.books[i].chapters[j].chapter;
+                    chap = obj.books[i].chapters[j].chapter;
+                    console.log(chap);
                     document.getElementById('deeper').appendChild(opt);
                 }
                 return;
@@ -248,7 +251,7 @@ function chooseReference() {
                             infoParent.removeChild(infoChild);
                             var infoPar = document.createElement('p');
                             infoPar.setAttribute('id', 'displayInformation');
-                            infoPar.innerHTML = (
+                            infoPar.innerHTML += (
                                 obj.books[i].book +
                                 ' ' +
                                 obj.books[i].chapters[j].chapter +
