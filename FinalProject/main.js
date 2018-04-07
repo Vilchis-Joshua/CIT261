@@ -252,7 +252,7 @@ function chooseReference() {
                         parentDiv.removeChild(parent);
 
                         var par = document.createElement('p');
-                        par.textContent = obj.sections[i].verses[j].verse;
+                        par.textContent = obj.sections[i].verses[j].text;
                         //par.setAttribute('class', 'textColor');
                         par.setAttribute('id', 'displayVerse');
 
