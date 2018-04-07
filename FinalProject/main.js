@@ -143,7 +143,6 @@ function loadDoc() {
 function displayImage() {
     if (document.getElementById('bom').checked == true) {
         var x = document.getElementById('selectScripture');
-        var pic = 
     }
 }
 
