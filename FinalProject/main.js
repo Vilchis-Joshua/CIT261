@@ -298,8 +298,8 @@ function chooseReference() {
                         divToAdd.setAttribute('id', 'verse-div');
                         divToAdd.setAttribute('class', 'verse-text');
 
-                        newDiv.appendChild(par);
                         par.appendChild(imgInsert);
+                        newDiv.appendChild(par);
                         infoParent.appendChild(infoPar);
                         parent.appendChild(newDiv);
                         
