@@ -219,7 +219,6 @@ function chooseVerse() {
     if (sel.options.length != 0) {
         sel.options.length = 0;
     }
-    console.log('coming here??????');
     var other = document.getElementById('deeper');
     if (other.options.length != 0) {
         other.options.length = 0;
@@ -313,8 +312,8 @@ function chooseReference() {
 
                             var divToAdd = document.createElement('div');
                             divToAdd.setAttribute('id', 'verse-div');
-                            //divToAdd.setAttribute('class', 'verse-text');
-                            divToAdd.className = 'verse-text';
+                            divToAdd.setAttribute('class', 'verse-text');
+                            //divToAdd.className = 'verse-text';
 
                             divToAdd.appendChild(par);
                             parentDiv.appendChild(divToAdd);
