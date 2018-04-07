@@ -207,8 +207,8 @@ img#displayBookImage {
 }
 
 .bookFlip .verseContainer {
-    border: 20px;
-    padding: 20px;
+    border: 20px !important;
+    padding: 20px !important;
     transition: .75s ease;
     opacity: 0;
     position: absolute;
