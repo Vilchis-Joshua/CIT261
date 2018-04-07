@@ -27,6 +27,7 @@ div#separate {
 h2, div#infoDisplays {
     display: flex;
     justify-content: center;
+    font-size: 30px;
 }
 
 select {
@@ -34,6 +35,15 @@ select {
     color: rgb(255, 229, 170);
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+select:hover {
+    transform: scale(2);
+}
+
+
+option:hover {
+    background-color: darkgreen;
 }
 
 body {
@@ -49,6 +59,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(15, 69, 79);
     height: 100%;
+
 }
 
 div#separate {
@@ -92,26 +103,17 @@ hr {
 h1 {
     display: flex;
     justify-content: flex-end;
+    border-right: 10px;
+    border-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .textColor {
     color: rgb(212, 116, 106);
+    font-size: 30px;
 }
 
-
-
-
-.transformAni {
-    /*position: relative;
-    border: solid;
-    transition: all 1s ease-in-out 0s;
-    -moz-transition: all 1s ease-in-out 0s;
-    -webkit-transition: all 1s ease-in-out 0s;
-    -o-transition: all 1s ease-in-out 0s;
-    animation-name: part1;
-    /*animation-duration: 6s;
-    animation-iteration-count: 1;*/
-}
 
 .verseText {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -123,7 +125,7 @@ h1 {
 
 .verse-text {
     position: relative;
-    font-size: 2em;
+    font-size: 20px;
     color: rgb(212, 116, 106);
     text-align: center;
     top: 0px;
