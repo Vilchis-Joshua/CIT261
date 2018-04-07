@@ -187,7 +187,7 @@ div#versesStuff {
     opacity: 1;
 }
 
-.bookFlip p#displayVerse img {
+.bookFlip p#displayVerse img#displayBookImage {
     opacity: 1 !important;
     transition: all 1s ease-in-out 0s;
     -moz-transition: all 1s ease-in-out 0s;
@@ -195,7 +195,7 @@ div#versesStuff {
     -o-transition: all 4s ease-in-out 0s;
 }
 
-.bookFlip p#displayVerse:hover img {
+.bookFlip p#displayVerse:hover img#displayBookImage {
     opacity: 0.25;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
