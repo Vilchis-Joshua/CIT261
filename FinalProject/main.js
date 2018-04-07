@@ -240,6 +240,7 @@ function chooseReference() {
                         imgInsert.setAttribute('id', 'displayBookImage');
                         imgInsert.setAttribute('height', '200');
                         imgInsert.setAttribute('width', '200');
+                        imgInsert.setAttribute('src', source);
 
                         //========= This is to make the book information 
                         var infoParent = document.getElementById('infoDisplays');
