@@ -235,7 +235,7 @@ function chooseReference() {
                         //========= This is to make the img
                         var imgParent = document.getElementById('dipslayVerse');
                         var imgChild = document.getElementById('displayBookImage');
-                        infoParent.removeChild(infoChild);
+                        imgParent.removeChild(imgChild);
                         var imgInsert = document.createElement('img');
                         imgInsert.setAttribute('id', 'displayBookImage');
                         imgInsert.setAttribute('height', '200');
