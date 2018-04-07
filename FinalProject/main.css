@@ -173,7 +173,7 @@ img#displayBookImage:hover {
     -o-transform: scale(.9) rotateY(180deg);
 }
 
-div#verseStuff {
+div#versesStuff {
     display: flex;
     justify-content: center;
     opacity: 1;
