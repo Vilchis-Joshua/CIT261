@@ -241,6 +241,8 @@ function chooseReference() {
                             sec +
                             ':' +
                             obj.sections[i].verses[j].verse)
+                        var otherDiv = document.createElement('div');
+
                         document.getElementById('infoDisplays').appendChild(infoPar);
 
                         //==============================================
