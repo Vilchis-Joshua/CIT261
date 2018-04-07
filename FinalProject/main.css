@@ -148,12 +148,19 @@ h1 {
         transform: rotate(25deg);
     }
 
-    25% {
-
-    }
-
     50% {
         transform: rotate(180deg);
+        opacity: .75;
         top: 300px;
     }
+}
+
+
+#displayVerse {
+    opacity: 0.25;
+    background-color: deeppink;
+    transform: scale(.9) rotateY(180deg);
+    -moz-transform: scale(.9) rotateY(180deg);
+    -webkit-transform: scale(.9) rotateY(180deg);
+    -o-transform: scale(.9) rotateY(180deg);
 }

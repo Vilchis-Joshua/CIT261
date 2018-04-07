@@ -9,55 +9,55 @@ var newT = "";
 
 function start() {
     document.getElementById('deeper').style.visibility = 'hidden';
-    getBom();
-    getDac();
-    getOt();
-    getNt();
+    //getBom();
+    //getDac();
+    //getOt();
+    //getNt();
 }
 
-function getBom() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            bookofmorm = JSON.parse(this.responseText);
-        }
-    }
-    xhttp.open("GET", "JSON/book-of-mormon.json", true);
-    xhttp.send();
-}
+//function getBom() {
+//    var xhttp = new XMLHttpRequest();
+//    xhttp.onreadystatechange = function () {
+//        if (this.readyState == 4 && this.status == 200) {
+//            bookofmorm = JSON.parse(this.responseText);
+//        }
+//    }
+//    xhttp.open("GET", "JSON/book-of-mormon.json", true);
+//    xhttp.send();
+//}
 
-function getDac() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            dandc = JSON.parse(this.responseText);
-        }
-    }
-    xhttp.open("GET", "JSON/doctrine-and-covenants.json", true);
-    xhttp.send();
-}
+//function getDac() {
+//    var xhttp = new XMLHttpRequest();
+//    xhttp.onreadystatechange = function () {
+//        if (this.readyState == 4 && this.status == 200) {
+//            dandc = JSON.parse(this.responseText);
+//        }
+//    }
+//    xhttp.open("GET", "JSON/doctrine-and-covenants.json", true);
+//    xhttp.send();
+//}
 
-function getOt() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            oldT = JSON.parse(this.responseText);
-        }
-    }
-    xhttp.open("GET", "JSON/old-testament.json", true);
-    xhttp.send();
-}
+//function getOt() {
+//    var xhttp = new XMLHttpRequest();
+//    xhttp.onreadystatechange = function () {
+//        if (this.readyState == 4 && this.status == 200) {
+//            oldT = JSON.parse(this.responseText);
+//        }
+//    }
+//    xhttp.open("GET", "JSON/old-testament.json", true);
+//    xhttp.send();
+//}
 
-function getNt() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            newT = JSON.parse(this.responseText);
-        }
-    }
-    xhttp.open("GET", "JSON/new-testament.json", true);
-    xhttp.send();
-}
+//function getNt() {
+//    var xhttp = new XMLHttpRequest();
+//    xhttp.onreadystatechange = function () {
+//        if (this.readyState == 4 && this.status == 200) {
+//            newT = JSON.parse(this.responseText);
+//        }
+//    }
+//    xhttp.open("GET", "JSON/new-testament.json", true);
+//    xhttp.send();
+//}
 
 
 function chooseBook(b) {
@@ -132,84 +132,19 @@ function loadDoc() {
         if (this.readyState == 4 && this.status == 200) {
             obj = JSON.parse(this.responseText);
             chooseBook(b);
+            displayImage();
         }
     }
     xhttp.open("GET", bookToParse, true);
     xhttp.send();
+}
 
-    //var b = 0;
-    //if (bookToParse != null) {
-    //    bookToParse = "";
-    //}
-    //if (document.getElementById('bom').checked == true) {
-    //    bookToParse += "JSON/book-of-mormon.json";
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else if (document.getElementById('dac').checked == true) {
-    //    bookToParse += "JSON/doctrine-and-covenants.json";
-    //    document.getElementById('deeper').style.visibility = 'hidden';
-    //    b = 1;
-    //} else if (document.getElementById('ot').checked == true) {
-    //    bookToParse += "JSON/old-testament.json";
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else if (document.getElementById('nt').checked == true) {
-    //    bookToParse += "JSON/new-testament.json";
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else {
-    //    console.log('There was an error loading the book')
-    //} 
 
-    //var xhttp = new XMLHttpRequest();
-    //xhttp.onreadystatechange = function () {
-    //    if (this.readyState == 4 && this.status == 200) {
-    //        if (document.getElementById('bom').checked == true) {
-    //            obj += bookofmorm;
-    //            document.getElementById('deeper').style.visibility = 'visible';
-    //            b = 0;
-    //        } else if (document.getElementById('dac').checked == true) {
-    //            obj += dandc;
-    //            document.getElementById('deeper').style.visibility = 'hidden';
-    //            b = 1;
-    //        } else if (document.getElementById('ot').checked == true) {
-    //            obj += oldT;
-    //            document.getElementById('deeper').style.visibility = 'visible';
-    //            b = 0;
-    //        } else if (document.getElementById('nt').checked == true) {
-    //            obj += newT;
-    //            document.getElementById('deeper').style.visibility = 'visible';
-    //            b = 0;
-    //        } else {
-    //            console.log('There was an error loading the book')
-    //        } 
-    //        chooseBook(b);
-    //    }
-    //}
-    //xhttp.open("GET", true);
-    //xhttp.send();
-
-    //if (document.getElementById('bom').checked == true) {
-    //    obj += bookofmorm;
-    //    console.log(obj);
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else if (document.getElementById('dac').checked == true) {
-    //    obj += dandc;
-    //    document.getElementById('deeper').style.visibility = 'hidden';
-    //    b = 1;
-    //} else if (document.getElementById('ot').checked == true) {
-    //    obj += oldT;
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else if (document.getElementById('nt').checked == true) {
-    //    obj += newT;
-    //    document.getElementById('deeper').style.visibility = 'visible';
-    //    b = 0;
-    //} else {
-    //    console.log('There was an error loading the book')
-    //} 
-    //    chooseBook(b);
+function displayImage() {
+    if (document.getElementById('bom').checked == true) {
+        var x = document.getElementById('selectScripture');
+        var pic = 
+    }
 }
 
 // Not great naming. It is really choosing the chapter/section
