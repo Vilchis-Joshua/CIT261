@@ -275,7 +275,7 @@ function chooseReference() {
                         divToAdd.setAttribute('class', 'verse-text');
                         //divToAdd.className = 'verse-text';
 
-                        imgParent.append(imgInsert);
+                        document.getElementById('displayVerse').appendChild(imgInsert);
                         infoParent.appendChild(infoPar);
                         divToAdd.appendChild(par);
                         parentDiv.appendChild(divToAdd);
