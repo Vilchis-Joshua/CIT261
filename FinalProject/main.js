@@ -275,9 +275,9 @@ function chooseReference() {
                         divToAdd.setAttribute('class', 'verse-text');
                         //divToAdd.className = 'verse-text';
 
+                        par.appendChild(imgInsert);
                         infoParent.appendChild(infoPar);
                         divToAdd.appendChild(par);
-                        imgParent.append(imgInsert);
                         parentDiv.appendChild(divToAdd);
                         document.getElementById('displayBookImage').style.visibility = 'visible';
                         return;
