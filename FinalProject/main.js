@@ -191,8 +191,6 @@ function chooseVerse() {
     } else {
         for (i in obj.books) {
             if (obj.books[i].book == v) {
-                chap = obj.books[i].chapters[j].chapter;
-                console.log(chap);
                 for (j in obj.books[i].chapters) {
                     if (temp == 1) {
                         var tempOpt = document.createElement('option');
@@ -316,6 +314,8 @@ function otherBooks() {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].chapters) {
                 if (obj.books[i].chapters[j].chapter == a) {
+                    chap = v;
+                    console.log(chap);
                     for (k in obj.books[i].chapters[j].verses) {
                         var opt = document.createElement('option');
                         if (temp == 1) {
