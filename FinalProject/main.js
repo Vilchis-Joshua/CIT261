@@ -314,7 +314,7 @@ function otherBooks() {
         if (obj.books[i].book == v) {
             for (j in obj.books[i].chapters) {
                 if (obj.books[i].chapters[j].chapter == a) {
-                    chap = v;
+                    chap = a;
                     console.log(chap);
                     for (k in obj.books[i].chapters[j].verses) {
                         var opt = document.createElement('option');
