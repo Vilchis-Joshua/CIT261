@@ -301,7 +301,6 @@ function chooseReference() {
                         par.appendChild(imgInsert);
                         infoParent.appendChild(infoPar);
                         parent.appendChild(newDiv);
-                        parentDiv.appendChild(divToAdd);
                         
                         document.getElementById('displayBookImage').style.visibility = 'visible';
                         return;
