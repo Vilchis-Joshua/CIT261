@@ -237,8 +237,8 @@ function chooseReference() {
                         imgParent.removeChild(imgChild);
                         var imgInsert = document.createElement('img');
                         imgInsert.setAttribute('id', 'displayBookImage');
-                        imgInsert.setAttribute('height', '200');
-                        imgInsert.setAttribute('width', '200');
+                        imgInsert.setAttribute('height', '100');
+                        imgInsert.setAttribute('width', '100');
                         imgInsert.setAttribute('src', source);
 
                         //========= This is to make the book information 
@@ -359,8 +359,8 @@ function chooseReference() {
                             imgParent.removeChild(imgChild);
                             var imgInsert = document.createElement('img');
                             imgInsert.setAttribute('id', 'displayBookImage');
-                            imgInsert.setAttribute('height', '200');
-                            imgInsert.setAttribute('width', '200');
+                            imgInsert.setAttribute('height', '100');
+                            imgInsert.setAttribute('width', '100');
                             imgInsert.setAttribute('src', source);
 
                             //========= This is to make the book information 
