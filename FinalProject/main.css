@@ -175,6 +175,13 @@ img#displayBookImage {
     -o-transition: all 1s ease-in-out 0s;
 }*/
 
+.vstuff {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    padding: 0 8px;
+}
+
 .bookFlip {
     display: block;
     margin: 0 auto;
@@ -229,7 +236,6 @@ img#displayBookImage {
 
 div.bookFlip:hover img {
     opacity: 0.25;
-    background-color: deeppink;
     transform: scale(.9) rotateY(180deg);
     -moz-transform: scale(.9) rotateY(180deg);
     -webkit-transform: scale(.9) rotateY(180deg);
