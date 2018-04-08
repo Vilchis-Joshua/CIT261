@@ -18,6 +18,9 @@ body {
     justify-content: center;
 }
 
+#instructions, #displayVerse {
+    font-size: 20px !important;
+}
 
 div#separate {
     border: 10px;
@@ -225,10 +228,6 @@ img#displayBookImage {
 
 .bookFlip:hover .verseContainer {
     opacity: 1;
-}
-
-#displayVerse {
-    font-size: 20px;
 }
 
 /*div.bookFlip img {
